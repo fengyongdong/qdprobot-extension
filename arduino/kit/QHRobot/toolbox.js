@@ -255,6 +255,13 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <block type="QH_VoicePlayValue">
+        <value name="addr">
+            <shadow type="math_number">
+                <field name="NUM">5.0</field>
+            </shadow>
+        </value>
+    </block>
     <block type="QH_ASR_SendData"></block>
     <block type="QH_ASR_ReceiveData"></block>
     <block type="QH_ASR_CompareData"></block>

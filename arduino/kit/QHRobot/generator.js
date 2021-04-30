@@ -501,6 +501,14 @@ function addGenerator (Blockly) {
         var code = 'VoiceSendData('+addr+','+PIN+');\ndelay('+delayTime+');\n'
         return code;
     };
+    //语音模块读值
+    Blockly.Arduino.QH_VoicePlayValue = function() {
+        Blockly.Arduino.definitions_['include_QDPVoice'] = '#include <QDPVoice.h>';
+        var PIN = this.getFieldValue('PIN');
+        var addr = Blockly.Arduino.valueToCode(this, 'addr',Blockly.Arduino.ORDER_ATOMIC) || '0';
+        var code = 'VoicePlayValue('+addr+','+PIN+');\n'
+        return code;
+    };
      //语音识别发送数据
     Blockly.Arduino.QH_ASR_SendData = function() {
         var dropdown_pin = this.getFieldValue('pinn');
