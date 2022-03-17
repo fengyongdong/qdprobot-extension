@@ -11,16 +11,33 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
 
-      - run: npm i -g openblock-resource-cli@0.2.2
+      - name: resource-cli Install
+        uses: actions/checkout@v2
+        with:
+          repository: aopu-edu/openblock-resource-cli
+          ref: refs/heads/main
+          token: ${{ secrets.GH_PAT }}
+          path: openblock-resource-cli
+      - run: |
+          cd openblock-resource-cli
+          npm install
+          npm link
+
+      - name: external-resources Install
+        uses: actions/checkout@v2
+        with:
+          repository: aopu-edu/external-resources-qdp
+          ref: refs/heads/qdp
+          token: ${{ secrets.GH_PAT }}
+          path: external-resources
 
       - name: Pro-process resources
         run: |
+          cd external-resources
           opt-size
           gen-config --version=${{ github.ref_name }}
 
@@ -33,11 +50,11 @@ jobs:
       - name: Zip resources
         uses: vimtor/action-zip@v1
         with:
-            files: ./
-            dest: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
+            files: ./external-resources
+            dest: qdp-external-resources-${{ steps.get-version.outputs.VERSION }}.zip
 
       - name: Checksum
-        run: sha256sum external-resources-*.zip >> ${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
+        run: sha256sum qdp-external-resources-*.zip >> ${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
 
       - name: Create Release
         id: create_release
@@ -52,25 +69,13 @@ jobs:
 
             - **New feature**
 
-                1. Feature 1.
-                2. Feature 2.
-
-            - **Fix bug**
-
-                1. Bug 1.
-                2. Bug 2.
+                1. Update Traditional Chinese translation.
 
             ## 更改日志 (zh-cn)
 
             - **新功能**
 
-                1. 功能1。
-                2. 功能2。
-
-            - **修复错误**
-
-                1. 错误1。
-                2. 错误2。
+                1. 更新繁体中文翻译。
           draft: true
           prerelease: false
 
@@ -80,8 +85,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
-          asset_name: external-resources-${{ steps.get-version.outputs.VERSION }}.zip
+          asset_path: qdp-external-resources-${{ steps.get-version.outputs.VERSION }}.zip
+          asset_name: qdp-external-resources-${{ steps.get-version.outputs.VERSION }}.zip
           asset_content_type: application/zip
 
       # Upload checksum
@@ -99,5 +104,5 @@ jobs:
         run: |
           export DO_KEY_ID=${{ secrets.DO_KEY_ID }}
           export DO_SECRET_KEY=${{ secrets.DO_SECRET_KEY }}
-          upload-file --filePath=external-resources-${{ steps.get-version.outputs.VERSION }}.zip
+          upload-file --filePath=qdp-external-resources-${{ steps.get-version.outputs.VERSION }}.zip
           upload-file --filePath=${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt

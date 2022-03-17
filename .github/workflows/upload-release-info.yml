@@ -14,7 +14,17 @@ jobs:
         with:
           node-version: '14.x'
 
-      - run: npm i -g openblock-resource-cli@0.2.2
+      - name: resource-cli Install
+        uses: actions/checkout@v2
+        with:
+          repository: aopu-edu/openblock-resource-cli
+          ref: refs/heads/main
+          token: ${{ secrets.GH_PAT }}
+          path: openblock-resource-cli
+      - run: |
+          cd openblock-resource-cli
+          npm install
+          npm link
 
       # Fetch the release info and upload to digitalocean
       - name: Release resources to digital ocean spaces

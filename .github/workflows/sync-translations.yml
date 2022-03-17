@@ -2,7 +2,7 @@ name: Sync Translations
 
 on:
   push:
-    branches: [ main ]
+    branches: [ qdp ]
     paths-ignore:
       - 'README.md'
   schedule:
@@ -18,7 +18,17 @@ jobs:
         with:
           node-version: '14.x'
 
-      - run: npm i -g openblock-resource-cli@0.2.1
+      - name: resource-cli Install
+        uses: actions/checkout@v2
+        with:
+          repository: aopu-edu/openblock-resource-cli
+          ref: refs/heads/main
+          token: ${{ secrets.GH_PAT }}
+          path: openblock-resource-cli
+      - run: |
+          cd openblock-resource-cli
+          npm install
+          npm link
 
       - name: Sync translations
         run: |
