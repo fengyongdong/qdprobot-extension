@@ -5,8 +5,8 @@ const sharpIR = formatMessage => ({
     }),
     extensionId: 'sharpIR',
     version: '1.0.0',
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp8266'],
+ supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
+        'arduinoMega2560', 'arduinoEsp8266','QDPRobot_arduinoUnoUltra', 'QDPRobotIOT_arduinoEsp8266'],
     author: 'ArthurZheng',
     iconURL: `asset/sharpIR.png`,
     description: formatMessage({

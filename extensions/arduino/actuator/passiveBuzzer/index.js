@@ -6,7 +6,8 @@ const passiveBuzzer = formatMessage => ({
     extensionId: 'passiveBuzzer',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
-        'arduinoMega2560', 'arduinoEsp8266'],
+        'arduinoMega2560', 'arduinoEsp8266','QDPRobot_arduinoUnoUltra',
+    'QDPRobotC02_arduinoESP32QDP', 'QDPRobotIOT_arduinoEsp8266'], // TODO 需要测试esp8266兼容性
     author: 'ArthurZheng',
     iconURL: `asset/passiveBuzzer.png`,
     description: formatMessage({
