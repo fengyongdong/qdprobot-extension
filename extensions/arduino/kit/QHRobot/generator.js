@@ -78,6 +78,87 @@ function addGenerator (Blockly) {
         var code = 'distanceSensor_'+dropdown_pin+'.measureDistance'+dropdown_pin2+'()';
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     };
+
+    //超声波I2C
+    Blockly.Arduino.qdp_chaoshengboI2C = function() {
+        Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>';
+        Blockly.Arduino.setups_['setup_Wire_begin'] = 'Wire.begin();';
+        Blockly.Arduino.definitions_['var_declare_UltrasonicI2C'] ='float UltrasonicI2C() {\n'+
+    '  byte BYTE_H;\n'+
+    '  byte BYTE_M;\n'+
+    '  byte BYTE_L;\n'+
+    '  Wire.beginTransmission(0x57);\n'+
+    '  Wire.write(0x01);\n'+
+    '  Wire.endTransmission();\n'+
+    '  delay(100);\n'+
+    '  Wire.requestFrom(0x57, 3);\n'+
+    '  if (3 <= Wire.available())\n'+
+    '  {\n'+
+    '    BYTE_H = Wire.read();\n'+
+    '    BYTE_M = Wire.read();\n'+
+    '    BYTE_L = Wire.read();\n'+
+    '    float  distance = ((long(BYTE_H) << 16) + (long(BYTE_M) << 8) + long(BYTE_L)) / 1000.0;\n'+
+    '    return distance;\n'+
+    '  }\n'+
+    '  return 0;\n'+
+    '}\n'
+
+        var code = 'UltrasonicI2C()';
+       
+      return [code, Blockly.Arduino.ORDER_ATOMIC];
+      };
+
+      //超声波Serial
+    Blockly.Arduino.qdp_chaoshengboSerial = function() {
+      var dropdown_pin = this.getFieldValue('PIN');
+      var mode = this.getFieldValue('mode');
+      Blockly.Arduino.definitions_['define_qdport'] = '#include <QDPport.h>';
+
+      if(mode=='0'){
+        Blockly.Arduino.definitions_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>';
+        Blockly.Arduino.definitions_['var_declare_qdprobot_serial'+dropdown_pin] = 'SoftwareSerial  P'+dropdown_pin+'(QDPport['+dropdown_pin+'][1],QDPport['+dropdown_pin+'][0]);';
+        Blockly.Arduino.setups_['setup_qdprobot_serial'+dropdown_pin] = 'P'+dropdown_pin+'.begin(9600);';
+        Blockly.Arduino.definitions_['var_declare_UltrasonicSerial'] ='float UltrasonicSerial(Stream &Serialx) {\n'+
+      '  byte BYTE_H;\n'+
+      '  byte BYTE_M;\n'+
+      '  byte BYTE_L;\n'+
+      '  Serialx.write(0xA0);\n'+
+      '  delay(100);\n'+
+      '  while (Serialx.available() > 0) {\n'+
+      '    BYTE_H = Serialx.read();\n'+
+      '    BYTE_M = Serialx.read();\n'+
+      '    BYTE_L =Serialx.read();\n'+
+      '    float  distance = ((long(BYTE_H) << 16) + (long(BYTE_M) << 8) + long(BYTE_L)) / 1000.0;\n'+
+      '    return distance;\n'+
+      '  }\n'+
+      '  return 0;\n'+
+      '}\n'
+
+        var code = 'UltrasonicSerial(P'+dropdown_pin+')';
+
+      }else{
+        Blockly.Arduino.definitions_['var_declare_UltrasonicIO'] = 'float UltrasonicIO(uint8_t pin ) {\n'+
+    '  uint8_t Trig =QDPport[pin][0];\n'+
+    '  uint8_t Echo=QDPport[pin][1];\n'+
+    '  pinMode(Trig, OUTPUT);\n'+
+    '  pinMode(Echo, INPUT);\n'+
+    '  digitalWrite(Trig, LOW);\n'+
+    '  delayMicroseconds(2);\n'+
+    '  digitalWrite(Trig, HIGH);\n'+
+    '  delayMicroseconds(10);\n'+
+    '  digitalWrite(Trig, LOW);\n'+
+    '  float distance = pulseIn(Echo, HIGH) *342.62/2000;\n'+
+    '  delay(10);\n'+
+    '  return distance;\n'+
+    '}\n'
+
+        var code = 'UltrasonicIO('+dropdown_pin+')';
+
+      }
+      
+      return [code, Blockly.Arduino.ORDER_ATOMIC];
+    };
+
     //巡线
     Blockly.Arduino.QH_Line_follower = function() {
         var PIN = this.getFieldValue('PIN');
@@ -330,8 +411,29 @@ function addGenerator (Blockly) {
         var code = 'QDPRGBLED_' + pin1 + '.setRgbLEDColor('+NUM+','+R+','+G+','+B+');\n';
         return code;
     };
-    //蜂鸣器
 
+    //RBGLED2
+    Blockly.Arduino.QH_rgb_led2 = function() {
+        Blockly.Arduino.definitions_['include_display'] = '#include "QDPRGBLED.h"';
+        var pin1 = this.getFieldValue('PIN');
+        var NUM=Blockly.Arduino.valueToCode(this, 'num1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+
+        var color = Blockly.Arduino.valueToCode(this, 'colour', Blockly.Arduino.ORDER_ATOMIC).replace('#', '');
+        var R = '0x'+color.substr(0,2);
+        var G = '0x'+color.substr(2,2);
+        var B = '0x'+color.substr(4);
+        var NUM8=Blockly.Arduino.valueToCode(this, 'num8', Blockly.Arduino.ORDER_ATOMIC) || '0';
+
+        Blockly.Arduino.definitions_['define_qdport'] = '#include <QDPport.h>';
+        if (!Blockly.Arduino.definitions_['var_declare_rgb_display' + pin1]) {
+          Blockly.Arduino.definitions_['var_declare_rgb_display' + pin1] = 'QDPRGBLED QDPRGBLED_' + pin1 + ';';
+          Blockly.Arduino.setups_['setup_rgb_display_setpin' + pin1] = 'QDPRGBLED_' + pin1 + '.init(QDPport[' + pin1 + '][1],'+NUM8+');';
+        }  
+        var code = 'QDPRGBLED_' + pin1 + '.setRgbLEDColor('+NUM+','+R+','+G+','+B+');\n';
+        return code;
+    };
+
+    //蜂鸣器
     Blockly.Arduino.QH_buzzer=function(){
         var dropdown_pin = this.getFieldValue('PIN'); 
         var dropdown_pin2 = this.getFieldValue('PIN2');
@@ -458,7 +560,7 @@ function addGenerator (Blockly) {
         Blockly.Arduino.definitions_['define_qdportPWM2'] = '#include "QDP16PWM.h"';
         Blockly.Arduino.definitions_['var_declare_qdprobot_PWM'+dropdown_pin] = 'QDP16PWM pwm'+dropdown_pin+' = QDP16PWM(0x4'+dropdown_pin+');\n';
         Blockly.Arduino.setups_['setup_output_PWM'+dropdown_pin] ='pwm'+dropdown_pin+'.begin();\n';
-        var code = 'pwm'+dropdown_pin+'.setDegree1('+num2+','+num1+');\n';
+        var code = 'pwm'+dropdown_pin+'.setDegree1('+num1+','+num2+');\n';
         return code;
     };
     //舵机板360度设置参数
@@ -8246,7 +8348,7 @@ function addGenerator (Blockly) {
         data = data.replace(/\"/g,'')
         var bits = Blockly.Arduino.valueToCode(this, 'bits',Blockly.Arduino.ORDER_ATOMIC) || '0';
         var type = this.getFieldValue('TYPE');
-        var code ='irsend.send'+type+'('+data+','+bits+');';
+        var code ='irsend.send'+type+'('+data+','+bits+');\n';
         return code;
     };
     //红外发送数组
@@ -8291,9 +8393,17 @@ function addGenerator (Blockly) {
         var num3 = Blockly.Arduino.valueToCode(this, 'N3',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
         var num4 = Blockly.Arduino.valueToCode(this, 'N4',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
         var num5 = Blockly.Arduino.valueToCode(this, 'N5',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-        var code = "Serial.print(String(" + num1 + ")+','+String(" + num2 + ")+','+String(" + num3+ ")+','+String(" + num4 +")+','+String(" + num5 + "));";
+        var code = "Serial.print(String(" + num1 + ")+','+String(" + num2 + ")+','+String(" + num3+ ")+','+String(" + num4 +")+','+String(" + num5 + "));\n";
         return code;
     };
+     //蓝牙发送字符串
+
+Blockly.Arduino.qdp_BT_print_string = function() {
+   var TEXT = Blockly.Arduino.valueToCode(this, 'TEXT',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  
+  var code = "Serial.print(String(" + TEXT + "));\n";
+  return code;
+  };
     //更改串口定义
     Blockly.Arduino.QH_serial_change = function() {
         var dropdown_pin = this.getFieldValue('pinn');
@@ -8323,7 +8433,7 @@ function addGenerator (Blockly) {
         +'}\n'
         +'return false;\n'
         +'}\n';
-        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(9600);';
+        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(115200);';
         var code = 'portReceived_Serial('+num+')';
 
         }
@@ -8355,7 +8465,7 @@ function addGenerator (Blockly) {
         var num = Blockly.Arduino.valueToCode(this, 'text',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
         Blockly.Arduino.definitions_['define_qdport'] = '#include <QDPport.h>';
         if(dropdown_pin==5){
-        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(9600);';
+        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(115200);';
         var code = 'Serial.'+OutputModel+'('+num+');\n'; 
         }else{
         Blockly.Arduino.definitions_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>';
@@ -8370,7 +8480,7 @@ function addGenerator (Blockly) {
         var dropdown_pin = this.getFieldValue('pin1');
         Blockly.Arduino.definitions_['define_qdport'] = '#include <QDPport.h>';
         if(dropdown_pin==5){
-        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(9600);';
+        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(115200);';
         var code = 'Serial.readString()'; 
         }else{
         Blockly.Arduino.definitions_['define_SoftwareSerial'] = '#include <SoftwareSerial.h>';
@@ -8385,7 +8495,7 @@ function addGenerator (Blockly) {
         var dropdown_pin = this.getFieldValue('pin1');
         Blockly.Arduino.definitions_['define_qdport'] = '#include <QDPport.h>';
         if(dropdown_pin==5){
-        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(9600);';
+        Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(115200);';
         var code = 'Serial.available() > 0\n';
 
         }else{
@@ -9952,12 +10062,26 @@ function addGenerator (Blockly) {
         code = name;
         return [code, Blockly.Arduino.ORDER_NONE];
     };
+    //字符串
+    Blockly.Arduino.QH_string = function() {
+        var name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
+        code = 'String('+name+')';
+        return [code, Blockly.Arduino.ORDER_NONE];
+    };
+
+    //字符
+    Blockly.Arduino.QH_char = function() {
+        var name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
+        name = name.replace(/\"/g,'');
+        code = '\''+name+'\'';
+        return [code, Blockly.Arduino.ORDER_NONE];
+    };
     //变量set
     Blockly.Arduino.QH_variables_set = function() {
         var name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
         name = name.replace(/\"/g,'');
         var value = Blockly.Arduino.valueToCode(this, 'VALUE',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
-        value = value.replace(/\"/g,'');
+        //value = value.replace(/\"/g,'');
         code = name+'\='+value+';\n';
         return code;
     };
