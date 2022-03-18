@@ -39,6 +39,8 @@ jobs:
         run: |
           cd external-resources
           opt-size
+          opt-size
+          gen-config --version=${{ github.ref_name }}
           gen-config --version=${{ github.ref_name }}
 
       - name: Get version
