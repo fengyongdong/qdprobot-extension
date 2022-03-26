@@ -50,14 +50,8 @@ bool Adafruit_I2CDevice::detected(void) {
   // A basic scanner, see if it ACK's
   _wire->beginTransmission(_addr);
   if (_wire->endTransmission() == 0) {
-#ifdef DEBUG_SERIAL
-    DEBUG_SERIAL.println(F("Detected"));
-#endif
     return true;
   }
-#ifdef DEBUG_SERIAL
-  DEBUG_SERIAL.println(F("Not detected"));
-#endif
   return false;
 }
 
@@ -131,8 +125,7 @@ bool Adafruit_I2CDevice::write(const uint8_t *buffer, size_t len, bool stop,
 #endif
 
 #ifdef DEBUG_SERIAL
-  DEBUG_SERIAL.print("Stop: ");
-  DEBUG_SERIAL.println(stop);
+  // DEBUG_SERIAL.print("Stop: "); DEBUG_SERIAL.println(stop);
 #endif
 
   if (_wire->endTransmission(stop) == 0) {
@@ -157,25 +150,17 @@ bool Adafruit_I2CDevice::write(const uint8_t *buffer, size_t len, bool stop,
  *    @return True if read was successful, otherwise false.
  */
 bool Adafruit_I2CDevice::read(uint8_t *buffer, size_t len, bool stop) {
-  size_t pos = 0;
-  while (pos < len) {
-    size_t read_len =
-        ((len - pos) > maxBufferSize()) ? maxBufferSize() : (len - pos);
-    bool read_stop = (pos < (len - read_len)) ? false : stop;
-    if (!_read(buffer + pos, read_len, read_stop))
-      return false;
-    pos += read_len;
-  }
-  return true;
-}
-
-bool Adafruit_I2CDevice::_read(uint8_t *buffer, size_t len, bool stop) {
-#if defined(TinyWireM_h)
-  size_t recv = _wire->requestFrom((uint8_t)_addr, (uint8_t)len);
-#else
-  size_t recv = _wire->requestFrom((uint8_t)_addr, (uint8_t)len, (uint8_t)stop);
+  if (len > maxBufferSize()) {
+    // currently not guaranteed to work if more than 32 bytes!
+    // we will need to find out if some platforms have larger
+    // I2C buffer sizes :/
+#ifdef DEBUG_SERIAL
+    DEBUG_SERIAL.println(F("\tI2CDevice could not read such a large buffer"));
 #endif
+    return false;
+  }
 
+  size_t recv = _wire->requestFrom((uint8_t)_addr, (uint8_t)len, (uint8_t)stop);
   if (recv != len) {
     // Not enough data available to fulfill our obligation!
 #ifdef DEBUG_SERIAL
@@ -242,11 +227,10 @@ uint8_t Adafruit_I2CDevice::address(void) { return _addr; }
  *    Not necessarily that the speed was achieved!
  */
 bool Adafruit_I2CDevice::setSpeed(uint32_t desiredclk) {
-#if (ARDUINO >= 157) && !defined(ARDUINO_STM32_FEATHER) && !defined(TinyWireM_h)
+#if (ARDUINO >= 157) && !defined(ARDUINO_STM32_FEATHER)
   _wire->setClock(desiredclk);
   return true;
 #else
-  (void)desiredclk;
   return false;
 #endif
 }

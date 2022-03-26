@@ -28,7 +28,6 @@ private:
   TwoWire *_wire;
   bool _begun;
   size_t _maxBufferSize;
-  bool _read(uint8_t *buffer, size_t len, bool stop);
 };
 
 #endif // Adafruit_I2CDevice_h

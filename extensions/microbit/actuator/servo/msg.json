@@ -1,4 +1,0 @@
-{
-    "SERVO_CATEGORY": "Servo",
-    "SERVO_WRITE": "set servo pin %1 out %2"
-}
