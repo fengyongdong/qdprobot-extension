@@ -25,6 +25,18 @@ function addMsg (Blockly) {
         IOT_REMOTE_CONTROL_get_the_joystick_value:'获取摇杆当前角度'
 
     });
+    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
+        QHGAMEPAD_CATEGORY:'IOT遙控器',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT: '%1按鈕 按鍵%2 觸發方式 %3%4執行%5',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_CHANGED : '變化時',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_PRESSED : '按下時',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_RELEASED : '釋放時',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_LONGCLICKDETECTED : '長按時',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_longClick : '長按鬆開時',
+        IOT_REMOTE_CONTROL_BUTTON_EVENT_DOUBLECLICK : '雙擊',
+        IOT_REMOTE_CONTROL_get_the_joystick_value:'獲取搖杆當前角度'
+
+    });
     return Blockly;
 }
 

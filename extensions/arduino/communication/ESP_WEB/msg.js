@@ -66,6 +66,38 @@ function addMsg (Blockly) {
         QH_SERIAL_PRINTLN:'打印(自动换行)',
 
     });
+    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
+        QH_WEB_CATEGORY:'網頁編輯',
+        QDP_esp32_web_page_init:'%1網頁編輯 初始化 %2 %3',
+        QDP_esp32_web_page_add:'網頁編輯 增加 %1 ID %2 名稱 %3',
+        NumberCard:'數字',
+        HumidityCard:'濕度',
+        StatusCard:'狀態',
+        ButtonCard:'按鈕',
+        GaugeChart:'儀錶盤',
+        SliderCard:'滑杆',
+        TemperatureCard:'溫度',
+        QDP_esp32_web_page_addTemperatureCard:'網頁編輯 增加濕度 ID %1 名稱 %2 類型 %3',
+        QDP_esp32_web_page_addSliderCard:'網頁編輯 增加滑杆 ID %1 名稱 %2 類型 %3',
+        QDP_ESP8266_web_page_Slider_type0:'垂直自下而上',
+        QDP_ESP8266_web_page_Slider_type1:'垂直自上而下',
+        QDP_ESP8266_web_page_Slider_type2:'水準從左到右',
+        QDP_ESP8266_web_page_Slider_type3:'水準從左到右',
+        QDP_esp32_web_page_attachSliderChanged:'網頁編輯 鏈接滑杆變化事件',
+        QDP_esp32_web_page_Slider_id:'滑杆 ID %1',
+        QDP_esp32_web_page_SliderChanged:'%1 網頁編輯 滑杆事件 const char* id, int value %2 %3',
+        QDP_esp32_web_page_attachButtonClick:'網頁編輯 鏈接按鈕事件',
+        QDP_esp32_web_page_ButtonClick:'%1 網頁編輯 按鈕事件 const char* id %2 %3',
+        QDP_esp32_web_page_Button_id:'按鈕 ID %1',
+        QDP_esp32_web_page_addLineChart:'網頁編輯 增加 折線圖 ID %1 名稱 %2 X軸的值(int數組或字串數組 %3 Y軸名字 %4 Y軸值 %5',
+        QDP_esp32_web_page_updateLineChart:'網頁編輯 更新 折線圖 ID %1 X軸的值(int數組或字串數組) %2 Y軸值(int數組) %3',
+        QDP_esp32_web_page_update:'網頁編輯 更新 %1 ID %2 值 %3',
+        QDP_web_serial_init:'%1 Web 串口 初始化',
+        QDP_web_print_data_32:'Web 串口列印 %1 %2',
+        QDP_web_receive_data_32:'%1 Web 讀取字串 %2 %3',
+        QH_SERIAL_PRINT:'列印',
+        QH_SERIAL_PRINTLN:'列印(自動換行)'
+    });
     return Blockly;
 }
 

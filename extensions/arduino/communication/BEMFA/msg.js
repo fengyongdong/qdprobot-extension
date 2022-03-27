@@ -17,6 +17,14 @@ function addMsg (Blockly) {
         println:'换行',
         QDP_tcp_device_cloud_theme_push:'巴法云物联网 推送 %1 密钥 %2 主题 %3 内容 %4'
     });
+    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
+        QH_BEMFA_CATEGORY:'巴法雲',
+        QDP_tcp_device_cloud_subscription:'巴法雲物聯網 %1 密鑰 %2 主題 %3 %4 收到消息 %5',
+        serialPrint:'串口列印 %1 %2',
+        print:'不換行',
+        println:'換行',
+        QDP_tcp_device_cloud_theme_push:'巴法雲物聯網 推送 %1 密鑰 %2 主題 %3 內容 %4'
+    });
     return Blockly;
 }
 

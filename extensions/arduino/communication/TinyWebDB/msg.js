@@ -18,6 +18,14 @@ function addMsg (Blockly) {
         QDP_web_microdatabase_count_tags:'网络微数据库 查询标签数',
 
     });
+    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
+        QH_DATABASE_CATEGORY:'網路微資料庫',
+        QDP_network_microdatabase_initialization:'網路微資料庫 初始化 用戶名 %1 密碼 %2',
+        QDP_web_microdatabase_update_tags:'網路微資料庫 更新標籤 標籤名 %1 值 %2',
+        QDP_web_microdatabase_delete_tags:'網路微資料庫 刪除標籤 標籤名 %1',
+        QDP_web_microdatabase_get_tags:'網路微資料庫 獲取標籤 標籤名 %1 的值',
+        QDP_web_microdatabase_count_tags:'網路微資料庫 查詢標籤數',
+    });
     return Blockly;
 }
 

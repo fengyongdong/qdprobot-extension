@@ -1,5 +1,11 @@
 {
     "en": {
+        "QDPRobot.name": "QDPRobot UNO",
+        "QDPRobot.description": "QDProbot.",
+        "QDPRobotC02.name": "QDPRobot ESP32",
+        "QDPRobotC02.description": "QDProbot C02.",
+        "QDPRobotIOT.name": "QDPRobot ESP8266",
+        "QDPRobotIOT.description": "QDProbot.",
         "chineseTTS.name": "Chinese TTS",
         "chineseTTS.description": "Text to speech module based on SYN6288, support Chinese and English letters and numbers.",
         "l298n.description": "Common high power dual motor drive module.",
@@ -55,6 +61,12 @@
         "servo.description": "Classic servo support for microbit."
     },
     "zh-cn": {
+        "QDPRobot.name": "QDPRobot UNO",
+        "QDPRobot.description": "齐护机器人。",
+        "QDPRobotC02.name": "QDPRobot ESP32",
+        "QDPRobotC02.description": "齐护机器人 C02。",
+        "QDPRobotIOT.name": "QDPRobot ESP8266",
+        "QDPRobotIOT.description": "齐护机器人。",
         "chineseTTS.name": "中文 TTS",
         "chineseTTS.description": "基于 SYN6288 的语音合成模块, 支持中文、英文字母以及数字。",
         "l298n.description": "常见的高功率双路电机驱动模块。",
@@ -110,6 +122,12 @@
         "servo.description": "让 Microbit 可以控制普通的舵机。"
     },
     "zh-tw": {
+        "QDPRobot.name": "QDPRobot UNO",
+        "QDPRobot.description": "齊護機器人。",
+        "QDPRobotC02.name": "QDPRobot ESP32",
+        "QDPRobotC02.description": "齊護機器人 C02。",
+        "QDPRobotIOT.name": "QDPRobot ESP8266",
+        "QDPRobotIOT.description": "齊護機器人。",
         "chineseTTS.name": "中文 TTS",
         "chineseTTS.description": "基於 SYN6288 的語音合成模塊, 支持中文、英文字母以及數字。",
         "l298n.description": "常見的高功率雙路電機驅動模塊。",

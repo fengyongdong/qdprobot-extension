@@ -33,6 +33,21 @@ function addMsg (Blockly) {
         IOT_PRO_GET_LINESENSOR_STATE : '巡线传感器状态 D1 %1 D2 %2 D3 %3 D4 %4 D5 %5'
 
     });
+    Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
+        QHIOT_PRO_CATEGORY:'IOT核心板',
+        IOT_PRO_ENCODER_PAUSE_COUNT:'IOT_Pro 旋轉編碼器 %1 %2',
+        PAUSE_COUNT : '暫停計數',
+        RESUME_COUNT : '計數',
+        CLEAR_COUNT : '清除計數',
+        IOT_PRO_ENCODER_GET_COUNT:'IOT_Pro 旋轉編碼器 獲取當前值 %1',
+        IOT_PRO_IO_DIGITAL_WRITE:'IOT_Pro 數字輸出 端口 %1 設為 %2',
+        IOT_PRO_IO_DIGITAL_READ:'IOT_Pro 數字輸入 端口 %1 模式 %2',
+        IOT_PRO_IO_INPUT : '輸入',
+        IOT_PRO_IO_PULLUP : '上拉輸入',
+        IOT_PRO_MOTOR_RUN : 'IOT_Pro 電機運行 端口 %1 速度-255~255 %2',
+        IOT_PRO_MOTOR_BRAKE : 'IOT_Pro 電機刹車 端口 %1',
+        IOT_PRO_GET_LINESENSOR_STATE : '巡線感測器狀態 D1 %1 D2 %2 D3 %3 D4 %4 D5 %5'
+    });
     return Blockly;
 }
 
