@@ -4,7 +4,7 @@ function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         OLED_CATEGORY: 'OLED',
         OLED_INIT: 'init oled width %1 height %2 I2C address %3',
-        OLED_DRAWLINE: 'draw line x0: %1 y0: %2, x1: %3 y1：%4 color %5',
+        OLED_DRAWLINE: 'draw line x0: %1 y0: %2, x1: %3 y1: %4 color %5',
         OLED_COLOR_WHITE: 'white',
         OLED_COLOR_BLACK: 'black',
         OLED_COLOR_INVERSE: 'inverse',
@@ -33,7 +33,7 @@ function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         OLED_CATEGORY: 'OLED',
         OLED_INIT: '初始化 oled 宽度 %1 高度 %2 I2C 地址 %3',
-        OLED_DRAWLINE: '绘制直线 x0: %1 y0: %2, x1: %3 y1：%4 颜色 %5',
+        OLED_DRAWLINE: '绘制直线 x0: %1 y0: %2, x1: %3 y1: %4 颜色 %5',
         OLED_COLOR_WHITE: '白色',
         OLED_COLOR_BLACK: '黑色',
         OLED_COLOR_INVERSE: '反转',
@@ -58,6 +58,35 @@ function addMsg (Blockly) {
         OLED_SCROLL_DIAGRIGHT: '右对角',
         OLED_SCROLL_DIAGLEFT: '左对角',
         OLED_STOPSCROLL: '停止滚动'
+    });
+    Object.assign(Blockly.ScratchMsgs.locales['zh-tw'], {
+        OLED_CATEGORY: 'OLED',
+        OLED_INIT: '初始化 oled 寬度 %1 高度 %2 I2C 地址 %3',
+        OLED_DRAWLINE: '繪製直線 x0: %1 y0: %2, x1: %3 y1: %4 顏色 %5',
+        OLED_COLOR_WHITE: '白色',
+        OLED_COLOR_BLACK: '黑色',
+        OLED_COLOR_INVERSE: '反轉',
+        OLED_DRAWRECT: '繪製矩形 x: %1 y: %2 寬度 %3 高度 %4 顏色 %5',
+        OLED_FILLRECT: '填充矩形 x: %1 y: %2 寬度 %3 高度 %4 顏色 %5',
+        OLED_DRAWCIRCLE: '繪製圓形 x: %1 y: %2 半徑 %3 顏色 %4',
+        OLED_FILLCIRCLE: '填充圓形 x: %1 y: %2 半徑 %3 顏色 %4',
+        OLED_DRAWROUNDRECT: '繪製圓角矩形 x: %1 y: %2 寬度 %3 高度 %4 半徑 %5 顏色 %6',
+        OLED_FILLROUNDRECT: '填充圓角矩形 x: %1 y: %2 寬度 %3 高度 %4 半徑 %5 顏色 %6',
+        OLED_DRAWTRIANGLE: '繪製三角形 x0: %1 y0: %2, x1: %3 y1: %4, x2: %5 y2: %6 顏色 %7',
+        OLED_FILLTRIANGLE: '填充三角形 x0: %1 y0: %2, x1: %3 y1: %4, x2: %5 y2: %6 顏色 %7',
+        OLED_SETTEXT: '設置字體大小 %1 顏色 %2 背景色 color %3',
+        OLED_SETCURSOR: '設置游標 x: %1 y: %2',
+        OLED_PRINT: '列印 %1 %2',
+        OLED_EOL_WARP: '換行',
+        OLED_EOL_NOWARP: '不換行',
+        OLED_CLEAR: '清空 oled',
+        OLED_REFRESH: '刷新 oled',
+        OLED_STARTSCROLL: '開始滾動 %1 y0: %2 y1: %3',
+        OLED_SCROLL_RIGHT: '向右',
+        OLED_SCROLL_LEFT: '向左',
+        OLED_SCROLL_DIAGRIGHT: '右對角',
+        OLED_SCROLL_DIAGLEFT: '左對角',
+        OLED_STOPSCROLL: '停止滾動'
     });
     return Blockly;
 }
