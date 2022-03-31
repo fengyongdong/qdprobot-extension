@@ -5,9 +5,9 @@ const mpu6050 = formatMessage => ({
     }),
     extensionId: 'mpu6050',
     version: '1.0.0',
- supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
+    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266','QDPRobot_arduinoUnoUltra',
-    'QDPRobotC02_arduinoESP32QDP', 'QDPRobotIOT_arduinoEsp8266'],
+        'QDPRobotC02_arduinoESP32QDP', 'QDPRobotIOT_arduinoEsp8266'],
     author: 'ArthurZheng',
     iconURL: `asset/mpu6050.png`,
     description: formatMessage({
@@ -20,6 +20,7 @@ const mpu6050 = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     library: 'lib',
+    official: true,
     tags: ['sensor'],
     helpLink: 'https://openblockcc.gitee.io/wiki/main'
 });
