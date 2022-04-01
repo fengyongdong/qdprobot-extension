@@ -29,7 +29,7 @@
     #include "ESP8266WiFi.h"
     #include "ESPAsyncTCP.h"
     #include "ESPAsyncWebServer.h"
-    #include "ArduinoJson.h"
+    #include "ArduinoJson6_8.h"
 #elif defined(ESP32)
     #define HARDWARE "ESP32"
     #include <esp_int_wdt.h>
@@ -37,7 +37,7 @@
     #include "WiFi.h"
     #include "AsyncTCP.h"
     #include "ESPAsyncWebServer.h"
-    #include "ArduinoJson.h"
+    #include "ArduinoJson6_8.h"
 #endif
 
 #include "webpage.h"
