@@ -484,6 +484,53 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <label text="%{BKY_QH_MECANUM_LABEL}"></label>
+    <block type="qdp_esp32_servomotor360_mecanum_init"></block>
+        <block type="qdp_esp32_servomotor360_mecanum_run">
+            <value name="speed1">
+                <shadow type="math_number">
+                    <field name="NUM">8</field>
+                </shadow>
+            </value>
+            <value name="speed2">
+                <shadow type="math_number">
+                    <field name="NUM">8</field>
+                </shadow>
+            </value>
+            <value name="speed3">
+                <shadow type="math_number">
+                    <field name="NUM">8</field>
+                </shadow>
+            </value>
+            <value name="speed4">
+                <shadow type="math_number">
+                    <field name="NUM">8</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="qdp_esp32_motor_mecanum_init"></block>
+        <block type="qdp_esp32_motor_mecanum_run">
+            <value name="speed1">
+                <shadow type="math_number">
+                    <field name="NUM">200</field>
+                </shadow>
+            </value>
+            <value name="speed2">
+                <shadow type="math_number">
+                    <field name="NUM">200</field>
+                </shadow>
+            </value>
+            <value name="speed3">
+                <shadow type="math_number">
+                    <field name="NUM">200</field>
+                </shadow>
+            </value>
+            <value name="speed4">
+                <shadow type="math_number">
+                    <field name="NUM">200</field>
+                </shadow>
+            </value>
+        </block>
 </category>
 <category name="%{BKY_QH_SPEECH_CATEGORY}" id="QH_SPEECH_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_SPEECH_ICO}">
     <block type="QDP32_ASR_SendData"></block>

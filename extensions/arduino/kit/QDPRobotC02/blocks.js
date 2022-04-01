@@ -154,6 +154,8 @@ function addBlocks (Blockly) {
 
    const QH_PS2_ICO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM2MzM2MDM1NTA2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjUgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjYwMzMwIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjMyLjAzMTI1IiBoZWlnaHQ9IjMyIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik0yMDguMSAzMDQuOGMzNy4zIDAgNjkuNCA4IDk2LjYgMjEuNnYtMjkuNWMwLTE1LjYtMTIuNy0yOC4zLTI4LjMtMjguM0gxMzAuM2MtMTUuNiAwLTI4LjMgMTIuNy0yOC4zIDI4LjN2MzQuNGMyOS4xLTE2LjYgNjQuNC0yNi41IDEwNi4xLTI2LjV6TTgyMC45IDMwNC44Yy0zNy4zIDAtNjkuNCA4LTk2LjYgMjEuNnYtMjkuNWMwLTE1LjYgMTIuNy0yOC4zIDI4LjMtMjguM2gxNDYuMmMxNS42IDAgMjguMyAxMi43IDI4LjMgMjguM3YzNC40Yy0yOS4yLTE2LjYtNjQuNS0yNi41LTEwNi4yLTI2LjV6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSI2MDMzMSIgZGF0YS1zcG0tYW5jaG9yLWlkPSJhMzEzeC43NzgxMDY5LjAuaTEwNiIgY2xhc3M9InNlbGVjdGVkIj48L3BhdGg+PHBhdGggZD0iTTg0NC41IDQ1NC40YzE0LjgtMTQuOCAxNC44LTM4LjggMC01My41LTE0LjgtMTQuOC0zOC44LTE0LjgtNTMuNSAwLTE0LjggMTQuOC0xNC44IDM4LjggMCA1My41IDE0LjcgMTQuOCAzOC43IDE0LjggNTMuNSAweiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNjAzMzIiIGRhdGEtc3BtLWFuY2hvci1pZD0iYTMxM3guNzc4MTA2OS4wLmkxMDciIGNsYXNzPSJzZWxlY3RlZCI+PC9wYXRoPjxwYXRoIGQ9Ik05NDMuNSA0OTkuOWMtMTQuOC0xNC44LTM4LjctMTQuOC01My41IDAtMTQuOCAxNC44LTE0LjggMzguOCAwIDUzLjUgMTQuOCAxNC44IDM4LjggMTQuOCA1My41IDAgMTQuOC0xNC43IDE0LjgtMzguNyAwLTUzLjV6TTY5Ni42IDQ5NS4yYy0xNC44IDE0LjgtMTQuOCAzOC44IDAgNTMuNSAxNC44IDE0LjggMzguOCAxNC44IDUzLjUgMCAxNC44LTE0LjggMTQuOC0zOC44IDAtNTMuNS0xNC44LTE0LjctMzguOC0xNC43LTUzLjUgMHoiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjYwMzMzIiBkYXRhLXNwbS1hbmNob3ItaWQ9ImEzMTN4Ljc3ODEwNjkuMC5pMTA0IiBjbGFzcz0ic2VsZWN0ZWQiPjwvcGF0aD48cGF0aCBkPSJNNzk1LjYgNTk0LjNjLTE0LjggMTQuOC0xNC44IDM4LjggMCA1My41IDE0LjggMTQuOCAzOC44IDE0LjggNTMuNiAwIDE0LjgtMTQuOCAxNC44LTM4LjggMC01My41LTE0LjktMTQuOC0zOC44LTE0LjgtNTMuNiAweiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNjAzMzQiIGRhdGEtc3BtLWFuY2hvci1pZD0iYTMxM3guNzc4MTA2OS4wLmkxMDUiIGNsYXNzPSJzZWxlY3RlZCI+PC9wYXRoPjxwYXRoIGQ9Ik0xNzQuMSAzNzkuNmMtMy45IDAtNy4xIDMuMi03LjEgNy4xdjQxLjljMCAzLjkgMi41IDkuMSA1LjUgMTEuNWwyOC41IDIyLjhjMyAyLjQgOCAyLjQgMTEgMGwyOC42LTIyLjhjMy0yLjQgNS41LTcuNiA1LjUtMTEuNXYtNDEuOWMwLTMuOS0zLjItNy4xLTcuMS03LjFoLTY0Ljl6TTYyIDU1Ni42YzAgMy45IDMuMiA3LjEgNy4xIDcuMUgxMTFjMy45IDAgOS4xLTIuNSAxMS41LTUuNWwyMi44LTI4LjVjMi41LTMgMi41LTggMC0xMWwtMjIuOC0yOC42Yy0yLjQtMy03LjYtNS41LTExLjUtNS41SDY5Yy0zLjkgMC03LjEgMy4yLTcuMSA3LjF2NjQuOXpNMjM5LjEgNjY4LjhjMy45IDAgNy4xLTMuMiA3LjEtNy4xdi00MS45YzAtMy45LTIuNS05LjEtNS41LTExLjVsLTI4LjUtMjIuOGMtMy0yLjQtOC0yLjQtMTEgMGwtMjguNSAyMi44Yy0zIDIuNC01LjUgNy42LTUuNSAxMS41bC0wLjEgNDEuOWMwIDMuOSAzLjIgNy4xIDcuMSA3LjFoNjQuOXpNMzUxLjIgNDkxLjdjMC0zLjktMy4yLTcuMS03LjEtNy4xaC00MS45Yy0zLjkgMC05IDIuNS0xMS41IDUuNWwtMjIuOCAyOC41Yy0yLjQgMy0yLjQgOCAwIDExbDIyLjggMjguNWMyLjQgMyA3LjYgNS41IDExLjUgNS41bDQxLjkgMC4xYzMuOSAwIDcuMS0zLjIgNy4xLTcuMXYtNjQuOXoiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjYwMzM1IiBkYXRhLXNwbS1hbmNob3ItaWQ9ImEzMTN4Ljc3ODEwNjkuMC5pMTAzIiBjbGFzcz0ic2VsZWN0ZWQiPjwvcGF0aD48cGF0aCBkPSJNNzc2LjEgMTYuM2MtOTIgMC0xNjIuOCAyNi41LTIxMC41IDc4LjctNjMuNCA2OS40LTY1LjUgMTYxLjctNjQuNSAxODkuMmgyOC4zYy0wLjctMjEuNyAwLjItMTA4IDU3LjMtMTcwLjMgNDIuMS00NiAxMDUuOS02OS4zIDE4OS40LTY5LjMgNy44IDAgMTQuMS02LjMgMTQuMS0xNC4xcy02LjMtMTQuMi0xNC4xLTE0LjJ6IiBmaWxsPSIjNjI2MjY0IiBwLWlkPSI2MDMzNiI+PC9wYXRoPjxwYXRoIGQ9Ik04MTQuMSAzMTQuM2MtNDQuOSAwLTg2LjQgMTQuMS0xMjAuNiAzNy45aC0yMS45Yy01LjItMTguMS0yMS43LTMxLjQtNDEuNS0zMS40SDU4N3YtMS42YzAtMTUuNi0xMi43LTI4LjMtMjguMy0yOC4zaC04Ny4yYy0xNS42IDAtMjguMyAxMi43LTI4LjMgMjguM3YxLjZoLTQ2LjljLTE5LjggMC0zNi4yIDEzLjMtNDEuNSAzMS40aC0yMS45Yy0zNC4yLTIzLjktNzUuNy0zNy45LTEyMC42LTM3LjktMTE2LjYgMC0yMTEuMSA5NC41LTIxMS4xIDIxMS4xdjQyNC4yYzAgNDcgNDAgNzkuMiA5My42IDE5LjkgNTAuNi01NS45IDE5Mi45LTE5NS45IDI1Ny45LTI2OC4yIDEtMC45IDItMS45IDMuMS0yLjggMTQuOCAxNSAzNS4zIDI0LjQgNTggMjQuNCAzNy43IDAgNjkuMi0yNS44IDc4LjQtNjAuNmg0MmM5LjMgMzQuOCA0MC43IDYwLjYgNzguNCA2MC42IDIyLjcgMCA0My4yLTkuMyA1OC0yNC40IDEgMSAyLjEgMS45IDMuMSAyLjggNjUgNzIuMyAyMDcuMyAyMTIuMyAyNTcuOSAyNjguMiA1My42IDU5LjMgOTMuNiAyNy4xIDkzLjYtMTkuOVY1MjUuNGMwLTExNi42LTk0LjUtMjExLjEtMjExLjEtMjExLjF6TTIwNi42IDcwNGMtOTkuMyAwLTE3OS44LTgwLjUtMTc5LjgtMTc5LjhzODAuNS0xNzkuOCAxNzkuOC0xNzkuOGM5OS4zIDAgMTc5LjggODAuNSAxNzkuOCAxNzkuOFMzMDUuOSA3MDQgMjA2LjYgNzA0eiBtMjcwLjEtODMuM2MwIDMuNy0yLjggNS42LTYuMyA0LjJsLTQzLjEtMThjLTMuNS0xLjUtMy41LTMuOCAwLTUuM2w0My4xLTE4YzMuNC0xLjQgNi4zIDAuNCA2LjMgNC4ydjMyLjl6TTU5OSA2MDYuOWwtNDMgMThjLTMuNSAxLjQtNi4zLTAuNC02LjMtNC4ydi0zMi44YzAtMy43IDIuOC01LjYgNi4zLTQuMmw0MyAxOGMzLjUgMS40IDMuNSAzLjcgMCA1LjJ6TTgxOS45IDcwNGMtOTkuMyAwLTE3OS44LTgwLjUtMTc5LjgtMTc5LjhzODAuNS0xNzkuOCAxNzkuOC0xNzkuOGM5OS4zIDAgMTc5LjggODAuNSAxNzkuOCAxNzkuOFM5MTkuMiA3MDQgODE5LjkgNzA0eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNjAzMzciIGRhdGEtc3BtLWFuY2hvci1pZD0iYTMxM3guNzc4MTA2OS4wLmkxMDIiIGNsYXNzPSJzZWxlY3RlZCI+PC9wYXRoPjwvc3ZnPg==';
 
+   const QH_MECANUM_ICO = 'data:image/png;base64,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';
+
 
     var qdprobotESP32_BOTH_PIN_Display_Dropdown = [
     ['.P0-32-33（Display）','0'],
@@ -2368,6 +2370,19 @@ function addBlocks (Blockly) {
         }
     };
 
+    var qdprobotESP32_MOTOR_PIN_Output_Dropdown = [
+    ['.P3-21-22（IIC）','3'],
+    ['.P4-16-17（RGB）','4'],
+    ['.P5-18-5','5'],
+    ['.P6-23-19','6'],
+    ['.P7-15-2（touch)','7'],
+    ['.P8-27-14（touch）','8'],
+    ['.P9-12-13（touch）','9'],
+    ['.P10-25-26','10'],
+    ['4-17(mini M1)','0'],
+    ['32-33(mini M2)','1']
+    ];
+
     //直流电机
     Blockly.Blocks.qdp_esp32_motor = {
         init: function () {
@@ -2391,7 +2406,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN',
-                        options: qdprobotESP32_BOTH_PIN_Output_Dropdown
+                        options: qdprobotESP32_MOTOR_PIN_Output_Dropdown
                     },
                     {
                         type: 'input_value',
@@ -2405,6 +2420,280 @@ function addBlocks (Blockly) {
             });
         }
     };
+
+    //舵机360麦克纳姆轮小车初始化
+    Blockly.Blocks.qdp_esp32_servomotor360_mecanum_init = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_esp32_servomotor360_mecanum_init,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_MECANUM_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin1',
+                        options: qdprobotESP32_L_PIN_Input_Dropdown
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin2',
+                        options: qdprobotESP32_L_PIN_Input_Dropdown
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin3',
+                        options: qdprobotESP32_L_PIN_Input_Dropdown
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin4',
+                        options: qdprobotESP32_L_PIN_Input_Dropdown
+                    }
+                ],
+                "tooltip": "定义接360度舵机的端口号，注意要对应位置，按照块上图标方式安装轮向。",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+            this.setFieldValue("P6L","pin1");
+            this.setFieldValue("P7L","pin2");
+            this.setFieldValue("P9L","pin3");
+            this.setFieldValue("P10L","pin4");
+        }
+    };
+
+    //舵机360麦克纳姆轮小车执行
+    Blockly.Blocks.qdp_esp32_servomotor360_mecanum_run = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_esp32_servomotor360_mecanum_run,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_MECANUM_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'action',
+                        options: [
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Forward,'0'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Backward,'1'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Upper_Right,'2'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Lower_Left,'3'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Upper_Left,'4'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Lower_Right,'5'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Move_Left,'6'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Move_Right,'7'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Clockwise,'8'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Counter_Clockwise,'9'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Right,'10'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Right_Back,'11'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Left,'12'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Left_back,'13'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Stop,'14']
+                                ]
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check1',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed1'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check2',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed2'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check3',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed3'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check4',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed4'
+                    }
+                ],
+                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的商品上，确保电机的旋转方向正确。\n",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    var qdprobotESP32_MOTOR_mecanum_PIN = [
+        ['.P3-21-22（IIC）','P3R,P3L'],
+        ['.P4-16-17（RGB）','P4R,P4L'],
+        ['.P5-18-5','P5R,P5L'],
+        ['.P6-23-19','P6R,P6L'],
+        ['.P7-15-2（touch)','P7R,P7L'],
+        ['.P8-27-14（touch）','P8R,P8L'],
+        ['.P9-12-13（touch）','P9R,P9L'],
+        ['.P10-25-26','P10R,P10L'],
+        ['M1(pro)','1'],
+        ['M2(pro)','2'],
+        ['M3(pro)','3'],
+        ['M4(pro)','4']
+        ];
+
+    //直流电机麦克纳姆轮小车初始化
+    Blockly.Blocks.qdp_esp32_motor_mecanum_init = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_esp32_motor_mecanum_init,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_MECANUM_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin1',
+                        options: qdprobotESP32_MOTOR_mecanum_PIN
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin2',
+                        options: qdprobotESP32_MOTOR_mecanum_PIN
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin3',
+                        options: qdprobotESP32_MOTOR_mecanum_PIN
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'pin4',
+                        options: qdprobotESP32_MOTOR_mecanum_PIN
+                    }
+                ],
+                "tooltip": "直流电机万向车的初始化，仅支持C02及IOT-Pro。\n请注意选择正确的端口。IOT-PRO仅M1~M4\nC02需连接IO口与电机控制端连线。",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+            this.setFieldValue("3","pin1");
+            this.setFieldValue("4","pin2");
+            this.setFieldValue("2","pin3");
+            this.setFieldValue("1","pin4");
+        }
+    };
+
+    //舵机360麦克纳姆轮小车执行
+    Blockly.Blocks.qdp_esp32_motor_mecanum_run = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_esp32_motor_mecanum_run,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_MECANUM_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'action',
+                        options: [
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Forward,'0'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Backward,'1'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Upper_Right,'2'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Lower_Left,'3'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Upper_Left,'4'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Lower_Right,'5'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Move_Left,'6'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Move_Right,'7'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Clockwise,'8'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Counter_Clockwise,'9'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Right,'10'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Right_Back,'11'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Left,'12'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Turn_Left_back,'13'],
+                                [Blockly.Msg.qdp_esp32_servomotor360_mecanum_Stop,'14']
+                                ]
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check1',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed1'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check2',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed2'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check3',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed3'
+                    },
+                    {
+                        type: 'field_label_serializable',
+                        name: 'check4',
+                        text: ""
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'speed4'
+                    }
+                ],
+                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的商品上，确保电机的旋转方向正确。\n",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
 
     //舵机360
     Blockly.Blocks.qdp_esp32_servomotor360 = {

@@ -8197,16 +8197,365 @@ Blockly.Arduino.qdp_esp32_chaoshengboSerial = function() {
   };
 
   Blockly.Arduino.qdp_esp32_motor = function() {
-    var MotorPin = this.getFieldValue('MotorPin');
-    var PIN = this.getFieldValue('PIN');
-    var speed = Blockly.Arduino.valueToCode(this, 'speed',Blockly.Arduino.ORDER_ATOMIC) || '0';
+      var MotorPin = this.getFieldValue('MotorPin');
+      var PIN = this.getFieldValue('PIN');
+      var speed = Blockly.Arduino.valueToCode(this, 'speed',Blockly.Arduino.ORDER_ATOMIC) || '0';
+      Blockly.Arduino.definitions_['define_QDPEsp32Port'] = '#include <QDPEsp32Port.h>';
+      Blockly.Arduino.definitions_['include_ESP32_Motor'] = '#include "ESP32_Motor.h"';
+      if(PIN=='0')
+        Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor'+MotorPin] = 'Motor Esp32Motor_'+MotorPin+'(motor_'+MotorPin+',17,4);\n';
+      else if(PIN=='1')
+        Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor'+MotorPin] = 'Motor Esp32Motor_'+MotorPin+'(motor_'+MotorPin+',33,32);\n';
+      else
+        Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor'+MotorPin] = 'Motor Esp32Motor_'+MotorPin+'(motor_'+MotorPin+',P'+PIN+'R,P'+PIN+'L);\n';
+      Blockly.Arduino.setups_['setup_BlynkBT.begin'+MotorPin] = 'Esp32Motor_'+MotorPin+'.mcpwm_begin();';
+      var code = 'Esp32Motor_'+MotorPin+'.Motor_Run('+speed+');\n';
+      return code;
+    };
+  //舵机360麦克纳姆轮小车初始化
+Blockly.Arduino.qdp_esp32_servomotor360_mecanum_init = function() {
+  var pin1 = this.getFieldValue('pin1');
+  var pin2 = this.getFieldValue('pin2');
+  var pin3 = this.getFieldValue('pin3');
+  var pin4 = this.getFieldValue('pin4');
+
+  Blockly.Arduino.definitions_['define_qdprobotservo'] = '#include <QDPServo.h>';
+  Blockly.Arduino.definitions_['define_QDPEsp32Port'] = '#include <QDPEsp32Port.h>';
+  Blockly.Arduino.definitions_['define_ESP32_Servo'] = '#include <ESP32_Servo.h>';
+
+  Blockly.Arduino.definitions_['var_declare_qdprobot_motor31'+pin1] = 'Servo QDPservo_1;\n';
+  Blockly.Arduino.definitions_['var_declare_qdprobot_motor31'+pin2] = 'Servo QDPservo_2;\n';
+  Blockly.Arduino.definitions_['var_declare_qdprobot_motor31'+pin3] = 'Servo QDPservo_3;\n';
+  Blockly.Arduino.definitions_['var_declare_qdprobot_motor31'+pin4] = 'Servo QDPservo_4;\n';
+  Blockly.Arduino.setups_['setup_output_3'+pin1] ='QDPservo_1.attach('+pin1+',500,2500);\n';
+  Blockly.Arduino.setups_['setup_output_3'+pin2] ='QDPservo_2.attach('+pin2+',500,2500);\n';
+  Blockly.Arduino.setups_['setup_output_3'+pin3] ='QDPservo_3.attach('+pin3+',500,2500);\n';
+  Blockly.Arduino.setups_['setup_output_3'+pin4] ='QDPservo_4.attach('+pin4+',500,2500);\n';
+  Blockly.Arduino.definitions_['var_declare_mecanum_Run'] = 'void mecanumRun(boolean dirLF, boolean dirLB, int dirRF, int dirRB, int speedLF, int speedLB, int speedRF, int speedRB) {\n'+
+'  QDPservo_1.writeMicroseconds(QDPServoPulseWith1(dirLF,speedLF));\n'+
+'  QDPservo_2.writeMicroseconds(QDPServoPulseWith1(dirLB,speedLB));\n'+
+'  QDPservo_3.writeMicroseconds(QDPServoPulseWith1(dirRF,speedRF));\n'+
+'  QDPservo_4.writeMicroseconds(QDPServoPulseWith1(dirRB,speedRB));\n'+
+'}\n'
+
+  var code = '';
+  return code;
+};
+
+//舵机360麦克纳姆轮小车执行
+Blockly.Arduino.qdp_esp32_servomotor360_mecanum_run = function() {
+  var action = parseInt(this.getFieldValue('action'));
+  var speed1 = Blockly.Arduino.valueToCode(this, 'speed1',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed2 = Blockly.Arduino.valueToCode(this, 'speed2',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed3 = Blockly.Arduino.valueToCode(this, 'speed3',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed4 = Blockly.Arduino.valueToCode(this, 'speed4',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var code = '';
+  switch(action){
+  case 0:
+  //前进
+  code = 'mecanumRun(0, 0, 1, 1, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 1:
+  //后退
+  code = 'mecanumRun(1, 1, 0, 0, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 2:
+  //右上
+  code = 'mecanumRun(0, 0, 1, 1, '+speed1+', 0, 0, '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 3:
+  //左下
+  code = 'mecanumRun(1, 1, 0, 0, '+speed1+', 0, 0, '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 4:
+  //左上
+  code = 'mecanumRun(0, 0, 1, 1, 0, '+speed2+', '+speed3+', 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 5:
+  //右下
+  code = 'mecanumRun(1, 1, 0, 0, 0, '+speed2+', '+speed3+', 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 6:
+  //左平移
+  code = 'mecanumRun(1, 0, 1, 0, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 7:
+  //右平移
+  code = 'mecanumRun(0, 1, 0, 1, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 8:
+  //顺时针旋转
+  code = 'mecanumRun(0, 0, 0, 0, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 9:
+  //逆时针旋转
+  code = 'mecanumRun(1, 1, 1, 1, '+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 10:
+  //右转
+  code = 'mecanumRun(0, 0, 1, 1, '+speed1+', '+speed2+', 0, 0);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 11:
+  //右后退
+  code = 'mecanumRun(1, 1, 0, 0, '+speed1+', '+speed2+', 0, 0);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 12:
+  //左转
+  code = 'mecanumRun(0, 0, 1, 1, 0, 0, '+speed3+', '+speed4+');\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 13:
+  //左后退
+  code = 'mecanumRun(1, 1, 0, 0, 0, 0, '+speed3+', '+speed4+');\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('*',"check4");
+  break;
+  case 14:
+  //停止
+  code = 'mecanumRun(0, 0, 0, 0, 0, 0, 0, 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+}
+  
+  return code;
+};
+
+//直流电机麦克纳姆轮小车初始化
+Blockly.Arduino.qdp_esp32_motor_mecanum_init = function() {
+  var pin1 = this.getFieldValue('pin1');
+  var pin2 = this.getFieldValue('pin2');
+  var pin3 = this.getFieldValue('pin3');
+  var pin4 = this.getFieldValue('pin4');
+
+  if((pin1>='0'&&pin1<='3')||(pin2>='0'&&pin2<='3')||(pin3>='0'&&pin3<='3')||(pin4>='0'&&pin4<='3')){
+    Blockly.Arduino.definitions_['include_QH_IOT_PRO'] = '#include <QH_IOT_PRO.h>';
+    Blockly.Arduino.definitions_['var_declare_ESP32Encoder'] ='QH_IOT_PRO QH_IOT_PRO;';
+    Blockly.Arduino.setups_['QH_IOT_PRO_INIT'] = 'QH_IOT_PRO.init();';
+    Blockly.Arduino.definitions_['define_VL53L0X'] = '#define LFwheel '+pin1+'\n'+'#define LBwheel '+pin2+'\n'+'#define RFwheel '+pin3+'\n'+'#define RBwheel '+pin4+'\n';
+    Blockly.Arduino.definitions_['var_declare_mecanum_Run'] = 'void mecanumMotorRun(int speedLF, int speedLB, int speedRF, int speedRB) {\n'+
+'  QH_IOT_PRO.motorRun(LFwheel,speedLF);\n'+
+'  QH_IOT_PRO.motorRun(LBwheel,speedLB);\n'+
+'  QH_IOT_PRO.motorRun(RFwheel,speedRF);\n'+
+'  QH_IOT_PRO.motorRun(RBwheel,speedRB);\n'+
+'}\n';
+
+  }else{
     Blockly.Arduino.definitions_['define_QDPEsp32Port'] = '#include <QDPEsp32Port.h>';
     Blockly.Arduino.definitions_['include_ESP32_Motor'] = '#include "ESP32_Motor.h"';
-    Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor'+MotorPin] = 'Motor Esp32Motor_'+MotorPin+'(motor_'+MotorPin+',P'+PIN+'R,P'+PIN+'L);\n';
-    Blockly.Arduino.setups_['setup_BlynkBT.begin'+MotorPin] = 'Esp32Motor_'+MotorPin+'.mcpwm_begin();';
-    var code = 'Esp32Motor_'+MotorPin+'.Motor_Run('+speed+');\n';
-    return code;
-  };
+    Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor1'] = 'Motor Esp32Motor_1(motor_1,'+pin1+');\n';
+    Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor2'] = 'Motor Esp32Motor_2(motor_2,'+pin2+');\n';
+    Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor3'] = 'Motor Esp32Motor_3(motor_3,'+pin3+');\n';
+    Blockly.Arduino.definitions_['var_declare_qdprobot_esp32_motor4'] = 'Motor Esp32Motor_4(motor_4,'+pin4+');\n';
+    Blockly.Arduino.setups_['setup_BlynkBT.begin1'] = 'Esp32Motor_1.mcpwm_begin();';
+    Blockly.Arduino.setups_['setup_BlynkBT.begin2'] = 'Esp32Motor_2.mcpwm_begin();';
+    Blockly.Arduino.setups_['setup_BlynkBT.begin3'] = 'Esp32Motor_3.mcpwm_begin();';
+    Blockly.Arduino.setups_['setup_BlynkBT.begin4'] = 'Esp32Motor_4.mcpwm_begin();';
+    Blockly.Arduino.definitions_['var_declare_mecanum_Run'] = 'void mecanumMotorRun(int speedLF, int speedLB, int speedRF, int speedRB) {\n'+
+'  Esp32Motor_1.Motor_Run(speedLF);\n'+
+'  Esp32Motor_2.Motor_Run(speedLB);\n'+
+'  Esp32Motor_3.Motor_Run(speedRF);\n'+
+'  Esp32Motor_4.Motor_Run(speedRB);\n'+
+'}\n';
+
+
+  }
+      
+
+  var code = '';
+  return code;
+};
+
+//直流电机麦克纳姆轮小车执行
+Blockly.Arduino.qdp_esp32_motor_mecanum_run = function() {
+  var action = parseInt(this.getFieldValue('action'));
+  var speed1 = Blockly.Arduino.valueToCode(this, 'speed1',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed2 = Blockly.Arduino.valueToCode(this, 'speed2',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed3 = Blockly.Arduino.valueToCode(this, 'speed3',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var speed4 = Blockly.Arduino.valueToCode(this, 'speed4',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+  var code = '';
+  switch(action){
+  case 0:
+  //前进
+  code = 'mecanumMotorRun('+speed1+'*-1, '+speed2+'*-1, '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 1:
+  //后退
+  code = 'mecanumMotorRun('+speed1+', '+speed2+', '+speed3+'*-1, '+speed4+'*-1);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 2:
+  //右上
+  code = 'mecanumMotorRun('+speed1+'*-1, 0, 0, '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 3:
+  //左下
+  code = 'mecanumMotorRun('+speed1+', 0, 0, '+speed4+'*-1);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 4:
+  //左上
+  code = 'mecanumMotorRun( 0, '+speed2+'*-1, '+speed3+', 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 5:
+  //右下
+  code = 'mecanumMotorRun( 0, '+speed2+', '+speed3+'*-1, 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 6:
+  //左平移
+  code = 'mecanumMotorRun('+speed1+', '+speed2+'*-1, '+speed3+', '+speed4+'*-1);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 7:
+  //右平移
+  code = 'mecanumMotorRun( '+speed1+'*-1, '+speed2+', '+speed3+'*-1, '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 8:
+  //顺时针旋转
+  code = 'mecanumMotorRun('+speed1+'*-1, '+speed2+'*-1, '+speed3+'*-1, '+speed4+'*-1);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 9:
+  //逆时针旋转
+  code = 'mecanumMotorRun('+speed1+', '+speed2+', '+speed3+', '+speed4+');\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 10:
+  //右转
+  code = 'mecanumMotorRun('+speed1+'*-1, '+speed2+'*-1, 0, 0);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 11:
+  //右后退
+  code = 'mecanumMotorRun('+speed1+', '+speed2+', 0, 0);\n';
+  this.setFieldValue('★',"check1");
+  this.setFieldValue('★',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+  case 12:
+  //左转
+  code = 'mecanumMotorRun(0, 0, '+speed3+', '+speed4+');\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 13:
+  //左后退
+  code = 'mecanumMotorRun( 0, 0, '+speed3+'*-1, '+speed4+'*-1);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('★',"check3");
+  this.setFieldValue('★',"check4");
+  break;
+  case 14:
+  //停止
+  code = 'mecanumMotorRun(0, 0, 0, 0);\n';
+  this.setFieldValue('×',"check1");
+  this.setFieldValue('×',"check2");
+  this.setFieldValue('×',"check3");
+  this.setFieldValue('×',"check4");
+  break;
+}
+  
+  return code;
+};
+
+
 
   //舵机360
   Blockly.Arduino.qdp_esp32_servomotor360 = function() {

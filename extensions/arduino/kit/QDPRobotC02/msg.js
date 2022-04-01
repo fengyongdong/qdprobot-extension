@@ -10,6 +10,7 @@ function addMsg (Blockly) {
         QH_BUZZER_LABEL:'---BUZZER---',
         QH_SERVO_LABEL:'---SERVO---',
         QH_DCMOTO_LABEL:'---DCMOTOR---',
+        QH_MECANUM_LABEL:'---UNIVERSAL_CAR---',
         QH_SYNTHESIS_LABEL:'---SYNTHESIS---',
         QH_RECOGNITION_LABEL:'---RECOGNITION---',
         QH_IR_LABEL:'---IR---',
@@ -426,7 +427,27 @@ function addMsg (Blockly) {
         MIXLY_1617171138070768_136 : "Open Number 5/Start Number 5",
         MIXLY_1617171138070768_137 : "Close No. 5/Stop No. 5",
         MIXLY_1617171138070768_138 : "Open Number 6/Start Number 6",
-        MIXLY_1617171138070768_139 : "Close No. 6/Stop No. 6"
+        MIXLY_1617171138070768_139 : "Close No. 6/Stop No. 6",
+        qdp_esp32_servomotor360_mecanum_init:"Servo universal car init Left front wheel %1 Left rear wheel %2 Right front wheel %3 Right rear wheel %4",
+        qdp_esp32_servomotor360_mecanum_run:"Servo universal car run %1 speed 0~10 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9",
+        qdp_esp32_servomotor360_mecanum_Forward : "↑ Forward",
+        qdp_esp32_servomotor360_mecanum_Backward : "↓ backwards",
+        qdp_esp32_servomotor360_mecanum_Move_Left : "← Shift left",
+        qdp_esp32_servomotor360_mecanum_Move_Right : "→ Shift Right",
+        qdp_esp32_servomotor360_mecanum_Clockwise : "↻ Clockwise",
+        qdp_esp32_servomotor360_mecanum_Counter_Clockwise : "↺ Counter clockwise",
+        qdp_esp32_servomotor360_mecanum_Upper_Right : "⇗ Upper right",
+        qdp_esp32_servomotor360_mecanum_Lower_Left : "⇙ Lower left",
+        qdp_esp32_servomotor360_mecanum_Upper_Left : "⇖ Upper left",
+        qdp_esp32_servomotor360_mecanum_Lower_Right : "⇘ Lower right",
+        qdp_esp32_servomotor360_mecanum_Turn_Right : "↱ Turn right",
+        qdp_esp32_servomotor360_mecanum_Turn_Right_Back : "↳ Right back",
+        qdp_esp32_servomotor360_mecanum_Turn_Left : "↰ Turn left",
+        qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲ Tur left_back",
+        qdp_esp32_servomotor360_mecanum_Stop : "ⓧ stop",
+        qdp_esp32_motor_mecanum_init : 'Motor universal car init Left front wheel %1 Left rear wheel %2 Right front wheel %3 Right rear wheel %4',
+        qdp_esp32_motor_mecanum_run :'Motor universal car run  %1 speed 0~255 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9'
+
 
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
@@ -439,6 +460,7 @@ function addMsg (Blockly) {
         QH_BUZZER_LABEL:'---蜂鸣器---',
         QH_SERVO_LABEL:'---舵机---',
         QH_DCMOTO_LABEL:'---直流电机---',
+        QH_MECANUM_LABEL:'---万向小车---',
         QH_SYNTHESIS_LABEL:'---语音合成---',
         QH_RECOGNITION_LABEL:'---语音识别---',
         QH_IR_LABEL:'---红外---',
@@ -855,7 +877,26 @@ function addMsg (Blockly) {
         MIXLY_1617171138070768_136 : "打开5号/开始5号",
         MIXLY_1617171138070768_137 : "关闭5号/停止5号",
         MIXLY_1617171138070768_138 : "打开6号/开始6号",
-        MIXLY_1617171138070768_139 : "关闭6号/停止6号"
+        MIXLY_1617171138070768_139 : "关闭6号/停止6号",
+        qdp_esp32_servomotor360_mecanum_init:"舵机万向车 初始化 左前轮 %1 左后轮 %2 右前轮 %3 右后轮 %4",
+        qdp_esp32_servomotor360_mecanum_run:"舵机万向车 执行 %1 速度0~10 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9",
+        qdp_esp32_servomotor360_mecanum_Forward : "↑前进",
+        qdp_esp32_servomotor360_mecanum_Backward : "↓后退",
+        qdp_esp32_servomotor360_mecanum_Move_Left : "←左移",
+        qdp_esp32_servomotor360_mecanum_Move_Right : "→右移",
+        qdp_esp32_servomotor360_mecanum_Clockwise : "↻顺时针",
+        qdp_esp32_servomotor360_mecanum_Counter_Clockwise : "↺逆时针",
+        qdp_esp32_servomotor360_mecanum_Upper_Right : "⇗右上",
+        qdp_esp32_servomotor360_mecanum_Lower_Left : "⇙左下",
+        qdp_esp32_servomotor360_mecanum_Upper_Left : "⇖左上",
+        qdp_esp32_servomotor360_mecanum_Lower_Right : "⇘右下",
+        qdp_esp32_servomotor360_mecanum_Turn_Right : "↱右转",
+        qdp_esp32_servomotor360_mecanum_Turn_Right_Back : "↳右后转",
+        qdp_esp32_servomotor360_mecanum_Turn_Left : "↰左转",
+        qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左后转",
+        qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
+        qdp_esp32_motor_mecanum_init : '直流电机万向车 初始化 左前轮 %1 左后轮 %2 右前轮 %3 右后轮 %4',
+        qdp_esp32_motor_mecanum_run :'直流电机万向车 执行 %1 速度0~255 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9'
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_BUTTON_LABEL:'---按鈕---',
@@ -867,6 +908,7 @@ function addMsg (Blockly) {
         QH_BUZZER_LABEL:'---蜂鳴器---',
         QH_SERVO_LABEL:'---舵機---',
         QH_DCMOTO_LABEL:'---直流電機---',
+        QH_MECANUM_LABEL:'---萬向小車---',
         QH_SYNTHESIS_LABEL:'---語音合成---',
         QH_RECOGNITION_LABEL:'---語音識別---',
         QH_IR_LABEL:'---紅外---',
@@ -1283,7 +1325,26 @@ function addMsg (Blockly) {
         MIXLY_1617171138070768_136 : "打開5號/開始5號",
         MIXLY_1617171138070768_137 : "關閉5號/停止5號",
         MIXLY_1617171138070768_138 : "打開6號/開始6號",
-        MIXLY_1617171138070768_139 : "關閉6號/停止6號"
+        MIXLY_1617171138070768_139 : "關閉6號/停止6號",
+        qdp_esp32_servomotor360_mecanum_init:"舵機萬向車 初始化 左前輪 %1 左後輪 %2 右前輪 %3 右後輪 %4",
+        qdp_esp32_servomotor360_mecanum_run:"舵機萬向車 執行 %1 速度0~10 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9",
+        qdp_esp32_servomotor360_mecanum_Forward : "↑前進",
+        qdp_esp32_servomotor360_mecanum_Backward : "↓後退",
+        qdp_esp32_servomotor360_mecanum_Move_Left : "←左移",
+        qdp_esp32_servomotor360_mecanum_Move_Right : "→右移",
+        qdp_esp32_servomotor360_mecanum_Clockwise : "↻順時針",
+        qdp_esp32_servomotor360_mecanum_Counter_Clockwise : "↺逆時針",
+        qdp_esp32_servomotor360_mecanum_Upper_Right : "⇗右上",
+        qdp_esp32_servomotor360_mecanum_Lower_Left : "⇙左下",
+        qdp_esp32_servomotor360_mecanum_Upper_Left : "⇖左上",
+        qdp_esp32_servomotor360_mecanum_Lower_Right : "⇘右下",
+        qdp_esp32_servomotor360_mecanum_Turn_Right : "↱右轉",
+        qdp_esp32_servomotor360_mecanum_Turn_Right_Back : "↳右後轉",
+        qdp_esp32_servomotor360_mecanum_Turn_Left : "↰左轉",
+        qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左後轉",
+        qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
+        qdp_esp32_motor_mecanum_init : '直流電機萬向車 初始化 左前輪 %1 左後輪 %2 右前輪 %3 右後輪 %4',
+        qdp_esp32_motor_mecanum_run :'直流電機萬向車 執行 %1 速度0~255 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9'
     });
     return Blockly;
 }
