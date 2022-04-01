@@ -2542,7 +2542,7 @@ function addBlocks (Blockly) {
                         name: 'speed4'
                     }
                 ],
-                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的商品上，确保电机的旋转方向正确。\n",
+                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的主板端口上，确保电机的旋转方向正确。\n",
                 colour: QH_Actuator_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -2686,7 +2686,7 @@ function addBlocks (Blockly) {
                         name: 'speed4'
                     }
                 ],
-                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的商品上，确保电机的旋转方向正确。\n",
+                "tooltip": "当4个电机速度不统一时，可以单独的对每一个电机设定不同的速度达到平衡或理想的效果。\n确保电机接在正确的主板端口上，确保电机的旋转方向正确。\n",
                 colour: QH_Actuator_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
