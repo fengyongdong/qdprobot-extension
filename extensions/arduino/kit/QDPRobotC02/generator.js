@@ -8361,7 +8361,7 @@ Blockly.Arduino.qdp_esp32_servomotor360_mecanum_run = function() {
   this.setFieldValue('×',"check1");
   this.setFieldValue('×',"check2");
   this.setFieldValue('★',"check3");
-  this.setFieldValue('*',"check4");
+  this.setFieldValue('★',"check4");
   break;
   case 14:
   //停止
