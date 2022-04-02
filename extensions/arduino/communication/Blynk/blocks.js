@@ -7,6 +7,8 @@ function addBlocks (Blockly) {
 
 const QH_BLYNK_ICO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjIxOTE0NDM4MDMyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjM0MTIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUzNC4yNyA1NTguMjhINDIzLjV2MTg0LjU1bDExMC44MyAwLjQ1YzUxLjEgMCA5Mi42Ny00MS41MiA5Mi42Ny05Mi41cy00MS42LTkyLjUtOTIuNzMtOTIuNXpNNTM0LjI3IDMwMy4yOGwtMTEwLjc3LTAuMTF2MTg1LjExaDExMC43N2M1MS4xMyAwIDkyLjczLTQxLjUgOTIuNzMtOTIuNXMtNDEuNi05Mi41LTkyLjczLTkyLjV6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIzNDEzIj48L3BhdGg+PHBhdGggZD0iTTk2MCAzMzUuMmE0ODQuNDcgNDg0LjQ3IDAgMSAwIDM4IDE4OCA0ODEuMzQgNDgxLjM0IDAgMCAwLTM4LTE4OHpNNjk3IDY1MC43OGMwIDg5LjYtNzMgMTYyLjUtMTYyLjczIDE2Mi41aC0wLjE0bC0xMjEuOTMtMC41Yy0zMi4zNyAwLTU4LjctMjYuNjctNTguNy01OS4zOVYyOTIuNTVjMC0zMi43NSAyNi4zNy01OS4zOSA1OC43OC01OS4zOWwxMjIgMC4xM2M4OS43IDAgMTYyLjcgNzIuOSAxNjIuNyAxNjIuNWExNjIuMiAxNjIuMiAwIDAgMS02MS45NSAxMjcuNUExNjIuMiAxNjIuMiAwIDAgMSA2OTcgNjUwLjc4eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iMzQxNCI+PC9wYXRoPjwvc3ZnPg==';
 
+const QH_SMARTCONFIG_ICO2 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAABfklEQVR42u3aWw6DMAwEwN7/0u0JkBrFGxuYfCLKY5ASO9vPJzC+F2P1t6vXXL3XiAELFqzyl/xn7Fxn2vP8hQ4LFqxRWOnJeGdxqDq+5QALFqxHYq1eP13QwoIFC9aJCbiqKIUFC9YzsRKNa9Wk/opdB1iwYLXs5U84fpt0BxYsWNGscNoiEH9+WLBgtWNVFX47TWmiAU4XurBgwerB6vqjR+LDVAUfl88MCxasUViJybLqnERxW5bowIIFqx0rAZoIL9JFKSxYsGZhJQq8k+encwZYsGDNxToZBFSFo23PBgsWrFFYJzfeEoFI1fGju4uwYME6hhVPfQ829lspNCxYsFqw0kXj0cm4CB0WLFj9WN/wSDTDVQsILFiw7oeVGImCNr0gHAWCBQtWCdbkACLdSC8vLLBgwRqFle7aq164bYGCBQvW47ESReNOs10WssKCBeu1WFVNb7yohgUL1iisxM2qJvjExx63+QcLFqz2wKIqiE039rBgwRqL9QMi+YmYDjUTWwAAAABJRU5ErkJggg==';
+
 
     Blockly.Blocks.QDP_esp32_blynk_server = {
         init: function () {
@@ -48,7 +50,7 @@ const QH_BLYNK_ICO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFu
         }
     };
 
-    Blockly.Blocks.QDP_esp32_blynk_smartconfig = {
+    Blockly.Blocks.QDP_esp32_blynk_web_smartconfig = {
         init: function () {
             this.jsonInit({
                 message0:'%1',
@@ -56,9 +58,9 @@ const QH_BLYNK_ICO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFu
                 args0: [
                     {
                         type: 'field_image',
-                        src: QH_BLYNK_ICO,
-                        width: 30,
-                        height: 30
+                        src: QH_SMARTCONFIG_ICO2,
+                        width: 60,
+                        height: 60
                     }
                 ],
                 args1: [
@@ -71,7 +73,7 @@ const QH_BLYNK_ICO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFu
                         name: 'auth_key'
                     }
                 ],
-                "tooltip": 'wifi连接信息及blynk对应服务信息',
+                "tooltip": 'blynk web一键配网',
                 colour: blynk_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']

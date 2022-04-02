@@ -28,7 +28,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    <block type="QDP_esp32_blynk_smartconfig" name="一键配网">
+    <block type="QDP_esp32_blynk_web_smartconfig" name="blynk web一键配网">
         <value name="server_add">
             <shadow type="text">
                 <field name="TEXT">182.61.28.31</field>

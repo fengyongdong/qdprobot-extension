@@ -27,43 +27,40 @@ Blockly.Arduino.QDP_esp32_blynk_server = function() {
   return code;
 };
 
- // 物联网-一键配网
-Blockly.Arduino.QDP_esp32_blynk_smartconfig = function() {
+ // 物联网-web一键配网
+Blockly.Arduino.QDP_esp32_blynk_web_smartconfig = function() {
   var auth_key = Blockly.Arduino.valueToCode(this, 'auth_key', Blockly.Arduino.ORDER_ATOMIC);
   var server_add = Blockly.Arduino.valueToCode(this, 'server_add', Blockly.Arduino.ORDER_ATOMIC);
   server_add = server_add.replace(/\"/g, "").replace(/\./g, ",");
   Blockly.Arduino.definitions_['DEFINE_BLYNK_INCLUDE'] = '#if defined(ESP8266)\n#define BLYNK_PRINT Serial\n#include <ESP8266WiFi.h>\n#include <BlynkSimpleEsp8266.h>\n#elif defined(ESP32)\n#define BLYNK_PRINT Serial\n#include <WiFi.h>\n#include <WiFiClient.h>\n#include <BlynkSimpleEsp32.h>\n#endif\n';
-  // Blockly.Arduino.definitions_['define_BLYNK_PRINT'] ='#define BLYNK_PRINT Serial';
-  // Blockly.Arduino.definitions_['include_WiFi'] = "#include <WiFi.h>";
-  // Blockly.Arduino.definitions_['include_WiFiClient'] = "#include <WiFiClient.h>";
-  // Blockly.Arduino.definitions_['include_BlynkSimpleEsp32'] = "#include <BlynkSimpleEsp32.h>";
+  Blockly.Arduino.definitions_['include_ESP_WiFiManager'] = '#include <ESP_WiFiManager.h>';
 
   Blockly.Arduino.definitions_['D1_auth_key'] ='char auth[] = '+auth_key+';';
   Blockly.Arduino.setups_['setup_qdprobot_serial']= 'Serial.begin(9600);';
   
-  Blockly.Arduino.setups_['setup_smartconfig'] ='\n'+
-  'WiFi.mode(WIFI_STA);\n'+
-  'WiFi.begin();\n'+
-  'int cnt = 0;\n'+
-  'while (WiFi.status() != WL_CONNECTED) {\n'+
-  '  delay(1000);\n'+
-  '  Serial.print(".");\n'+
-  '  if (cnt++ >= 30) {\n'+
-  '    WiFi.beginSmartConfig();\n'+
-  '    while (1) {\n'+
-  '      delay(1000);\n'+
-  '      if (WiFi.smartConfigDone()) {\n'+
-  '        Serial.println();\n'+
-  '        Serial.println("SmartConfig: Success");\n'+
-  '        cnt = 0;\n'+
-  '        WiFi.setAutoConnect(true);\n'+
-  '        break;\n'+
-  '      }\n'+
-  '      Serial.print("|");\n'+
-  '    }\n'+
-  '  }\n'+
-  '}  WiFi.printDiag(Serial);\n'+
-  'Blynk.config(auth, IPAddress('+server_add+'), 8080);\n'
+  Blockly.Arduino.setups_['setup_smartconfig'] = 'Serial.println("\\nStarting AutoConnectAP");\n'
+                                                       +'ESP_WiFiManager ESP_wifiManager("AutoConnectAP");\n'
+                                                       +'ESP_wifiManager.setDebugOutput(1);\n'
+                                                       +'String Router_SSID;\n'
+                                                       +'String Router_Pass;\n'
+                                                       +'Router_SSID = ESP_wifiManager.WiFi_SSID();\n'
+                                                       +'Router_Pass = ESP_wifiManager.WiFi_Pass();\n'
+                                                       +'Serial.println("Stored: SSID = " + Router_SSID + ", Pass = " + Router_Pass);\n'
+                                                       +'if (Router_SSID != "")\n'
+                                                       +'{\n'
+                                                       +'ESP_wifiManager.setConfigPortalTimeout(60);\n'
+                                                       +'Serial.println("Got stored Credentials. Timeout 60s");\n'
+                                                       +'}\n'
+                                                       +'else\n'
+                                                       +'{\n'
+                                                       +'Serial.println("No stored Credentials. No timeout");\n'
+                                                       +'}\n'
+                                                       +'String AP_SSID = "qdprobot";\n'
+                                                       +'String AP_PASS = "12345678";\n'
+                                                       +'ESP_wifiManager.autoConnect(AP_SSID.c_str(), AP_PASS.c_str());\n'
+                                                       +'Serial.println("WiFi connected");\n'
+                                                       +'WiFi.printDiag(Serial);\n'
+                                                       +'Blynk.config(auth, IPAddress('+server_add+'), 8080);\n';
   var code="Blynk.run();\n";
   return code;
 };
