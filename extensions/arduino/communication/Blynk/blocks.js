@@ -73,7 +73,7 @@ const QH_SMARTCONFIG_ICO2 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAA
                         name: 'auth_key'
                     }
                 ],
-                "tooltip": 'blynk web一键配网',
+                "tooltip": 'blynk web网页一键配网\n上传后查找qdprobot热点加入，密码12345678\n自动转到配网页面(如没有自动跳转，也可以连接热点后在浏览器输入：192.168.4.1进入网页）\n选第一项，进入后选当前环境可用的wifi名，并在第一项中输入密码，最下面save,等10秒后自动切回环境wifi即可。\n如果只是想测试功能可以先写入一个错误的wifi,然后再写入这个程序 ，否则会记录保存最后正确的wifi信息并自动连接，不会再出现配网页。',
                 colour: blynk_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
