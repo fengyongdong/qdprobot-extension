@@ -51,6 +51,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <block name="默认图片显示" type="QH_esp32_display_samll_flash_pic"></block>
     <block type="QDP_esp32_display_samll_pic" name="图片显示">
         <value name="QDP_display_samll_pic_add">
             <shadow type="math_number">

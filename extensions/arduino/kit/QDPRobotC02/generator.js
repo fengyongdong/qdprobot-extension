@@ -7552,6 +7552,31 @@ function addGenerator (Blockly) {
       return code;
      };
 
+     //小彩屏默认图片显示
+    Blockly.Arduino.QH_esp32_display_samll_flash_pic = function() {
+      var Serial = this.getFieldValue('Serial');
+      var model = this.getFieldValue('model');
+      var picNum = parseInt(this.getFieldValue('picNum'));
+      var HV = parseInt(this.getFieldValue('HV'));
+
+      var W,H;
+      picNum = 2097152 + (picNum+HV*12)*40960;
+
+      if(HV)
+      {
+        W =160;
+        H=128;
+      }
+      else
+      {
+        W =128;
+        H=160;
+      }
+
+      var code = 'myHardwareSerial'+Serial+'.print(String("FSIMG(")+String('+picNum+')+String(",0,0,")+String('+W+')+String(",")+String('+H+')+String(",")+String('+model+')+String(");"));\n';
+      return code;
+    };
+
      //小彩屏图片显示
      Blockly.Arduino.QDP_esp32_display_samll_pic = function() {
       var Serial = this.getFieldValue('Serial');
