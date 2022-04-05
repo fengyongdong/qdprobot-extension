@@ -5,10 +5,8 @@
             "repo": "openblockcc/external-resources-v2"
         },
         "cn" : {
-            "provider": "spaces",
-            "name": "aopuqdp",
-            "path": "resource",
-            "region": "sgp1"
+            "provider": "gitee",
+            "repo": "qdprobot/push-open-block"
         }
     }
 }
