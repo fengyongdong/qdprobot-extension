@@ -382,7 +382,7 @@ function addBlocks(Blockly) {
                         [Blockly.Msg.QH_IrPressOn, '1']
                     ]
                 }],
-                "tooltip": "对应摇控器的按键输入，注：红外遥控器的“发送” “接收”在一个程序内不能同时使用，只能二选一！",
+                "tooltip": "对应摇控器的按键输入.",
                 colour: QH_COMMUNICATE_color1,
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_boolean']
@@ -402,7 +402,7 @@ function addBlocks(Blockly) {
                     height: 30
                 }],
                 args1: [],
-                "tooltip": "P5接口 放在循环内，上传程序时不要插模块 蓝牙APP上的滑动变量对应值,在“蓝牙变量”和“蓝牙按键”前使用",
+                "tooltip": "P5接口 放在循环内，上传程序时不要插模块或关闭蓝牙开关,蓝牙APP上的滑动变量对应值,在“蓝牙变量”和“蓝牙按键”前使用",
                 colour: QH_COMMUNICATE_color2,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -426,7 +426,7 @@ function addBlocks(Blockly) {
                     name: 'TEXT',
                     "text": "U"
                 }],
-                "tooltip": "P5接口 上传程序时不要插模块 接收到蓝牙模块在对应APP输入的按键设定字符值（APP发送格式为“,发送的字符.”）,\n在“启用蓝牙接收”后有效",
+                "tooltip": "P5接口 上传程序时不要插模块或关闭蓝牙开关, 接收到蓝牙模块在对应APP输入的按键设定字符值（APP发送格式为“,发送的字符.”）,\n在“启用蓝牙接收”后有效",
                 colour: QH_COMMUNICATE_color2,
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_boolean']
@@ -456,7 +456,7 @@ function addBlocks(Blockly) {
                         ["5", "5"]
                     ]
                 }],
-                "tooltip": "P5接口 上传程序时不要插模块 蓝牙APP上的滑动变量对应值,在“启用蓝牙接收”后有效",
+                "tooltip": "P5接口 上传程序时不要插模块或关闭蓝牙开关, 蓝牙APP上的滑动变量对应值,在“启用蓝牙接收”后有效",
                 colour: QH_COMMUNICATE_color2,
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_number']
@@ -491,7 +491,7 @@ function addBlocks(Blockly) {
                     type: 'input_value',
                     name: 'N5'
                 }],
-                "tooltip": "P5接口 上传程序时不要插模块 蓝牙APP V1~V5 显示变量对应值,可以为传感器值或字符串，注：重复发送要加延时间隔约30毫秒！",
+                "tooltip": "P5接口 上传程序时不要插模块或关闭蓝牙开关, 蓝牙APP V1~V5 显示变量对应值,可以为传感器值或字符串，注：重复发送要加延时间隔约30毫秒！",
                 colour: QH_COMMUNICATE_color2,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
