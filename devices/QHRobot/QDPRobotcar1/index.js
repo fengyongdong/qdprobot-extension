@@ -5,7 +5,7 @@ const QDPRobotcar1 = formatMessage => ({
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobotcar11.png',
     description: formatMessage({
-        id: 'QDPRobot.description',
+        id: 'QDPRobotcar1.description',
         default: 'QDProbot.',
         description: 'Description for the QDP robot device'
     }),

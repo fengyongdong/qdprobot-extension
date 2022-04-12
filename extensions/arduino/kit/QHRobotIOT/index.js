@@ -13,7 +13,7 @@ const  QDPRobotIOT= formatMessage => ({
     description: formatMessage({
         id: 'QDPRobotIOT.description',
         default: '物联屏/IOTstart.',
-        description: '物联屏/IOTstart ESP8266 Module'
+        description: 'QDPRobotIOT.description'
     }),
     featured: true,
     blocks: 'blocks.js',

@@ -9,7 +9,7 @@ const QDPRobot = formatMessage => ({
     description: formatMessage({
         id: 'QDPRobot.description',
         default: 'QDP robot',
-        description: 'Description of QDP robot'
+        description: 'QDPRobot.description'
     }),                           //显示在扩展选择界面图片下方扩展介绍内容
     featured: true,
     blocks: `blocks.js`,          //扩展的积木渲染生成代码
