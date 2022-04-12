@@ -7,9 +7,9 @@ const QDPRobotC02 = formatMessage => ({
     author: 'QDProbot',
     iconURL: `asset/QH.png`,
     description: formatMessage({
-        id: 'QDPRobot_C02.description',
+        id: 'QDPRobotC02.description',
         default: 'QDP robot C02',
-        description: 'QDP robot C02'
+        description: 'QDPRobotC02.description'
     }),
     featured: true,
     blocks: 'blocks.js',
