@@ -1,13 +1,13 @@
-const QDPRobot_SmartCar01 = formatMessage => ({
-    name: 'QDPRobot_SmartCar01',                //显示在扩展选择界面的名字
-    extensionId: 'QDPRobot_SmartCar01',         //扩展的唯一ID
+const QDPRobotcar1 = formatMessage => ({
+    name: 'QDPRobotcar1',                //显示在扩展选择界面的名字
+    extensionId: 'QDPRobotcar1',         //扩展的唯一ID
     version: '1.0.0',             //显示在扩展选择界面的版本号
     type: 'arduino',              //标识对此插件的处置方式
-    supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560'], //支持的设备，扩展只会选择了对应支持的设备后才会在扩展选择界面显示
+    supportDevice: ['arduinoUno'], //支持的设备，扩展只会选择了对应支持的设备后才会在扩展选择界面显示
     author: 'QDProbot',        //显示在扩展选择界面的作者名字
     iconURL: `asset/QDPRobot_SmartCar01.png`,   //显示在扩展选择界面的图片，图片比例和像素参数请参照DHT11样例中的修改
     description: formatMessage({
-        id: 'QDPRobot_SmartCar01.description',
+        id: 'QDPRobotcar1.description',
         default: 'QDP robot smart car 01',
         description: 'Description of QDP robot smart car 01'
     }),                           //显示在扩展选择界面图片下方扩展介绍内容
@@ -21,4 +21,4 @@ const QDPRobot_SmartCar01 = formatMessage => ({
     helpLink: 'https://qdprobot.taobao.com'//帮助链接，点击插件页中的帮助将打开此链接。
 });
 
-module.exports = QDPRobot_SmartCar01;
+module.exports = QDPRobotcar1;

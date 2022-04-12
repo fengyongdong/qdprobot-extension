@@ -1,15 +1,19 @@
 {
     "en": {
+        "QDPRobotcar1.description": "QDP robot.",
         "QDPRobot.description": "QDP robot.",
         "QDPRobotC02.description": "QDP robot C02.",
         "QDPRobotIOT.description": "QDP robot."
+
     },
     "zh-cn": {
+        "QDPRobotcar1.description": "齐护机器人。",
         "QDPRobot.description": "齐护机器人。",
         "QDPRobotC02.description": "齐护机器人 C02。",
         "QDPRobotIOT.description": "齐护机器人。"
     },
     "zh-tw": {
+        "QDPRobotcar1.description": "齊護機器人。",
         "QDPRobot.description": "齊護機器人。",
         "QDPRobotC02.description": "齊護機器人 C02。",
         "QDPRobotIOT.description": "齊護機器人。"
