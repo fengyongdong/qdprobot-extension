@@ -1,5 +1,7 @@
 {
     "en": {
+        "STARSHIPMAKER.description": "STARSHIPMAKER",
+        "STARSHIPMAKER.name": "STARSHIPMAKER ESP8266",
         "QDPRobotpuhui.description": "Special for pratt & Whitney artificial Intelligence series courses.",
         "QDPRobotcar1.description": "Multifunctional programmable car (obstacle avoidance, line patrol, remote control, compatible building block expansion).",
         "QDPRobot.name": "QDPRobot UNO",
@@ -79,6 +81,8 @@
         "servo.description": "Classic servo support for microbit."
     },
     "zh-cn": {
+        "STARSHIPMAKER.description": "星舰创客",
+        "STARSHIPMAKER.name": "星舰创客",
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
         "QDPRobotcar1.description": "齐护多功能可编程小车(避障、巡线、遥控、兼容积木扩展)。",
         "QDPRobot.name": "QDPRobot UNO",
@@ -158,6 +162,8 @@
         "servo.description": "让 Microbit 可以控制普通的舵机。"
     },
     "zh-tw": {
+        "STARSHIPMAKER.description": "星舰创客",
+        "STARSHIPMAKER.name": "星舰创客",
         "QDPRobotpuhui.description": "普惠人工智慧系列課程專用。",
         "QDPRobotcar1.description": "齊護多功能可編程小車(避障、巡線、遙控、相容積木擴展)。",
         "QDPRobot.name": "QDPRobot UNO",
