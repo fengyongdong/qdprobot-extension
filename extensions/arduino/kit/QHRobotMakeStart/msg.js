@@ -11,6 +11,8 @@ function addMsg (Blockly) {
     	QH_SENSOR_CATEGORY:'Sensor',
     	QH_ACTUATOR_CATEGORY:'Actuator',
     	QH_SPEECH_CATEGORY:'Speech',
+        QH_SMG_CATEGORY:'Display',
+        QH_COMMUNICATE_CATEGORY:'Communicate',
         QH_BUTTON_GENERAL:'Button P3-12',
         QH_BUTTONFUCTION_INIT:'Enable the multi-functionbutton P3-12',
         QH_BUTTONFUCTION_DO:'Multi-function button P3-12 mode %1',
