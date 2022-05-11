@@ -1,21 +1,26 @@
 {
     "en": {
+        "QDPRobotpuhui.description": "QDP robot.",
         "QDPRobotcar1.description": "QDP robot.",
         "QDPRobot.description": "QDP robot.",
         "QDPRobotC02.description": "QDP robot C02.",
-        "QDPRobotIOT.description": "QDP robot."
-
+        "QDPRobotIOT.description": "QDP robot.",
+        "QDPRobotMakeStart.description":"QDP MakeStart"
     },
     "zh-cn": {
+        "QDPRobotpuhui.description": "齐护机器人。",
         "QDPRobotcar1.description": "齐护机器人。",
         "QDPRobot.description": "齐护机器人。",
         "QDPRobotC02.description": "齐护机器人 C02。",
-        "QDPRobotIOT.description": "齐护机器人。"
+        "QDPRobotIOT.description": "齐护机器人。",
+        "QDPRobotMakeStart.description":"齊護機器人 MakeStart"
     },
     "zh-tw": {
+        "QDPRobotpuhui.description": "齊護機器人。",
         "QDPRobotcar1.description": "齊護機器人。",
         "QDPRobot.description": "齊護機器人。",
         "QDPRobotC02.description": "齊護機器人 C02。",
-        "QDPRobotIOT.description": "齊護機器人。"
+        "QDPRobotIOT.description": "齊護機器人。",
+        "QDPRobotMakeStart.description":"齊護機器人 MakeStart"
     }
 }

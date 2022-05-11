@@ -4,6 +4,8 @@ module.exports = [
     'QDPRobotC02_arduinoESP32QDP',
     'QDPRobotIOT_arduinoEsp8266',
     'QDPRobotcar1_arduinoUnoUltra',
+    'QDPRobotpuhui_arduinoUnoUltra',
+    'QDPRobotMakeStart_arduinoUnoUltra',
     'arduinoUno',
     'arduinoNano_arduinoUno',
     'arduinoMini_arduinoUno',
