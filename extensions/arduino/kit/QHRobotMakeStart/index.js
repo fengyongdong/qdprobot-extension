@@ -1,5 +1,5 @@
 const QDPRobotMakeStart = formatMessage => ({
-    name: 'QDP',                //显示在扩展选择界面的名字
+    name: 'MakeStart',                //显示在扩展选择界面的名字
     extensionId: 'QDPRobotMakeStart',         //扩展的唯一ID
     version: '1.0.0',             //显示在扩展选择界面的版本号
     type: 'arduino',              //标识对此插件的处置方式
