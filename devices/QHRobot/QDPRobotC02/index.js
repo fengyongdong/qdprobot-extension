@@ -1,6 +1,6 @@
 const QDPRobotC02 = formatMessage => ({
     name: 'QDPRobot ESP32',
-    deviceId: 'QDPRobotC02_arduinoESP32QDP',
+    deviceId: 'QDPRobotC02_esp32QDP',
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobotC02.png',
@@ -26,7 +26,7 @@ const QDPRobotC02 = formatMessage => ({
     programLanguage: ['block', 'cpp'],
     tags: ['kit'],
     deviceExtensions: ['QDPRobotC02'],
-    deviceExtensionsCompatible: 'arduinoESP32QDP',
+    deviceExtensionsCompatible: 'esp32',
     helpLink: 'http://www.qdprobot.com/'
 });
 

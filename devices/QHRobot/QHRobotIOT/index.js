@@ -1,6 +1,6 @@
 const QDPRobotIOT = formatMessage => ({
     name: 'QDPRobot ESP8266',
-    deviceId: 'QDPRobotIOT_arduinoEsp8266',
+    deviceId: 'QDPRobotIOT_esp8266',
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/IOTstart8266.png',
@@ -26,7 +26,7 @@ const QDPRobotIOT = formatMessage => ({
     programLanguage: ['block', 'cpp'],
     tags: ['kit'],
     deviceExtensions: ['QDPRobotIOT'],
-    deviceExtensionsCompatible: 'arduinoEsp8266',
+    deviceExtensionsCompatible: 'esp8266',
     helpLink: 'http://www.qdprobot.com/'
 });
 

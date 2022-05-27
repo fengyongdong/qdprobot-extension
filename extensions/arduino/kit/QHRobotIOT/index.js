@@ -4,7 +4,7 @@ const  QDPRobotIOT= formatMessage => ({
         default: '物联屏/IOTstart',
         description: '基于ESP8266核心'
     }),
-    extensionId: 'QDPRobotIOT',
+    extensionId: 'arduinoQDPRobotIOT',
     version: '1.0.0',
     type: 'arduino',
     supportDevice: ['arduinoEsp8266','QDPRobotIOT_arduinoEsp8266'],
