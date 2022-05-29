@@ -3,7 +3,7 @@ const QDPRobotC02 = formatMessage => ({
     extensionId: 'arduinoQDPRobotC02',
     version: '1.0.0',
     type: 'arduino',
-    supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32'],
+    supportDevice: ['QDPRobotC02_arduinoEsp32QDP','arduinoEsp32'],
     author: 'QDProbot',
     iconURL: `asset/QH.png`,
     description: formatMessage({

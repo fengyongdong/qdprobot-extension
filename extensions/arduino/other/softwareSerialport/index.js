@@ -7,7 +7,7 @@ const softwareSerial = formatMessage => ({
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266','QDPRobot_arduinoUnoUltra',
-        'QDPRobotC02_arduinoESP32QDP', 'QDPRobotIOT_arduinoEsp8266'],
+        'QDPRobotC02_arduinoEsp32QDP', 'QDPRobotIOT_arduinoEsp8266'],
     author: 'ArthurZheng',
     iconURL: `asset/softwareSerial.png`,
     description: formatMessage({
