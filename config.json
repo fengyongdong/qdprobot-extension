@@ -1,10 +1,10 @@
 {
     "updater": {
         "default": {
-            "provider": "github",
-            "repo": "openblockcc/external-resources-v2"
+            "provider": "gitee",
+            "repo": "qdprobot/push-open-block"
         },
-        "cn" : {
+        "cn": {
             "provider": "gitee",
             "repo": "qdprobot/push-open-block"
         }
