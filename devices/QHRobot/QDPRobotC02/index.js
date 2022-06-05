@@ -4,6 +4,7 @@ const QDPRobotC02 = formatMessage => ({
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobotC02.png',
+    typeList: ['arduino', 'microPython'],
     description: formatMessage({
         id: 'QDPRobotC02.description',
         default: 'QDProbot.',
@@ -23,6 +24,7 @@ const QDPRobotC02 = formatMessage => ({
     connectionIconURL: 'asset/QDPRobotC02-illustration.svg',
     connectionSmallIconURL: 'asset/QDPRobotC02-small.svg',
     programMode: ['realtime', 'upload'],
+    microPythonProgramMode: ['upload'],
     programLanguage: ['block', 'cpp'],
     tags: ['kit'],
     deviceExtensions: ['QDPRobotC02'],

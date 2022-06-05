@@ -2,11 +2,7 @@ module.exports = [
     // Buid-in device
     'QDPRobot_arduinoUnoUltra',
     'QDPRobotC02_esp32QDP',
-    'QDPRobotC02_arduinoEsp32QDP',
-    'QDPRobotC02_microPythonEsp32QDP',
     'QDPRobotIOT_esp8266',
-    'QDPRobotIOT_arduinoEsp8266',
-    'QDPRobotIOT_microPythonEsp8266',
     'QDPRobotcar1_arduinoUnoUltra',
     'QDPRobotpuhui_arduinoUnoUltra',
     'QDPRobotMakeStart_arduinoUnoUltra',

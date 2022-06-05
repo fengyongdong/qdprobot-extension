@@ -4,6 +4,7 @@ const QDPRobotIOT = formatMessage => ({
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/IOTstart8266.png',
+    typeList: ['arduino', 'microPython'],
     description: formatMessage({
         id: 'QDPRobotIOT.description',
         default: 'QDProbot.',
