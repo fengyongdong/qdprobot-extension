@@ -13,7 +13,8 @@ const QDPRobotIOT = formatMessage => ({
     disabled: false,
     bluetoothRequired: false,
     serialportRequired: true,
-    defaultBaudRate: '9600',
+    defaultBaudRate: '76800',
+    microPythonDefaultBaudRate: '115200',
     pnpidList: [
         'USB\\VID_10C4&PID_EA60', // CP2102
         'USB\\VID_1A86&PID_7523' // CH340
