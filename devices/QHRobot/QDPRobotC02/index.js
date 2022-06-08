@@ -1,6 +1,6 @@
 const QDPRobotC02 = formatMessage => ({
     name: 'QDPRobot ESP32',
-    deviceId: 'QDPRobotC02_esp32QDP',
+    deviceId: 'QDPRobotC02_ESP32QDP',
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
     iconURL: 'asset/QDPRobotC02.png',
