@@ -18,9 +18,12 @@ module.exports = [
     'microPythonEsp8266',
     'microbit',
     'microbitV2',
-    'maixDock',
-    'arduinoMaixDock',
-    'microPythonMaixDock',
+    'k210MaixDock',
+    'arduinoK210MaixDock',
+    'microPythonK210MaixDock',
+    'k210Maixduino',
+    'arduinoK210Maixduino',
+    'microPythonK210Maixduino',
     'makeyMakey'
     // Third party
    
