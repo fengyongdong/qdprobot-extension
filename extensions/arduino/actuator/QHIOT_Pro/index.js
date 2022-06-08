@@ -5,7 +5,7 @@ const QHIOT_Pro = formatMessage => ({
     }),
     extensionId: 'QHIOT_Pro',
     version: '1.0.0',
-    supportDevice: ['QDPRobotC02_arduinoEsp32QDP','arduinoEsp32'],
+    supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32'],
     author: 'QDProbot',
     iconURL: `asset/QHIOT_Pro.png`,
     description: formatMessage({

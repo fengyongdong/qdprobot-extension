@@ -5,7 +5,7 @@ const QHgamepad = formatMessage => ({
     }),
     extensionId: 'QHgamepad',
     version: '1.0.0',
-    supportDevice: ['QDPRobotC02_arduinoEsp32QDP','arduinoEsp32'],
+    supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32'],
     author: 'QDProbot',
     iconURL: `asset/QHgamepad.png`,
     description: formatMessage({

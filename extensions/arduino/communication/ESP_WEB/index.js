@@ -6,7 +6,7 @@ const ESP_WEB = formatMessage => ({
     }),
     extensionId: 'ESP_WEB',
     version: '1.0.0',
-    supportDevice: ['QDPRobotC02_arduinoEsp32QDP','arduinoEsp32','QDPRobotIOT_Esp8266','arduinoEsp8266'],
+    supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32','QDPRobotIOT_Esp8266','arduinoEsp8266'],
     author: 'QDProbot',
     iconURL: `asset/webpage.png`,
     description: formatMessage({

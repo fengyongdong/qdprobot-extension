@@ -7,7 +7,7 @@ const  blynk= formatMessage => ({
     extensionId: 'blynk',
     version: '1.0.0',
     type: 'arduino',
-    supportDevice: ['QDPRobotC02_arduinoEsp32QDP','arduinoEsp32','arduinoEsp8266'],
+    supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32','arduinoEsp8266'],
     author: 'QDProbot',
     iconURL: `asset/blynk.png`,
     description: formatMessage({
