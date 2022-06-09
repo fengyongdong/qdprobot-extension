@@ -12,5 +12,7 @@ module.exports = [
     // Third party
     'ironKit_arduinoUno',
     'QDPRobot_arduinoUnoUltra',
-    'QDPRobotC02_arduinoEsp32'
+    'QDPRobotC02_esp32',
+    'QDPRobotC02_arduinoEsp32',
+    'QDPRobotC02_microPythonEsp32'
 ];
