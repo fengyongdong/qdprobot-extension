@@ -1,6 +1,6 @@
 const QDPRobotC02 = formatMessage => ({
     name: 'QDPRobotC02',
-    extensionId: 'arduinoQDPRobotC02',
+    extensionId: 'QDPRobotC02',
     version: '1.0.0',
     type: 'arduino',
     supportDevice: ['QDPRobotC02_arduinoESP32QDP','arduinoEsp32'],

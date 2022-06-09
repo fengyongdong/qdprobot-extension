@@ -28,6 +28,7 @@ const QDPRobotC02 = formatMessage => ({
     programLanguage: ['block', 'cpp'],
     tags: ['kit'],
     deviceExtensions: ['QDPRobotC02'],
+    arduinoDeviceExtensions: ['QDPRobotC02'],
     deviceExtensionsCompatible: 'esp32',
     helpLink: 'http://www.qdprobot.com/'
 });
