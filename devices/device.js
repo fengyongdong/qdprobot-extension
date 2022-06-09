@@ -6,6 +6,7 @@ module.exports = [
     'QDPRobotcar1_arduinoUnoUltra',
     'QDPRobotpuhui_arduinoUnoUltra',
     'QDPRobotMakeStart_arduinoUnoUltra',
+    'QDPAIStart_k210MaixDock',
     'arduinoUno',
     'arduinoNano',
     'arduinoLeonardo',
