@@ -3,6 +3,7 @@ const QDPRobotC02 = formatMessage => ({
     deviceId: 'QDPRobotC02_ESP32QDP',
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
+    typeList: ['arduino', 'microPython'],
     iconURL: 'asset/QDPRobotC02.png',
     typeList: ['arduino', 'microPython'],
     description: formatMessage({
@@ -10,27 +11,40 @@ const QDPRobotC02 = formatMessage => ({
         default: 'QDProbot.',
         description: 'Description for the QDP robot device'
     }),
-    disabled: false,
-    bluetoothRequired: false,
-    serialportRequired: true,
-    defaultBaudRate: '115200',
     pnpidList: [
         'USB\\VID_10C4&PID_EA60', // CP2102
         'USB\\VID_1A86&PID_7523' // CH340
     ],
-    internetConnectionRequired: false,
-    launchPeripheralConnectionFlow: true,
-    useAutoScan: false,
     connectionIconURL: 'asset/QDPRobotC02-illustration.svg',
     connectionSmallIconURL: 'asset/QDPRobotC02-small.svg',
-    programMode: ['realtime', 'upload'],
-    microPythonProgramMode: ['upload'],
-    programLanguage: ['block', 'cpp'],
+    programLanguage: ['block', 'c', 'cpp', 'microPython'],
     tags: ['kit'],
     deviceExtensions: ['QDPRobotC02'],
-    arduinoDeviceExtensions: ['QDPRobotC02'],
-    deviceExtensionsCompatible: 'esp32',
     helpLink: 'http://www.qdprobot.com/'
 });
 
-module.exports = QDPRobotC02;
+const QDPRobotC02Arduino = formatMessage => {
+    const device = QDPRobotC02(formatMessage);
+    device.defaultBaudRate = '9600';
+    device.deviceId = 'QDPRobotC02_arduinoESP32QDP';
+    device.programMode = ['upload'];
+    deviceExtensionsCompatible = 'arduinoEsp32',
+    device.hide = true;
+    return device;
+}
+
+const QDPRobotC02MicroPython = formatMessage => {
+    const device = QDPRobotC02(formatMessage);
+    device.defaultBaudRate = '115200';
+    device.deviceId = 'QDPRobotC02_microPythonESP32QDP';
+    device.programMode = ['upload'];
+    deviceExtensionsCompatible = 'microPythonEsp32',
+    device.hide = true;
+    return device;
+}
+
+module.exports = formatMessage => ([
+    QDPRobotC02(formatMessage),
+    QDPRobotC02Arduino(formatMessage),
+    QDPRobotC02MicroPython(formatMessage)
+]);
