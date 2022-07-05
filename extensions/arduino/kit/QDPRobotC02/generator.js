@@ -8790,42 +8790,43 @@ Blockly.Arduino.qdp_esp32_motor_mecanum_run = function() {
     return code;
   };
   //QF合成变量中文
-  // Blockly.Arduino.qdp_esp32_QF_hc_chinese = function() {
-  //   var dropdown_pin3 = this.getFieldValue('PIN33');
-  //   var dropdown_pin4 = this.getFieldValue('PIN44');
-  //   var num = Blockly.Arduino.valueToCode(this, 'num',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-  //   var num2 = Blockly.Arduino.valueToCode(this, 'num2',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-  //   var num3 = Blockly.Arduino.valueToCode(this, 'num3',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-  //   var text = Blockly.Arduino.valueToCode(this, 'TEXT',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-  //   Blockly.Arduino.definitions_['include_QDP_text_code'] = '#include "QDP_text_code.h"';
-  //   //编码函数
-  //   Blockly.Arduino.definitions_['function_HC_transform'] = 'void HC_transform(String input_data, uint8_t choose)'
-  //                                                      +'\n{'
-  //                                                      +'\n  int input_num = input_data.length();'
-  //                                                      +'\n  int output_num = 0;'
-  //                                                      +'\n  unsigned char str[input_num];'
-  //                                                      +'\n  byte select = 0;'
-  //                                                      +'\n  for(int x = 0;x < input_num;x++)'
-  //                                                      +'\n  {'
-  //                                                      +'\n    str[x] = input_data.charAt(x);'
-  //                                                      +'\n    select = Transform.GetUtf8ByteNumForWord(str[x]);'
-  //                                                      +'\n    if(select == 0)'
-  //                                                      +'\n      output_num++;'
-  //                                                      +'\n    else if(select >= 2)'
-  //                                                      +'\n      output_num+=2;'
-  //                                                      +'\n  }'
-  //                                                      +'\n  uint8_t gbArray[output_num];'
-  //                                                      +'\n  Transform.Utf8ToGb2312(str,input_num,gbArray);'
-  //                                                      +'\n  char gbArray1[output_num];'
-  //                                                      +'\n  for(int x = 0;x < output_num;x++)'
-  //                                                      +'\n    gbArray1[x] = char(gbArray[x]);'
-  //                                                      +'\n  QFYY.HC(gbArray1,sizeof(gbArray1),choose);'
-  //                                                      +'\n}';
+  Blockly.Arduino.qdp_esp32_QF_hc_chinese = function() {
+    var dropdown_pin3 = this.getFieldValue('PIN33');
+    var dropdown_pin4 = this.getFieldValue('PIN44');
+    var num = Blockly.Arduino.valueToCode(this, 'num',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+    var num2 = Blockly.Arduino.valueToCode(this, 'num2',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+    var num3 = Blockly.Arduino.valueToCode(this, 'num3',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+    var text = Blockly.Arduino.valueToCode(this, 'TEXT',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+    Blockly.Arduino.definitions_['include_QDP_text_code'] = '#include "QDP_text_code.h"';
+    //编码函数
+    Blockly.Arduino.definitions_['function_HC_transform'] = 'void HC_transform(String input_data, uint8_t choose)'
+                                                       +'\n{'
+                                                       +'\nQDP_text_code Transform;'
+                                                       +'\n  int input_num = input_data.length();'
+                                                       +'\n  int output_num = 0;'
+                                                       +'\n  unsigned char str[input_num];'
+                                                       +'\n  byte select = 0;'
+                                                       +'\n  for(int x = 0;x < input_num;x++)'
+                                                       +'\n  {'
+                                                       +'\n    str[x] = input_data.charAt(x);'
+                                                       +'\n    select = Transform.GetUtf8ByteNumForWord(str[x]);'
+                                                       +'\n    if(select == 0)'
+                                                       +'\n      output_num++;'
+                                                       +'\n    else if(select >= 2)'
+                                                       +'\n      output_num+=2;'
+                                                       +'\n  }'
+                                                       +'\n  uint8_t gbArray[output_num];'
+                                                       +'\n  Transform.Utf8ToGb2312(str,input_num,gbArray);'
+                                                       +'\n  char gbArray1[output_num];'
+                                                       +'\n  for(int x = 0;x < output_num;x++)'
+                                                       +'\n    gbArray1[x] = char(gbArray[x]);'
+                                                       +'\n  QFYY.HC(gbArray1,sizeof(gbArray1),choose);'
+                                                       +'\n}';
     
-  //   var code = 'QFYY.HC("'+dropdown_pin3+'[h0][v'+num+'][s'+num2+'][t'+num3+']");\nHC_transform('+text+','+dropdown_pin4+');\n';
+    var code = 'QFYY.HC("'+dropdown_pin3+'[h0][v'+num+'][s'+num2+'][t'+num3+']");\nHC_transform('+text+','+dropdown_pin4+');\n';
 
-  //   return code;
-  // };
+    return code;
+  };
 
   //QF提示音
   Blockly.Arduino.qdp_esp32_QF_sound = function() {

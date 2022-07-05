@@ -570,6 +570,28 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <block type="qdp_esp32_QF_hc_chinese">
+        <value name="num">
+            <shadow type="math_number">
+                <field name="NUM">8</field>
+            </shadow>
+        </value>
+        <value name="num2">
+            <shadow type="math_number">
+                <field name="NUM">5</field>
+            </shadow>
+        </value>
+        <value name="num3">
+            <shadow type="math_number">
+                <field name="NUM">5</field>
+            </shadow>
+        </value>
+        <value name="TEXT">
+            <shadow type="text">
+                <field name="TEXT">实时变量</field>
+            </shadow>
+        </value>
+    </block>
     <block type="qdp_esp32_QF_sound">
         <value name="num1">
             <shadow type="math_number">
