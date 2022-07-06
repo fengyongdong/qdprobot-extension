@@ -19,7 +19,7 @@ const mpyQHMPU6050 = formatMessage => ({
     toolbox: 'toolbox.js',
     msg: 'msg.js',
     library: 'lib',
-    tags: ['actuator'],
+    tags: ['sensor'],
     helpLink: 'https://qdprobot.taobao.com'
 });
 
