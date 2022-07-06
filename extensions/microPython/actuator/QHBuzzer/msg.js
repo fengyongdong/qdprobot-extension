@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_BUZZER_CATEGORY:'BUZZER',
+        QH_BUZZER_CATEGORY:'Buzzer',
         PY_qdp_esp32_buzzer:'Buzzer Port %1  frequency %2 duration %3'
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {

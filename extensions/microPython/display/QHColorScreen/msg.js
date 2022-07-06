@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_C02_COLOR_SCREEN_CATEGORY:'COLOR SCREEN',
+        QH_C02_COLOR_SCREEN_CATEGORY:'Color Screen',
         PY_QDP_blink_32:'Learn QR Code',
         PY_QDP_esp32_display_samll_init:'Color screen initialization %1 Port %2 Baud rate %3',
         PY_QDP_esp32_display_samll_refresh_display:'%1 Color screen refresh display %2',

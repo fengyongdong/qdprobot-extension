@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_RELAY_CATEGORY:'RELAY',
+        QH_RELAY_CATEGORY:'Relay',
         PY_qdp_esp32_relay:'Relay Port %1 state %2',
         PY_qdp_esp32_read_relay:'Read relay Port %1',
     });

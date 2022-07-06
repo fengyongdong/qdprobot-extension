@@ -3,7 +3,7 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         QH_SYNTHESIS_LABEL:'---SYNTHESIS---',
-        QH_SPEECH_CATEGORY:'SPEECH',
+        QH_SPEECH_CATEGORY:'Speech',
         PY_qdp_esp32_QF_hc_init:'Speech synthesis initialization %1 Port %2',
         PY_qdp_esp32_QF_hc:'Text to speech Pronunciation people %1 interrupt %2 volume(0-11) %3 speed(0-11) %4 intonnation(0-11) %5 Details %6',
         QH_Donotinterrupt:'Do not interrupt',

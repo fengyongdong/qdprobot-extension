@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_SET_CATEGORY:'SET',
+        QH_SET_CATEGORY:'Set',
         set_create_with:'Create set  name: %1 content:%2',
         set_len:'Set %1 len',
         set_operation:'Set A %1 and Set B %2 %3 operation',

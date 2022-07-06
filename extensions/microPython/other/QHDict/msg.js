@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_DICT_CATEGORY:'DICT',
+        QH_DICT_CATEGORY:'Dict',
         dict_create_with:'Create dict  name: %1 content:%2',
         dict_set_value:'Dict %1 key %2 set value:%3',
         dict_get_key_value:'Dict %1 get %2',

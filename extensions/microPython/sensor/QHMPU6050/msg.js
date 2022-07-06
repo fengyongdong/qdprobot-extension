@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_MPU6050_CATEGORY:'GYRO',
+        QH_MPU6050_CATEGORY:'Gyro',
         PY_QDP_ESP32_MPU6050_INIT:'MPU6050 update pin SDA %1 SCL %2 range %3',
         PY_QDP_ESP32_MPU6050_DATA:'Read the value of the gyroscope %1',
     });

@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_TUPLE_CATEGORY:'TUPLE',
+        QH_TUPLE_CATEGORY:'Tuple',
         tuple_create_with:'Create tuple  name: %1 content:%2',
         tuple_create_with_item:'Tupel %1 %2 option',
         tuple_slice:'Tupel %1 from %2 to %3',
