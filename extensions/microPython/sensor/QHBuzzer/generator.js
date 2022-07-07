@@ -2,6 +2,25 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
+    //DH11温湿度
+  Blockly.Python.PY_qdp_esp32_dht11 = function () {
+      var pin = this.getFieldValue('PIN');
+      var what = this.getFieldValue('WHAT');
+      Blockly.Python.imports_['import_dht'] = 'import dht';
+      Blockly.Python.imports_['import_time'] = 'import time';
+      Blockly.Python.customFunctions_['getDht']=`def getDht(Odht,Otype):
+    Odht.measure()
+    time.sleep_ms(1)  
+    if Otype:
+      return Odht.temperature()
+    else:
+      return Odht.humidity()
+  `;
+      Blockly.Python.variables_[`pin${pin}`] = `dht${pin} = dht.DHT11(machine.Pin(${pin}))`;
+     
+      var code=`getDht(dht${pin},${what})`;
+      return [code, Blockly.Python.ORDER_ATOMIC];
+  };
 
   //蜂鸣器
   Blockly.Python.PY_qdp_esp32_buzzer = function() {
