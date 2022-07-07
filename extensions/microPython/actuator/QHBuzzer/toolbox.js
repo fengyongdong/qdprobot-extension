@@ -7,6 +7,11 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_BUZZER_CATEGORY}" id="QH_BUZZER_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_BUZZER_ICO}">
+    <block type="PY_qdp_esp32_dht11">
+        <value name="PIN">
+            <shadow type="pins_digital2"></shadow>
+        </value>
+    </block>
     <block type="PY_qdp_esp32_buzzer">
         <field name="PIN">4</field>
         <value name="freq">
