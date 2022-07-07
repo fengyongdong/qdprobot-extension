@@ -82,26 +82,6 @@ function addGenerator (Blockly) {
     return [code, Blockly.Python.ORDER_ATOMIC];
   };
 
-    //DH11温湿度
-  Blockly.Python.PY_qdp_esp32_dht11 = function () {
-    var pin = this.getFieldValue('PIN');
-    var what = this.getFieldValue('WHAT');
-    Blockly.Python.imports_['import_dht'] = 'import dht';
-    Blockly.Python.imports_['import_time'] = 'import time';
-    Blockly.Python.customFunctions_['getDht']=`def getDht(Odht,Otype):
-  Odht.measure()
-  time.sleep_ms(1)  
-  if Otype:
-    return Odht.temperature()
-  else:
-    return Odht.humidity()
-`;
-    Blockly.Python.variables_[`pin${pin}`] = `dht${pin} = dht.DHT11(machine.Pin(${pin}))`;
-   
-    var code=`getDht(dht${pin},${what})`;
-    return [code, Blockly.Python.ORDER_ATOMIC];
-  };
-
   Blockly.Python.qdp_inout_highlow = function () {
     // Boolean values HIGH and LOW.
     var code = (this.getFieldValue('BOOL') === '1') ? '1' : '0';

@@ -26,11 +26,6 @@ function addToolbox () {
     <block type="PY_qdp_esp32_sound"></block>
     <block type="PY_qdp_esp32_potentiometer"></block>
     <block type="PY_qdp_esp32_Soilmoisture"></block>
-    <block type="PY_qdp_esp32_dht11">
-        <value name="PIN">
-            <shadow type="pins_digital2"></shadow>
-        </value>
-    </block>
 </category>
 <category name="%{BKY_QH_ACTUATOR_CATEGORY}" id="QH_ACTUATOR_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_Actuator_ICO}">
     <label text="---LED---"></label>
