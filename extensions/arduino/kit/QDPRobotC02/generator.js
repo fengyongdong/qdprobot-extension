@@ -9092,9 +9092,9 @@ Blockly.Arduino.qdp_esp32_BT_print_string = function() {
     Blockly.Arduino.definitions_['var_declare_BluetoothSerial'] = '#include "BluetoothSerial.h"\nBluetoothSerial SerialBT;';
     Blockly.Arduino.setups_['setup_serial_BT'] =  'SerialBT.begin("qdprobot-Master", true);';
     if(type == '1')
-      var code = 'SerialBT.write('+num+',sizeof('+num+')/sizeof('+num+'[0]));';
+      var code = 'SerialBT.write('+num+',sizeof('+num+')/sizeof('+num+'[0]));\n';
     else if(type == '2')
-    var code = 'SerialBT.write((const uint8_t *)"'+num+'",sizeof("'+num+'")/sizeof("'+num+'"[0]));';
+    var code = 'SerialBT.write((const uint8_t *)"'+num+'",sizeof("'+num+'")/sizeof("'+num+'"[0]));\n';
     else
       var code = 'SerialBT.write('+num+');\n';
     
