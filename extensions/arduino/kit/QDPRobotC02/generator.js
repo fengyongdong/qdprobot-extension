@@ -9086,17 +9086,24 @@ Blockly.Arduino.qdp_esp32_BT_print_string = function() {
 
   //蓝牙Master 写数据
   Blockly.Arduino.qdp_esp32_BT_MASTER_WRITE = function() {
-    var num = Blockly.Arduino.valueToCode(this, 'TEXT',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
-    num = num.replace(/\"/g,'');
+    var num = Blockly.Arduino.valueToCode(this, 'TEXT', Blockly.Arduino.ORDER_ATOMIC);
+
     var type = this.getFieldValue('TYPE');
     Blockly.Arduino.definitions_['var_declare_BluetoothSerial'] = '#include "BluetoothSerial.h"\nBluetoothSerial SerialBT;';
     Blockly.Arduino.setups_['setup_serial_BT'] =  'SerialBT.begin("qdprobot-Master", true);';
     if(type == '1')
       var code = 'SerialBT.write('+num+',sizeof('+num+')/sizeof('+num+'[0]));\n';
     else if(type == '2')
-    var code = 'SerialBT.write((const uint8_t *)"'+num+'",sizeof("'+num+'")/sizeof("'+num+'"[0]));\n';
-    else
+    {
+      Blockly.Arduino.definitions_['define_send_string'] = 'String sendStr;\n'; 
+      var code = `sendStr = ${num};\n`;
+      code += `SerialBT.write((uint8_t *)sendStr.c_str(), sendStr.length());\n`;
+    } else
+    {
+      num = num.replace(/\"/g,'');
+      num = num.replace(/\\/g,'');
       var code = 'SerialBT.write('+num+');\n';
+    }
     
     return code;
   };
