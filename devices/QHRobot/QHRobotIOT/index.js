@@ -3,6 +3,7 @@ const QDPRobotIOT = formatMessage => ({
     deviceId: 'QDPRobotIOT_esp8266',
     manufactor: 'QDPRobot',
     learnMore: 'https://qdprobot.taobao.com',
+    typeList: ['arduino', 'microPython'],
     iconURL: 'asset/IOTstart8266.png',
     typeList: ['arduino', 'microPython'],
     description: formatMessage({
@@ -10,26 +11,41 @@ const QDPRobotIOT = formatMessage => ({
         default: 'QDProbot.',
         description: 'Description for the QDP robot device'
     }),
-    disabled: false,
-    bluetoothRequired: false,
-    serialportRequired: true,
-    defaultBaudRate: '76800',
-    microPythonDefaultBaudRate: '115200',
     pnpidList: [
         'USB\\VID_10C4&PID_EA60', // CP2102
         'USB\\VID_1A86&PID_7523' // CH340
     ],
-    internetConnectionRequired: false,
-    launchPeripheralConnectionFlow: true,
-    useAutoScan: false,
     connectionIconURL: 'asset/IOTstart8266-1.png',
     connectionSmallIconURL: 'asset/IOTstart8266-2.png',
-    programMode: ['upload'],
-    programLanguage: ['block', 'cpp'],
+    programLanguage: ['block', 'c', 'cpp', 'microPython'],
     tags: ['kit'],
-    deviceExtensions: ['QDPRobotIOT'],
-    deviceExtensionsCompatible: 'esp8266',
     helpLink: 'http://www.qdprobot.com/'
 });
 
-module.exports = QDPRobotIOT;
+const QDPRobotIOTArduino = formatMessage => {
+    const device = QDPRobotIOT(formatMessage);
+    device.defaultBaudRate = '76800';
+    device.deviceId = 'QDPRobotIOT_arduinoEsp8266';
+    device.programMode = ['realtime', 'upload'];
+    device.deviceExtensions = ['QDPRobotIOT'],
+    device.deviceExtensionsCompatible = 'arduinoEsp8266',
+    device.hide = true;
+    return device;
+}
+
+const QDPRobotIOTMicroPython = formatMessage => {
+    const device = QDPRobotIOT(formatMessage);
+    device.defaultBaudRate = '115200';
+    device.deviceId = 'QDPRobotIOT_microPythonEsp8266';
+    device.programMode = ['upload'];
+    device.deviceExtensions = ['microPythonQDPRobotIOT'],
+    device.deviceExtensionsCompatible = 'microPythonEsp8266',
+    device.hide = true;
+    return device;
+}
+
+module.exports = formatMessage => ([
+    QDPRobotIOT(formatMessage),
+    QDPRobotIOTArduino(formatMessage),
+    QDPRobotIOTMicroPython(formatMessage)
+]);
