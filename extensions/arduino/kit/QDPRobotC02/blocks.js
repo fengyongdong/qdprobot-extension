@@ -3369,54 +3369,54 @@ function addBlocks (Blockly) {
             });
         }
     };
-    // //QF合成
-    // Blockly.Blocks.qdp_esp32_QF_hc_chinese = {
-    //     init: function () {
-    //         this.jsonInit({
-    //             message0: '%1',
-    //             message1: Blockly.Msg.qdp_esp32_QF_hc,
-    //             args0: [
-    //                 {
-    //                     type: 'field_image',
-    //                     src: QH_SPEECH_ICO,
-    //                     width: 40,
-    //                     height: 40
-    //                 }
-    //             ],
-    //             args1: [
-    //                 {
-    //                     type: 'field_dropdown',
-    //                     name: 'PIN33',
-    //                     options: [['女音1', "[m3]"],['男音1', "[m51]"],['男音2', "[m52]"],['女音2', "[m53]"],['唐老鸭', "[m54]"],['女童声', "[m55]"]]
-    //                 },
-    //                 {
-    //                     type: 'field_dropdown',
-    //                     name: 'PIN44',
-    //                     options: [[(Blockly.Msg.QH_Donotinterrupt), "1"],[(Blockly.Msg.QH_Interruptible), "0"]]
-    //                 },
-    //                 {
-    //                     type: 'input_value',
-    //                     name: 'num'
-    //                 },
-    //                 {
-    //                     type: 'input_value',
-    //                     name: 'num2'
-    //                 },
-    //                 {
-    //                     type: 'input_value',
-    //                     name: 'num3'
-    //                 },
-    //                 {
-    //                     type: 'input_value',
-    //                     name: 'TEXT'
-    //                 }
-    //             ],
-    //             "tooltip": '支持中文或中文变量字符串,英文或符号，运行占系统内存较大！',
-    //             colour: QH_SPEECH_color3,
-    //             extensions: ['shape_statement']
-    //         });
-    //     }
-    // };
+    //QF合成
+    Blockly.Blocks.qdp_esp32_QF_hc_chinese = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_esp32_QF_hc,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_SPEECH_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN33',
+                        options: [['女音1', "[m3]"],['男音1', "[m51]"],['男音2', "[m52]"],['女音2', "[m53]"],['唐老鸭', "[m54]"],['女童声', "[m55]"]]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN44',
+                        options: [[(Blockly.Msg.QH_Donotinterrupt), "1"],[(Blockly.Msg.QH_Interruptible), "0"]]
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'num'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'num2'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'num3'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'TEXT'
+                    }
+                ],
+                "tooltip": '支持中文或中文变量字符串,英文或符号，运行占系统内存较大！',
+                colour: QH_SPEECH_color3,
+                extensions: ['shape_statement']
+            });
+        }
+    };
 
     //QF提示音
     Blockly.Blocks.qdp_esp32_QF_sound = {

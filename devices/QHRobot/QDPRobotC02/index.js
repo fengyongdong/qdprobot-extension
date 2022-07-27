@@ -19,7 +19,6 @@ const QDPRobotC02 = formatMessage => ({
     connectionSmallIconURL: 'asset/QDPRobotC02-small.svg',
     programLanguage: ['block', 'c', 'cpp', 'microPython'],
     tags: ['kit'],
-    deviceExtensions: ['QDPRobotC02'],
     helpLink: 'http://www.qdprobot.com/'
 });
 
@@ -27,8 +26,9 @@ const QDPRobotC02Arduino = formatMessage => {
     const device = QDPRobotC02(formatMessage);
     device.defaultBaudRate = '9600';
     device.deviceId = 'QDPRobotC02_arduinoESP32QDP';
-    device.programMode = ['upload'];
-    deviceExtensionsCompatible = 'arduinoEsp32',
+    device.programMode = ['realtime', 'upload'];
+    device.deviceExtensions = ['QDPRobotC02'],
+    device.deviceExtensionsCompatible = 'arduinoEsp32',
     device.hide = true;
     return device;
 }
@@ -38,7 +38,8 @@ const QDPRobotC02MicroPython = formatMessage => {
     device.defaultBaudRate = '115200';
     device.deviceId = 'QDPRobotC02_microPythonESP32QDP';
     device.programMode = ['upload'];
-    deviceExtensionsCompatible = 'microPythonEsp32',
+    device.deviceExtensions = ['microPythonQDPRobotC02'],
+    device.deviceExtensionsCompatible = 'microPythonEsp32',
     device.hide = true;
     return device;
 }
