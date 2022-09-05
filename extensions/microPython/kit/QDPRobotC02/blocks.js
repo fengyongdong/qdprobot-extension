@@ -596,7 +596,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN1',
-                        options: qdprobotESP32_R_PIN_Output_Dropdown
+                        options: qdprobotESP32_L_PIN_Output_Dropdown
                     },
                     {
                         type: 'input_value',
@@ -645,7 +645,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN1',
-                        options: qdprobotESP32_R_PIN_Output_Dropdown
+                        options: qdprobotESP32_L_PIN_Output_Dropdown
                     }
                 ],
                 "tooltip": "RGB颜色发送执行",
