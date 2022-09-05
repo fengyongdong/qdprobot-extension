@@ -367,6 +367,8 @@ function addMsg (Blockly) {
         QH_OLED_UP_L:'Upper left',
         QH_OLED_LOW_R:'Down right',
         QH_OLED_LOW_L:'Down left',
+        QH_OLED_HOLLOW:'HOLLOW',
+        QH_OLED_SOLID:'SOLID',
         ESP8266_oled_drawEllipse:'OLED Draw Ellipse Mode %1 Center X %2 Y %3 Radius X %4 Y %5 Type %6',
         QDP_ESP8266_group_lcd_init2:'Initialization LCD %1 Name %2 Device address %3 port %4 ',
         group_lcd_print:'LCD %1 Print Line 1 %2 Print Line 2 %3',
