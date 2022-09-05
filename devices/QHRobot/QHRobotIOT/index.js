@@ -26,7 +26,7 @@ const QDPRobotIOTArduino = formatMessage => {
     const device = QDPRobotIOT(formatMessage);
     device.defaultBaudRate = '76800';
     device.deviceId = 'QDPRobotIOT_arduinoEsp8266';
-    device.programMode = ['realtime', 'upload'];
+    device.programMode = ['upload'];
     device.deviceExtensions = ['QDPRobotIOT'],
     device.deviceExtensionsCompatible = 'arduinoEsp8266',
     device.hide = true;
