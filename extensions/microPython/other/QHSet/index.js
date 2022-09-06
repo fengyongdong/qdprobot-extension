@@ -6,7 +6,7 @@ const mpyQHSet = formatMessage => ({
     extensionId: 'mpyQHSet',
     version: '1.0.0',
     type: 'microPython',
-    supportDevice: ['microPythonEsp32'],
+    supportDevice: ['microPythonEsp32','microPythonK210MaixDock'],
     author: 'QDProbot',
     iconURL: `asset/set.png`,
     description: formatMessage({

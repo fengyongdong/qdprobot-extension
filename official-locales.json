@@ -103,7 +103,25 @@
         "mpyQHTuple.name": "Tuple",
         "mpyQHTuple.description": "Tuple of MicroPython.",
         "mpyQHUultrasonic.name": "Ultrasonic transducer",
-        "mpyQHUultrasonic.description": "A module for measuring distance data with ultrasonic waves."
+        "mpyQHUultrasonic.description": "A module for measuring distance data with ultrasonic waves.",
+        "mpyQHAudio.name": "Audio play",
+        "mpyQHAudio.description":"Used for K210 audio playback",
+        "mpyQHVideo.name": "Video play",
+        "mpyQHVideo.description":"Used for K210 video playback",
+        "mpyQH_K210_LCD.name": "LCD",
+        "mpyQH_K210_LCD.description":"Used to display the AIStart LCD",
+        "QHk210Communicate.name": "Communicate",
+        "QHk210Communicate.description":"Used to communicate the AIStart",
+        "QH_K210_AI.name": "vision",
+        "QH_K210_AI.description":"Used to vision and AI the aistar",
+        "QH_K210_CAMERA.name": "camera",
+        "QH_K210_CAMERA.description":"for AIStart camera",
+        "mpyQHSensor.name": "Sensor",
+        "mpyQHSensor.description":"For AIStart sensor",
+        "mpyQHActuator.name": "Actuator",
+        "mpyQHActuator.description":"For AIStart actuator",
+        "mpyQHASR.name": "ASR",
+        "mpyQHASR.description":"For AIStart ASR"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -209,7 +227,28 @@
         "mpyQHTuple.name": "元组",
         "mpyQHTuple.description": "MicroPython的元组",
         "mpyQHUultrasonic.name": "超声波传感器",
-        "mpyQHUultrasonic.description": "用超声波测量距离数据的模块。"
+        "mpyQHUultrasonic.description": "用超声波测量距离数据的模块。",
+        "mpyQHAudio.name": "音频播放",
+        "mpyQHAudio.description":"用于AIStart音频播放",
+        "mpyQHVideo.name": "视频播放",
+        "mpyQHVideo.description":"用于AIStart视频播放",
+        "mpyQH_K210_LCD.name": "LCD",
+        "mpyQH_K210_LCD.description":"用于AIStart LCD显示",
+        "QHk210Communicate.name": "通讯",
+        "QHk210Communicate.description":"用于AIStart 通讯",
+        "QH_K210_AI.name": "智能视觉",
+        "QH_K210_AI.description":"用于AIStart 机器视觉和人工智能算法",
+        "QH_K210_CAMERA.name": "摄像头",
+        "QH_K210_CAMERA.description":"用于AIStart 摄像头",
+        "mpyQHSensor.name": "传感器",
+        "mpyQHSensor.description":"用于AIStart 外接传感器",
+        "mpyQHActuator.name": "执行器",
+        "mpyQHActuator.description":"用于AIStart 外接执行器",
+        "mpyQHASR.name": "语音识别",
+        "mpyQHASR.description":"用于AIStart 语音识别"
+
+
+
     },
     "zh-tw": {
         "QDPRobotpuhui.description": "普惠人工智慧系列課程專用。",
@@ -314,7 +353,24 @@
         "mpyQHTuple.name": "元組",
         "mpyQHTuple.description": "MicroPython的元組",
         "mpyQHUultrasonic.name": "超聲波感測器",
-        "mpyQHUultrasonic.description": "用超聲波測量距離數據的模組。"
-
+        "mpyQHUultrasonic.description": "用超聲波測量距離數據的模組。",
+        "mpyQHAudio.name": "音頻播放",
+        "mpyQHAudio.description":"用於K210音頻播放",
+        "mpyQHVideo.name": "視頻播放",
+        "mpyQHVideo.description":"用於K210視頻播放",
+        "mpyQH_K210_LCD.name": "LCD",
+        "mpyQH_K210_LCD.description":"用於AIStart LCD顯示",
+        "QHk210Communicate.name": "通訊",
+        "QHk210Communicate.description":"用於AIStart 通訊",
+        "QH_K210_AI.name": "智能視覺",
+        "QH_K210_AI.description":"用於AIStart 機器視覺和人工智慧演算法",
+        "QH_K210_CAMERA.name": "攝像頭",
+        "QH_K210_CAMERA.description":"用於AIStart 攝像頭",
+        "mpyQHSensor.name": "感測器",
+        "mpyQHSensor.description":"用於AIStart 外接感測器",
+        "mpyQHActuator.name": "執行器",
+        "mpyQHActuator.description":"用於AIStart 外接執行器",
+        "mpyQHASR.name": "語音識別",
+        "mpyQHASR.description":"用於AIStart 語音識別"
     }
 }

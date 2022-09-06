@@ -6,7 +6,7 @@ const mpyQHTuple = formatMessage => ({
     extensionId: 'mpyQHTuple',
     version: '1.0.0',
     type: 'microPython',
-    supportDevice: ['microPythonEsp32'],
+    supportDevice: ['microPythonEsp32','microPythonK210MaixDock'],
     author: 'QDProbot',
     iconURL: `asset/tuple.png`,
     description: formatMessage({
