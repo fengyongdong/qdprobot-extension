@@ -7,6 +7,21 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_COMMUNICATE_CATEGORY}" id="QH_COMMUNICATE_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_COMMUNICATE_ICO}">
+    <label text="%{BKY_QH_SERIAL_LABEL}"></label>
+    <block type="PY_qdp_k210_serial_softserial1">
+        <field name="RX">2</field>
+        <field name="TX">3</field>
+    </block>
+    <block type="PY_qdp_k210_serial_print">
+        <value name="CONTENT">
+          <shadow type="text">
+            <field name="TEXT">hello</field>
+          </shadow>
+        </value>
+    </block>
+    <block type="PY_qdp_k210_serial_any"></block>
+    <block type="PY_qdp_k210_serial_read"></block>
+    <label text="IR"></label>
     <block type="PY_qdp_k210_communicate_ir_recv"></block>
     <block type="PY_qdp_k210_communicate_i2c_init">
         <value name="freq">
@@ -15,6 +30,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <label text="I2C"></label>
     <block type="PY_qdp_k210_communicate_i2c_init1">
         <value name="freq">
             <shadow type="math_number">
@@ -25,6 +41,7 @@ function addToolbox () {
         <field name="scl">3</field>
     </block>
     <block type="PY_qdp_k210_communicate_i2c_scan"></block>
+    <label text="I2S"></label>
     <block type="PY_qdp_k210_communicate_i2s_init">
         <value name="freq">
             <shadow type="math_number">

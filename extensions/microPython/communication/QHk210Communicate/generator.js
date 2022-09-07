@@ -3,6 +3,44 @@
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
     
+    Blockly.Python.PY_qdp_k210_serial_softserial1 = function () {
+      Blockly.Python.imports_['import_UART'] = 'from machine import UART';
+      Blockly.Python.imports_['import_fm'] = 'from fpioa_manager import fm';
+      Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';
+      var dropdown_uart = this.getFieldValue('mode');
+      var baudrate = this.getFieldValue('baudrate');
+      var TX = this.getFieldValue('TX');
+      var RX = this.getFieldValue('RX');
+      var code1="fm.register(qdpk210_aistart.board_pins["+TX+"],fm.fpioa.UART"+dropdown_uart+"_TX)\n";
+      var code2="fm.register(qdpk210_aistart.board_pins["+RX+"],fm.fpioa.UART"+dropdown_uart+"_RX)\n";
+      var code3 = "uart"+dropdown_uart+"=UART(UART.UART"+dropdown_uart+", "+baudrate+", timeout=1000, read_buf_len=4096)\n";
+      var code =code1+code2+code3;
+      return code;
+    };
+
+    Blockly.Python.PY_qdp_k210_serial_print = function() {
+      Blockly.Python.imports_['import_UART'] = 'from machine import UART';
+      var dropdown_uart = this.getFieldValue('mode');
+      var content = Blockly.Python.valueToCode(this, 'CONTENT', Blockly.Python.ORDER_ATOMIC) || '\"\"'
+      var code = "uart"+dropdown_uart+".write("+content+")\n";
+      return code;
+    };
+
+    Blockly.Python.PY_qdp_k210_serial_any = function(){
+      Blockly.Python.imports_['import_UART'] = 'from machine import UART'; 
+      var dropdown_uart = this.getFieldValue('mode');
+      var code =`uart${dropdown_uart}.any()`;
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+
+    Blockly.Python.PY_qdp_k210_serial_read = function(){
+      Blockly.Python.imports_['import_UART'] = 'from machine import UART'; 
+      var mode = this.getFieldValue('mode');
+      var type = this.getFieldValue('type');
+      var code =`uart${mode}.${type}()`;
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+
     //红外发射
     Blockly.Python.PY_qdp_k210_communicate_ir_recv = function(){
       Blockly.Python.imports_['import_irremote_k210'] = 'import irremote_k210';   

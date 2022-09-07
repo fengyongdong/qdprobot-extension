@@ -9,7 +9,108 @@ function addBlocks (Blockly) {
     const k210_digital_pin=[['0','0'],['1','1'],['2','2'],['3','3'],['4','4'],['5','5'],['6','6'],['7','7'],['8','8'],['9','9']]
 
 
+    //串口初始化
+    Blockly.Blocks.PY_qdp_k210_serial_softserial1 = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.PY_qdp_k210_serial_softserial1,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'mode',
+                        options: [['uart1','1'],['uart2','2'],['uart3','3']]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'RX',
+                        options: k210_digital_pin
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'TX',
+                        options: k210_digital_pin
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'baudrate',
+                        options: [['115200', '115200'], ['57600', '57600'], ['37400', '38400'], ['31250', '31250'], ['28800', '28800'], ['19200', '19200'], ['14400', '14400'], ['9600', '9600'], ['4800', '4800'], ['2400', '2400'], ['1200', '1200'], ['300', '300']]
+                    }
+                ],
+                "tooltip": "串口初始化",
+                colour: QH_Communicate_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
 
+    //串口打印
+    Blockly.Blocks.PY_qdp_k210_serial_print = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.PY_qdp_k210_serial_print,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'mode',
+                        options: [['uart1','1'],['uart2','2'],['uart3','3']]
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "CONTENT" 
+                    }
+                ],
+                "tooltip": "串口打印",
+                colour: QH_Communicate_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.PY_qdp_k210_serial_any = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.PY_qdp_k210_serial_any,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'mode',
+                        options: [['uart1','1'],['uart2','2'],['uart3','3']]
+                    }
+                ],
+                "tooltip": "串口打印",
+                colour: QH_Communicate_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_boolean']
+            });
+        }
+    };
+
+    Blockly.Blocks.PY_qdp_k210_serial_read = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.PY_qdp_k210_serial_read,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'mode',
+                        options: [['uart1','1'],['uart2','2'],['uart3','3']]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'type',
+                        options: [[Blockly.Msg.serial_read,'read'],[Blockly.Msg.serial_read_line,'readline']]
+                    }
+                ],
+                "tooltip": "串口读取",
+                colour: QH_Communicate_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
+            });
+        }
+    };
+    
     //红外发射
     Blockly.Blocks.PY_qdp_k210_communicate_ir_recv = {
         init: function () {

@@ -121,7 +121,9 @@
         "mpyQHActuator.name": "Actuator",
         "mpyQHActuator.description":"For AIStart actuator",
         "mpyQHASR.name": "ASR",
-        "mpyQHASR.description":"For AIStart ASR"
+        "mpyQHASR.description":"For AIStart ASR",
+        "QHk210Other.name": "AIStart other",
+        "QHk210Other.description":"For AIStart other"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -245,9 +247,9 @@
         "mpyQHActuator.name": "执行器",
         "mpyQHActuator.description":"用于AIStart 外接执行器",
         "mpyQHASR.name": "语音识别",
-        "mpyQHASR.description":"用于AIStart 语音识别"
-
-
+        "mpyQHASR.description":"用于AIStart 语音识别",
+        "QHk210Other.name": "AIStart 其它",
+        "QHk210Other.description":"用于AIStart 其它功能"
 
     },
     "zh-tw": {
@@ -371,6 +373,8 @@
         "mpyQHActuator.name": "執行器",
         "mpyQHActuator.description":"用於AIStart 外接執行器",
         "mpyQHASR.name": "語音識別",
-        "mpyQHASR.description":"用於AIStart 語音識別"
+        "mpyQHASR.description":"用於AIStart 語音識別",
+        "QHk210Other.name": "AIStart 其他",
+        "QHk210Other.description":"用於AIStart 其他功能"
     }
 }
