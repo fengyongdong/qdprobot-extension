@@ -65,6 +65,11 @@ function addBlocks (Blockly) {
                     }
                 ],
                 args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'key1',
+                        options: [['AIstart','4'],['Mini','2']]
+                    },
                     { 
                         type: "input_value", 
                         name: "colour" 

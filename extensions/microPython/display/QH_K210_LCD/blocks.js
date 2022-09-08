@@ -33,7 +33,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'invert',
-                        options: [[Blockly.Msg.py_yes,'1'],[Blockly.Msg.py_no,'0']]
+                        options: [[Blockly.Msg.py_no,'0'],[Blockly.Msg.py_yes,'1']]
                     }
                 ],
                 "tooltip": "LCD初始化\n频率:（实际上指 SPI 的通讯速率） 的频率\n颜色:LCD 初始化的颜色， 可以是 16 位的 RGB565 颜色值，比如 0xFFFF； 或者 RGB888 元组， 比如 (236, 36, 36)，\n反色:LCD 反色显示",

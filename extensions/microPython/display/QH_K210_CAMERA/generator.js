@@ -26,6 +26,7 @@ function addGenerator (Blockly) {
       var G = "0x" + color.substr(3, 2);
       var B = "0x" + color.substr(5);
       var key = Blockly.Python.valueToCode(this,'key', Blockly.Python.ORDER_ATOMIC);
+      var key1 = this.getFieldValue('key1');
       Blockly.Python.imports_['import_ws2812'] = 'from modules import ws2812';
       Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';
       if (key == "0")
@@ -34,7 +35,7 @@ function addGenerator (Blockly) {
                  + "rgb.display()\n";
       else
         var code = "rgb = ws2812(qdpk210_aistart.board_pins[10], 5)\n"
-                 + "rgb.set_led(4, ("+R+","+G+","+B+"))\n"
+                 + "rgb.set_led("+key1+", ("+R+","+G+","+B+"))\n"
                  + "rgb.display()\n";
       return code;  
     };

@@ -95,11 +95,11 @@
         "mpyQHDigit.name": "Digital tube",
         "mpyQHDigit.description": "Used to display values.",
         "mpyQHDict.name": "Dict",
-        "mpyQHDict.description": "Dict of MicroPython.",
+        "mpyQHDict.description": "Dict of MicroPython",
         "mpyQHList.name": "List",
-        "mpyQHList.description": "List of MicroPython.",
+        "mpyQHList.description": "List of MicroPython",
         "mpyQHSet.name": "Set",
-        "mpyQHSet.description": "Set of MicroPython.",
+        "mpyQHSet.description": "Set of MicroPython",
         "mpyQHTuple.name": "Tuple",
         "mpyQHTuple.description": "Tuple of MicroPython.",
         "mpyQHUultrasonic.name": "Ultrasonic transducer",
@@ -122,8 +122,8 @@
         "mpyQHActuator.description":"For AIStart actuator",
         "mpyQHASR.name": "ASR",
         "mpyQHASR.description":"For AIStart ASR",
-        "QHk210Other.name": "Micropython Advanced",
-        "QHk210Other.description":"For Micropython Advanced"
+        "QHk210Other.name": "MicroPython Advanced",
+        "QHk210Other.description":"For MicroPython Advanced"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -221,9 +221,9 @@
         "mpyQHDigit.name": "数码管",
         "mpyQHDigit.description": "用于显示数值。",
         "mpyQHDict.name": "字典",
-        "mpyQHDict.description": "MicroPython的字典。",
+        "mpyQHDict.description": "MicroPython的字典",
         "mpyQHList.name": "列表",
-        "mpyQHList.description": "MicroPython的列表。",
+        "mpyQHList.description": "MicroPython的列表",
         "mpyQHSet.name": "集合",
         "mpyQHSet.description": "MicroPython的集合",
         "mpyQHTuple.name": "元组",
@@ -248,8 +248,8 @@
         "mpyQHActuator.description":"用于AIStart 外接执行器",
         "mpyQHASR.name": "语音识别",
         "mpyQHASR.description":"用于AIStart 语音识别",
-        "QHk210Other.name": "Micropython 高级",
-        "QHk210Other.description":"用于Micropython 高级功能"
+        "QHk210Other.name": "MicroPython 高级",
+        "QHk210Other.description":"用于MicroPython 高级功能"
 
     },
     "zh-tw": {
@@ -347,9 +347,9 @@
         "mpyQHDigit.name": "數碼管",
         "mpyQHDigit.description": "用於顯示數值。",
         "mpyQHDict.name": "字典",
-        "mpyQHDict.description": "MicroPython的字典。",
+        "mpyQHDict.description": "MicroPython的字典",
         "mpyQHList.name": "列表",
-        "mpyQHList.description": "MicroPython的列表。",
+        "mpyQHList.description": "MicroPython的列表",
         "mpyQHSet.name": "集合",
         "mpyQHSet.description": "MicroPython的集合",
         "mpyQHTuple.name": "元組",
@@ -374,7 +374,7 @@
         "mpyQHActuator.description":"用於AIStart 外接執行器",
         "mpyQHASR.name": "語音識別",
         "mpyQHASR.description":"用於AIStart 語音識別",
-        "QHk210Other.name": "Micropython 高級",
-        "QHk210Other.description":"用於Micropython 高級功能"
+        "QHk210Other.name": "MicroPython 高級",
+        "QHk210Other.description":"用於MicroPython 高級功能"
     }
 }
