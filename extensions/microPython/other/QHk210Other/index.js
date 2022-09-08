@@ -1,7 +1,7 @@
 const QHk210Other = formatMessage => ({
     name: formatMessage({
         id: 'QHk210Other.name',
-        default: 'other'
+        default: 'Advanced'
     }),
     extensionId: 'QHk210Other',
     version: '1.0.0',
@@ -11,7 +11,7 @@ const QHk210Other = formatMessage => ({
     iconURL: `asset/other.png`,
     description: formatMessage({
         id: 'QHk210Other.description',
-        default: 'other'
+        default: 'Advanced'
     }),
     featured: true,
     blocks: 'blocks.js',

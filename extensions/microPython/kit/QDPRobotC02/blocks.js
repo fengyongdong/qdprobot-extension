@@ -777,7 +777,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-
+ /*
     //删除
     Blockly.Blocks.python_del = {
         init: function () {
@@ -797,6 +797,7 @@ function addBlocks (Blockly) {
             });
         }
     };
+   
 
     //try_except
     Blockly.Blocks.try_except_else_finally = {
@@ -901,9 +902,10 @@ function addBlocks (Blockly) {
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_number']
             });
+            
         }     
     };
-
+*/
     return Blockly;
 }
 
