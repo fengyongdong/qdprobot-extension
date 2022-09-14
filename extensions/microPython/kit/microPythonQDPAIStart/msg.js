@@ -2,7 +2,7 @@
 /* eslint-disable require-jsdoc */
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
-        QH_OTHER_CATEGORY:'Advanced',
+        QH_OTHER_CATEGORY:'Other',
         python_del:'del %1',
         python_in:'%1 is %2 in?',
         PY_time_ticks:'System run time %1',
@@ -23,7 +23,7 @@ function addMsg (Blockly) {
 
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
-        QH_OTHER_CATEGORY:'高级',
+        QH_OTHER_CATEGORY:'其它',
         python_del:'删除 %1',
         python_in:'%1 是否在 %2 内?',
         PY_time_ticks:'系统运行时间 %1',
@@ -43,7 +43,7 @@ function addMsg (Blockly) {
         controls_exec:'执行代码 %1'
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
-        QH_OTHER_CATEGORY:'高级',
+        QH_OTHER_CATEGORY:'其他',
         python_del:'刪除 %1',
         python_in:'%1 是否在 %2 內?',
         PY_time_ticks:'系統運行時間 %1',
