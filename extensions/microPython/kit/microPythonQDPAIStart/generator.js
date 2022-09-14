@@ -75,6 +75,7 @@ function addGenerator (Blockly) {
       var name=this.getFieldValue('VAR');
       var arg=Blockly.Python.valueToCode(this, 'arg', Blockly.Python.ORDER_RELATIONAL) || '0';
       arg = arg.replace(/\'/g, "");
+      Blockly.Python.imports_['import _thread'] = 'import _thread';
       var code = `_thread.start_new_thread(${name}, (${arg}))\n`;
       return code;  
     };
@@ -87,6 +88,7 @@ function addGenerator (Blockly) {
         branch='pass';
       var arg=Blockly.Python.valueToCode(this, 'arg', Blockly.Python.ORDER_RELATIONAL);
       arg = arg.replace(/\'/g, "");
+      Blockly.Python.imports_['import _thread'] = 'import _thread';
       var code = `def ${name}(${arg}):\n    ${branch}\n`;
       return code;  
     };
