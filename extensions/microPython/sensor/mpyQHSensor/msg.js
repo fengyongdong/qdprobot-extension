@@ -3,7 +3,9 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         QH_SENSOR_CATEGORY:'SENSOR',
+        PY_qdp_k210_sensor_button_init:'Initialization button %1',
         PY_qdp_k210_sensor_dht11:'DHT11 PIN %1 get %2',
+        PY_qdp_k210_sensor_button_read:'Button %1 pressed?',
         k210_temp:'temperature',
         k210_humi:'humidity',
         k210_temp_humi:'temperature/humidity',
@@ -23,6 +25,8 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         QH_SENSOR_CATEGORY:'传感器',
+        PY_qdp_k210_sensor_button_init:'初始化 按键 %1',
+        PY_qdp_k210_sensor_button_read:'按键 %1 被按下?',
         PY_qdp_k210_sensor_dht11:'DHT11 管脚 %1 获取 %2',
         k210_temp:'温度',
         k210_humi:'湿度',
@@ -43,6 +47,8 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_SENSOR_CATEGORY:'感測器',
+        PY_qdp_k210_sensor_button_init:'初始化 按鍵 %1',
+        PY_qdp_k210_sensor_button_read:'按鍵 %1 被按下?',
         PY_qdp_k210_sensor_dht11:'DHT11 管腳 %1 獲取 %2',
         k210_temp:'溫度',
         k210_humi:'濕度',

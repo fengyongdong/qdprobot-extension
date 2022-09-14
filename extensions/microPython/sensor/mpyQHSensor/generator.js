@@ -3,6 +3,22 @@
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
 
+  Blockly.Python.PY_qdp_k210_sensor_button_init = function () {
+    Blockly.Python.imports_['import_GPIO'] = 'from Maix import GPIO';
+    Blockly.Python.imports_['import_fm'] = 'from fpioa_manager import fm';
+    Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';
+    var key =this.getFieldValue('key');
+    var code1 = 'fm.register(qdpk210_aistart.button_pins['+key+'], qdpk210_aistart.pins(qdpk210_aistart.button_pins['+key+'])[0])\n';
+    code1 += 'button'+key+'=GPIO(qdpk210_aistart.pins(qdpk210_aistart.button_pins['+key+'])[1], GPIO.IN, GPIO.PULL_UP)\n';
+  return code1;  
+  };
+
+  Blockly.Python.PY_qdp_k210_sensor_button_read = function () {
+    var key = this.getFieldValue('key');
+    var code = 'not button'+key+'.value()';
+    return [code, Blockly.Python.ORDER_ATOMIC];
+  };
+
   Blockly.Python.PY_qdp_k210_sensor_dht11 = function () {
     Blockly.Python.imports_['import_dht11_k210'] = 'import dht11_k210';
     Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';

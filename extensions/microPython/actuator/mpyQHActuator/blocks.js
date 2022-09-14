@@ -11,8 +11,72 @@ function addBlocks (Blockly) {
     const QH_MOTOR_ICO =
     "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM2MzMzMzA1NDE5IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjIyOTI3IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik05MjEuNiAzMzIuOGgtNTEuMmMtNi42IDAtMTMgMC42LTE5LjMgMS44LTIwLjctMjguNy01NC41LTUzLTgzLjEtNTNINTEyVjEyOGMwLTI4LjMtMjIuOS01MS4yLTUxLjItNTEuMmgtMjU2Yy0yOC4zIDAtNTEuMiAyMi45LTUxLjIgNTEuMnYxNTMuNmMtMjcuNSAwLTU5LjggMjIuNC04MC42IDQ5LjctNS4xLTEuNS0xMC41LTIuMy0xNi4xLTIuM0MyNS41IDMyOC45IDAgMzU0LjQgMCAzODUuOHYzNDkuOWMwIDMxLjQgMjUuNSA1Ni45IDU2LjkgNTYuOSAzLjUgMCA2LjgtMC4yIDkuOC0wLjcgMTguMyAzMi42IDUwLjEgNjIuNSA3OS42IDYyLjVoMi41bC00Ni40IDkyLjdoNzY4bC01MS4yLTEwMi40aC0yLjFjNC40LTIuNCA4LjYtNS4yIDEyLjctOC40IDEyLjUgNS40IDI2LjIgOC40IDQwLjYgOC40aDUxLjJjNTYuNiAwIDEwMi40LTQ1LjggMTAyLjQtMTAyLjRWNDM1LjJjMC01Ni42LTQ1LjgtMTAyLjQtMTAyLjQtMTAyLjR6TTQwOS42IDEyOGMyOC4zIDAgNTEuMiAyMi45IDUxLjIgNTEuMnMtMjIuOSA1MS4yLTUxLjIgNTEuMi01MS4yLTIyLjktNTEuMi01MS4yIDIyLjktNTEuMiA1MS4yLTUxLjJ6TTI1NiAxMjhjMjguMyAwIDUxLjIgMjIuOSA1MS4yIDUxLjJzLTIyLjkgNTEuMi01MS4yIDUxLjItNTEuMi0yMi45LTUxLjItNTEuMlMyMjcuNyAxMjggMjU2IDEyOHogbTUxMiA2NjUuNkgxNTMuNnYtNTEuMkg3Njh2NTEuMnogbTAtMTAyLjRIMTUzLjZWNjQwSDc2OHY1MS4yeiBtMC0xMDIuNEgxNTMuNnYtNTEuMkg3Njh2NTEuMnogbTAtMTAyLjRIMTUzLjZ2LTUxLjJINzY4djUxLjJ6IG0wLTEwMi40SDE1My42di01MS4ySDc2OFYzODR6IiBmaWxsPSIjZmZmZmZmIiBwLWlkPSIyMjkyOCI+PC9wYXRoPjwvc3ZnPg==";
 
+    const QH_LED_ICO =
+    "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM2MzMyODk5Mzc2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE2MTMzIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik04MTAuNjY2NjY3IDIxNi4wNjRsLTQ4LjEyOC00OC4xMjgtODYuNjk4NjY3IDg2LjY5ODY2NyA0OC4xMjggNDguMTI4IDg2LjY5ODY2Ny04Ni42OTg2Njd6TTM0OC41MDEzMzMgMjU0LjYzNDY2N0wyNjEuODAyNjY3IDE2Ny45MzYgMjEzLjY3NDY2NyAyMTYuMDY0IDMwMC4zNzMzMzMgMzAyLjc2MjY2N2w0OC4xMjgtNDguMTI4ek01NDYuMTMzMzMzIDc4LjE2NTMzM2gtNjguMjY2NjY2djEyMi41Mzg2NjdoNjguMjY2NjY2Vjc4LjE2NTMzM3ogbTIzMS4wODI2NjcgMzUzLjk2MjY2N3Y2OC4yNjY2NjdoMTIyLjUzODY2N3YtNjguMjY2NjY3aC0xMjIuNTM4NjY3eiBtLTc3LjQ4MjY2NyAyOC42NzJjMC0xMDMuNDI0LTg0LjMwOTMzMy0xODcuNzMzMzMzLTE4Ny43MzMzMzMtMTg3LjczMzMzM3MtMTg3LjczMzMzMyA4NC4zMDkzMzMtMTg3LjczMzMzMyAxODcuNzMzMzMzVjc1MC45MzMzMzNIMjA0Ljh2NjguMjY2NjY3aDE3MC42NjY2Njd2MTM2LjUzMzMzM2g2OC4yNjY2NjZ2LTEzNi41MzMzMzNoMTM2LjUzMzMzNHYxMzYuNTMzMzMzaDY4LjI2NjY2NnYtMTM2LjUzMzMzM2gxNzAuNjY2NjY3di02OC4yNjY2NjdoLTExOS40NjY2Njd2LTI5MC4xMzMzMzN6IG0tNjguMjY2NjY2IDI5MC4xMzMzMzNoLTIzOC45MzMzMzR2LTI5MC4xMzMzMzNjMC02NS44NzczMzMgNTMuNTg5MzMzLTExOS40NjY2NjcgMTE5LjQ2NjY2Ny0xMTkuNDY2NjY3czExOS40NjY2NjcgNTMuNTg5MzMzIDExOS40NjY2NjcgMTE5LjQ2NjY2N1Y3NTAuOTMzMzMzek0yNDkuNTE0NjY3IDQzMi4xMjhIMTIzLjkwNHY2OC4yNjY2NjdIMjQ5LjE3MzMzM3YtNjguMjY2NjY3eiIgcC1pZD0iMTYxMzQiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4=";
+
 
     const k210_pins = [['P0','0'],['P1','1'],['P2','2'],['P3','3'],['P4','4'],['P5','5'],['P6','6'],['P7','7'],['P8','8'],['P9','9']];
+
+    Blockly.Blocks.PY_qdp_k210_actuator_led_init = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.PY_qdp_k210_actuator_led_init,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_LED_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'key',
+                        options:[[Blockly.Msg.LED_R, "LED_R-13"],[Blockly.Msg.LED_G, "LED_G-12"],[Blockly.Msg.LED_B, "LED_B-14"]]
+                    } 
+                ],
+                "tooltip": "",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.PY_qdp_k210_actuator_led_bright = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.PY_qdp_k210_actuator_led_bright,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_LED_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'key',
+                        options:[[Blockly.Msg.LED_R, "LED_R"],[Blockly.Msg.LED_G, "LED_G"],[Blockly.Msg.LED_B, "LED_B"]]
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'bright',
+                        options:[[Blockly.Msg.ON, "0"],[Blockly.Msg.OFF, "1"]]
+                    }  
+                ],
+                "tooltip": "",
+                colour: QH_Actuator_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
 
     Blockly.Blocks.PY_qdp_k210_actuator_ws2812_init = {
         init: function () {

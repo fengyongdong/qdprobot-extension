@@ -7,6 +7,8 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_SENSOR_CATEGORY}" id="QH_SENSOR_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_Sensor_ICO}">
+    <block type="PY_qdp_k210_sensor_button_init"></block>
+    <block type="PY_qdp_k210_sensor_button_read"></block>
     <block type="PY_qdp_k210_sensor_dht11"></block>
     <block type="PY_qdp_k210_sensor_HCSR04">
         <field name="PIN1">2</field>

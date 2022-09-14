@@ -3,6 +3,24 @@
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
 
+  Blockly.Python.PY_qdp_k210_actuator_led_init = function () {
+    Blockly.Python.imports_['import_GPIO'] = 'from Maix import GPIO';
+    Blockly.Python.imports_['import_fm'] = 'from fpioa_manager import fm';  
+    var key = this.getFieldValue('key');
+    key = key.split('-');
+    var code = `fm.register(${key[1]}, fm.fpioa.GPIOHS14)\n${key[0]}= GPIO(GPIO.GPIOHS${key[1]}, GPIO.OUT)\n`;
+    return code;  
+  };
+
+  Blockly.Python.PY_qdp_k210_actuator_led_bright= function() {
+    Blockly.Python.imports_['import_GPIO'] = 'from Maix import GPIO';
+    var key = this.getFieldValue('key');
+    var bright = this.getFieldValue('bright');
+    var code = ""+key+".value("+bright+")\n";
+    return code;
+  };
+
+
   Blockly.Python.PY_qdp_k210_actuator_ws2812_init=function(){
     var dropdown_rgbpin = this.getFieldValue('PIN');
     var value_ledcount = Blockly.Python.valueToCode(this, 'LEDCOUNT', Blockly.Python.ORDER_ATOMIC);
@@ -52,9 +70,6 @@ function addGenerator (Blockly) {
     var code = "pse"+key+".duty("+range+"/18.0+2.5)\n";
     return code;  
   };
-
-  
-
 
   return Blockly;
   }

@@ -7,6 +7,14 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_ACTUATOR_CATEGORY}" id="QH_ACTUATOR_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_Actuator_ICO}">
+    <block type="PY_qdp_k210_actuator_led_init">
+    </block>
+    <block type="PY_qdp_k210_actuator_led_bright">
+      <value name="bright">
+        <shadow type="ledswitch">
+        </shadow>
+      </value>
+    </block>
     <block type="PY_qdp_k210_actuator_ws2812_init">
     <field name="PIN">10</field>
     <value name="LEDCOUNT">

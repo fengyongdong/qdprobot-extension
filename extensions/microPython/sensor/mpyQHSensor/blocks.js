@@ -3,6 +3,9 @@
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
     const QH_sensor_color = '#ff5757';
+
+    const QH_Button_ICO =
+    "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM2MzMxNzEzMTg2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjUxOTYiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTM2OCA1MTguNGMtMy4yLTYuNC02LjQtOS42LTEyLjgtMTYtMy4yLTMuMi05LjYtNi40LTEyLjgtOS42IDMuMi0zLjIgNi40LTMuMiA2LjQtNi40IDMuMi0zLjIgMy4yLTYuNCA2LjQtOS42IDAtMy4yIDMuMi02LjQgMy4yLTEyLjh2LTEyLjhjMC05LjYtMy4yLTE5LjItNi40LTI4LjgtMy4yLTkuNi05LjYtMTYtMTIuOC0yMi40LTYuNC02LjQtMTIuOC05LjYtMTkuMi0xMi44LTYuNC0zLjItMTYtMy4yLTIyLjQtMy4ySDIyNHYyNTIuOGg4MGM5LjYgMCAxOS4yLTMuMiAyOC44LTYuNCA5LjYtMy4yIDE2LTkuNiAyMi40LTE2IDYuNC02LjQgMTIuOC0xNiAxNi0yNS42IDMuMi05LjYgNi40LTE5LjIgNi40LTMyIDAtNi40IDAtMTYtMy4yLTIyLjRzLTMuMi0xMi44LTYuNC0xNnogbS05Ni04OS42aDE2YzYuNCAwIDEyLjggMy4yIDE2IDYuNCA2LjQgMy4yIDYuNCA5LjYgNi40IDE5LjJzLTMuMiAxNi02LjQgMTkuMmMtMy4yIDYuNC05LjYgNi40LTE2IDYuNGgtMTZ2LTUxLjJ6IG01NC40IDE0NGMtMy4yIDMuMi0zLjIgNi40LTYuNCA5LjYtMy4yIDMuMi02LjQgMy4yLTkuNiA2LjQtMy4yIDAtNi40IDMuMi0xMi44IDMuMkgyNzJ2LTY0aDI1LjZjOS42IDAgMTYgMy4yIDIyLjQgOS42IDYuNCA2LjQgOS42IDEyLjggOS42IDI1LjYgMCAwLTMuMiA2LjQtMy4yIDkuNnpNNzQ4LjggNDgwdjQ4Yy02LjQtNi40LTkuNi0xNi0xNi0yNS42LTYuNC05LjYtMTIuOC0xNi0xOS4yLTIyLjRMNjQwIDM4NGgtNDEuNnYyNTIuOGg1MS4ydi0xNjBsMTkuMiAyOC44YzYuNCA5LjYgMTIuOCAxOS4yIDIyLjQgMjguOGw4My4yIDEwOC44SDgwMHYtMjU2aC01MS4yVjQ4MHoiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjUxOTciPjwvcGF0aD48cGF0aCBkPSJNODk2IDIyNEgxMjhjLTM1LjIgMC02NCAyOC44LTY0IDY0djQ0OGMwIDM1LjIgMjguOCA2NCA2NCA2NGg3NjhjMzUuMiAwIDY0LTI4LjggNjQtNjRWMjg4YzAtMzUuMi0yOC44LTY0LTY0LTY0eiBtMCA0ODBjMCAxOS4yLTEyLjggMzItMzIgMzJIMTYwYy0xOS4yIDAtMzItMTIuOC0zMi0zMlYzMjBjMC0xOS4yIDEyLjgtMzIgMzItMzJoNzA0YzE5LjIgMCAzMiAxMi44IDMyIDMydjM4NHoiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjUxOTgiPjwvcGF0aD48cGF0aCBkPSJNMzkzLjYgNDMyaDY0djIwNC44SDUxMlY0MzJoNjR2LTQ4SDM5My42eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNTE5OSI+PC9wYXRoPjwvc3ZnPg==";
    
     const QH_SENSOR_ICO =
     "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjYyMzcwNTQ1OTUzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjYgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0MDQiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIuMDYyNSIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTUxMy4wNjY2NjcgNjQwYy03Mi41MzMzMzMgMC0xMjgtNTUuNDY2NjY3LTEyOC0xMjhzNTUuNDY2NjY3LTEyOCAxMjgtMTI4IDEyOCA1NS40NjY2NjcgMTI4IDEyOC01NS40NjY2NjcgMTI4LTEyOCAxMjh6IG0wLTE3MC42NjY2NjdjLTI1LjYgMC00Mi42NjY2NjcgMTcuMDY2NjY3LTQyLjY2NjY2NyA0Mi42NjY2NjdzMTcuMDY2NjY3IDQyLjY2NjY2NyA0Mi42NjY2NjcgNDIuNjY2NjY3IDQyLjY2NjY2Ny0xNy4wNjY2NjcgNDIuNjY2NjY2LTQyLjY2NjY2Ny0xNy4wNjY2NjctNDIuNjY2NjY3LTQyLjY2NjY2Ni00Mi42NjY2Njd6TTMxNi44IDc1MC45MzMzMzNjLTEyLjggMC0yMS4zMzMzMzMtNC4yNjY2NjctMjkuODY2NjY3LTEyLjgtMTIzLjczMzMzMy0xMjMuNzMzMzMzLTEyMy43MzMzMzMtMzI4LjUzMzMzMyAwLTQ1Mi4yNjY2NjYgMTcuMDY2NjY3LTE3LjA2NjY2NyA0Mi42NjY2NjctMTcuMDY2NjY3IDU5LjczMzMzNCAwczE3LjA2NjY2NyA0Mi42NjY2NjcgMCA1OS43MzMzMzNjLTg5LjYgODkuNi04OS42IDIzOC45MzMzMzMgMCAzMzIuOCAxNy4wNjY2NjcgMTcuMDY2NjY3IDE3LjA2NjY2NyA0Mi42NjY2NjcgMCA1OS43MzMzMzMtOC41MzMzMzMgOC41MzMzMzMtMTcuMDY2NjY3IDEyLjgtMjkuODY2NjY3IDEyLjh6TTcwOS4zMzMzMzMgNzUwLjkzMzMzM2MtMTIuOCAwLTIxLjMzMzMzMy00LjI2NjY2Ny0yOS44NjY2NjYtMTIuOC0xNy4wNjY2NjctMTcuMDY2NjY3LTE3LjA2NjY2Ny00Mi42NjY2NjcgMC01OS43MzMzMzMgODkuNi04OS42IDg5LjYtMjM4LjkzMzMzMyAwLTMzMi44LTE3LjA2NjY2Ny0xNy4wNjY2NjctMTcuMDY2NjY3LTQyLjY2NjY2NyAwLTU5LjczMzMzM3M0Mi42NjY2NjctMTcuMDY2NjY3IDU5LjczMzMzMyAwYzEyMy43MzMzMzMgMTIzLjczMzMzMyAxMjMuNzMzMzMzIDMyOC41MzMzMzMgMCA0NTIuMjY2NjY2LTguNTMzMzMzIDguNTMzMzMzLTE3LjA2NjY2NyAxMi44LTI5Ljg2NjY2NyAxMi44eiIgcC1pZD0iMTQwNSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0xODAuMjY2NjY3IDg4Ny40NjY2NjdjLTEyLjggMC0yMS4zMzMzMzMtNC4yNjY2NjctMjkuODY2NjY3LTEyLjgtMjAwLjUzMzMzMy0yMDAuNTMzMzMzLTIwMC41MzMzMzMtNTI0LjggMC03MjUuMzMzMzM0IDE3LjA2NjY2Ny0xNy4wNjY2NjcgNDIuNjY2NjY3LTE3LjA2NjY2NyA1OS43MzMzMzMgMHMxNy4wNjY2NjcgNDIuNjY2NjY3IDAgNTkuNzMzMzM0QzQzLjczMzMzMyAzNzUuNDY2NjY3IDQzLjczMzMzMyA2NDguNTMzMzMzIDIxMC4xMzMzMzMgODE0LjkzMzMzM2MxNy4wNjY2NjcgMTcuMDY2NjY3IDE3LjA2NjY2NyA0Mi42NjY2NjcgMCA1OS43MzMzMzQtOC41MzMzMzMgOC41MzMzMzMtMTcuMDY2NjY3IDEyLjgtMjkuODY2NjY2IDEyLjh6TTg0NS44NjY2NjcgODg3LjQ2NjY2N2MtMTIuOCAwLTIxLjMzMzMzMy00LjI2NjY2Ny0yOS44NjY2NjctMTIuOC0xNy4wNjY2NjctMTcuMDY2NjY3LTE3LjA2NjY2Ny00Mi42NjY2NjcgMC01OS43MzMzMzRDOTgyLjQgNjQ4LjUzMzMzMyA5ODIuNCAzNzkuNzMzMzMzIDgxNiAyMTMuMzMzMzMzYy0xNy4wNjY2NjctMTcuMDY2NjY3LTE3LjA2NjY2Ny00Mi42NjY2NjcgMC01OS43MzMzMzNzNDIuNjY2NjY3LTE3LjA2NjY2NyA1OS43MzMzMzMgMGMyMDAuNTMzMzMzIDIwMC41MzMzMzMgMjAwLjUzMzMzMyA1MjQuOCAwIDcyNS4zMzMzMzMtOC41MzMzMzMgNC4yNjY2NjctMjEuMzMzMzMzIDguNTMzMzMzLTI5Ljg2NjY2NiA4LjUzMzMzNHoiIHAtaWQ9IjE0MDYiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4=";
@@ -18,6 +21,64 @@ function addBlocks (Blockly) {
 
 
     const k210_pins = [['P0','0'],['P1','1'],['P2','2'],['P3','3'],['P4','4'],['P5','5'],['P6','6'],['P7','7'],['P8','8'],['P9','9']];
+     
+
+    Blockly.Blocks.PY_qdp_k210_sensor_button_init = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.PY_qdp_k210_sensor_button_init,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_Button_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'key',
+                        options:[["←", "0"], ["↑", "1"], ["→", "2"], ["↓", "3"], ["□", "4"], ["×", "5"], ["SELECT", "6"], ["START", "7"], ["EXIT", "8"], ["BOOT", "9"]]
+                    }
+                ],
+                "tooltip": "",
+                colour: QH_sensor_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    }; 
+
+    Blockly.Blocks.PY_qdp_k210_sensor_button_read = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.PY_qdp_k210_sensor_button_read,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_Button_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'key',
+                        options:[["←", "0"], ["↑", "1"], ["→", "2"], ["↓", "3"], ["□", "4"], ["×", "5"], ["SELECT", "6"], ["START", "7"], ["EXIT", "8"], ["BOOT", "9"]]
+                    }
+                ],
+                "tooltip": "",
+                colour: QH_sensor_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_boolean']
+            });
+        }
+    };     
+
     //dht11
     Blockly.Blocks.PY_qdp_k210_sensor_dht11 = {
         init: function () {
