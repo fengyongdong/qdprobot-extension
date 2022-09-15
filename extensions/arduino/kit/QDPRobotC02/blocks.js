@@ -1997,7 +1997,7 @@ function addBlocks (Blockly) {
                 "tooltip": "颜色传感器的值的应用",
                 colour: color_c02_serson,
                 colourTertiary: '#C0C0C0',
-                extensions: ['output_number']
+                extensions: ['output_boolean']
             });
         }
     };
