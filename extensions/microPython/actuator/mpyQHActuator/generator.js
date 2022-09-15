@@ -8,7 +8,7 @@ function addGenerator (Blockly) {
     Blockly.Python.imports_['import_fm'] = 'from fpioa_manager import fm';  
     var key = this.getFieldValue('key');
     key = key.split('-');
-    var code = `fm.register(${key[1]}, fm.fpioa.GPIOHS14)\n${key[0]}= GPIO(GPIO.GPIOHS${key[1]}, GPIO.OUT)\n`;
+    var code = `fm.register(${key[1]}, fm.fpioa.GPIOHS${key[1]})\n${key[0]}= GPIO(GPIO.GPIOHS${key[1]}, GPIO.OUT)\n`;
     return code;  
   };
 
@@ -61,7 +61,6 @@ function addGenerator (Blockly) {
     var code2 = 'pse'+key+'=PWM(tim'+time+', freq=50, duty=2.5, pin=qdpk210_aistart.board_pins['+key+'])\n';
     return code1+code2;  
   };
-
 
   Blockly.Python.PY_qdp_k210_actuator_Servo = function () {
     Blockly.Python.imports_['imports_PWM'] = 'from machine import PWM';
