@@ -588,7 +588,7 @@ function addGenerator (Blockly) {
     Blockly.Python.PY_qdp_k210_face_predict = function () {
       Blockly.Python.imports_['import_qdpk210_aistart_facedetect'] = 'import qdpk210_aistart_facedetect as facedetect';
       Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';
-      var calss =Blockly.Python.valueToCode(this, 'corpus',Blockly.Python.ORDER_ATOMIC);
+      var calss =this.getFieldValue("corpus");
       var code = "facedetect.get_result("+calss+")";
       return [code, Blockly.Python.ORDER_ATOMIC]; 
     };

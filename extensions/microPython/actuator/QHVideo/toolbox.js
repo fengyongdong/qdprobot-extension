@@ -10,7 +10,7 @@ function addToolbox () {
     <block type="PY_qdp_k210_video_open">
         <value name="path">
             <shadow type="text">
-                <field name="TEXT">/sd/QDPK210_AIstart.wav</field>
+                <field name="TEXT">/sd/QDPK210_AIstart.avi</field>
             </shadow>
         </value>
         <value name="sub">
@@ -31,7 +31,7 @@ function addToolbox () {
     <block type="PY_qdp_esp32_video_open">
         <value name="path">
             <shadow type="text">
-                <field name="TEXT">/sd/record01.wav</field>
+                <field name="TEXT">/sd/QDPK210_AIstart_record.avi</field>
             </shadow>
         </value>
         <value name="interval">

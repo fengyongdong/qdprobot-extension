@@ -139,10 +139,10 @@ function addBlocks (Blockly) {
                         options:k210_pins
                     }
                 ],
-                "tooltip": "dht11",
+                "tooltip": "超声波",
                 colour: QH_sensor_color,
                 colourTertiary: '#C0C0C0',
-                extensions: ['shape_statement']
+                extensions: ['output_number']
             });
         }
     };

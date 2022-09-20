@@ -33,7 +33,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'invert',
-                        options: [[Blockly.Msg.py_no,'0'],[Blockly.Msg.py_yes,'1']]
+                        options: [[Blockly.Msg.py_yes,'1'],[Blockly.Msg.py_no,'0']]
                     }
                 ],
                 "tooltip": "LCD初始化\n频率:（实际上指 SPI 的通讯速率） 的频率\n颜色:LCD 初始化的颜色， 可以是 16 位的 RGB565 颜色值，比如 0xFFFF； 或者 RGB888 元组， 比如 (236, 36, 36)，\n反色:LCD 反色显示",
@@ -185,14 +185,16 @@ function addBlocks (Blockly) {
                         type: "input_value", 
                         name: "content" 
                     },
-                    { 
-                        type: "input_value", 
-                        name: "color_T" 
+                    {
+                        type: 'field_dropdown',
+                        name: 'color_T',
+                        options: [[Blockly.Msg.BLACK,'BLACK'],[Blockly.Msg.NAVY,'NAVY'],[Blockly.Msg.DARKGREEN,'DARKGREEN'],[Blockly.Msg.DARKCYAN,'DARKCYAN'],[Blockly.Msg.MAROON,'MAROON'],[Blockly.Msg.PURPLE,'PURPLE'],[Blockly.Msg.OLIVE,'OLIVE'],[Blockly.Msg.LIGHTGREY,'LIGHTGREY'],[Blockly.Msg.DARKGREY,'DARKGREY'],[Blockly.Msg.BLUE,'BLUE'],[Blockly.Msg.GREEN,'GREEN'],[Blockly.Msg.CYAN,'CYAN'],[Blockly.Msg.RED,'RED'],[Blockly.Msg.MAGENTA,'MAGENTA'],[Blockly.Msg.YELLOW,'YELLOW'],[Blockly.Msg.WHITE,'WHITE'],[Blockly.Msg.ORANGE,'ORANGE'],[Blockly.Msg.GREENYELLOW,'GREENYELLOW'],[Blockly.Msg.PINK,'PINK']]
                     },
-                    { 
-                        type: "input_value", 
-                        name: "color_S" 
-                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'color_S',
+                        options: [[Blockly.Msg.WHITE,'WHITE'],[Blockly.Msg.BLACK,'BLACK'],[Blockly.Msg.NAVY,'NAVY'],[Blockly.Msg.DARKGREEN,'DARKGREEN'],[Blockly.Msg.DARKCYAN,'DARKCYAN'],[Blockly.Msg.MAROON,'MAROON'],[Blockly.Msg.PURPLE,'PURPLE'],[Blockly.Msg.OLIVE,'OLIVE'],[Blockly.Msg.LIGHTGREY,'LIGHTGREY'],[Blockly.Msg.DARKGREY,'DARKGREY'],[Blockly.Msg.BLUE,'BLUE'],[Blockly.Msg.GREEN,'GREEN'],[Blockly.Msg.CYAN,'CYAN'],[Blockly.Msg.RED,'RED'],[Blockly.Msg.MAGENTA,'MAGENTA'],[Blockly.Msg.YELLOW,'YELLOW'],[Blockly.Msg.ORANGE,'ORANGE'],[Blockly.Msg.GREENYELLOW,'GREENYELLOW'],[Blockly.Msg.PINK,'PINK']]
+                    }
                 ],
                 "tooltip": "LCD镜像",
                 colour: QH_LCD_color,

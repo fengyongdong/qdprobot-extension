@@ -260,6 +260,77 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.controls_range = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.controls_range,
+                args0: [
+                    { 
+                        type: "input_value", 
+                        name: "FROM" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "TO" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "STEP" 
+                    },
+                ],
+                "tooltip": "",
+                colour: QH_OTHER_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.controls_forEach = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.controls_forEach,
+                args0: [
+                    { 
+                        type: "input_value", 
+                        name: "LIST" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "VAR" 
+                    },
+                    {
+                      "type": "input_statement",
+                      "name": "DO"
+                    }
+                ],
+                "tooltip": "",
+                colour: QH_OTHER_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.py_variables = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.py_variables,
+                args0: [
+                    { 
+                        type: "input_value", 
+                        name: "name" 
+                    }
+                ],
+                "tooltip": "",
+                colour: QH_OTHER_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
+            });
+        }
+    };
+
+
 
 
     return Blockly;

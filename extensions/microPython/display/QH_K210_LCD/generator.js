@@ -59,15 +59,9 @@ function addGenerator (Blockly) {
       var x =Blockly.Python.valueToCode(this, 'x',Blockly.Python.ORDER_ATOMIC);
       var y =Blockly.Python.valueToCode(this, 'y',Blockly.Python.ORDER_ATOMIC);
       var tex = Blockly.Python.valueToCode(this, 'content', Blockly.Python.ORDER_ATOMIC);
-      var color_T = Blockly.Python.valueToCode(this, 'color_T', Blockly.Python.ORDER_ATOMIC);
-      var color_S = Blockly.Python.valueToCode(this, 'color_S', Blockly.Python.ORDER_ATOMIC);
-      var R1 = "0x" + color_T.substr(1, 2);
-      var G1 = "0x" + color_T.substr(3, 2);
-      var B1 = "0x" + color_T.substr(5);
-      var R2 = "0x" + color_S.substr(1, 2);
-      var G2 = "0x" + color_S.substr(3, 2);
-      var B2 = "0x" + color_S.substr(5);
-      var code = `lcd.draw_string(${x},${y},${tex},(${R1},${G1},${B1}),(${R2},${G2},${B2}))\n`;
+      var color_T = this.getFieldValue("color_T");
+      var color_S = this.getFieldValue("color_S");
+      var code = `lcd.draw_string(${x},${y},${tex},lcd.${color_T},lcd.${color_S})\n`;
       return code;  
     };
 

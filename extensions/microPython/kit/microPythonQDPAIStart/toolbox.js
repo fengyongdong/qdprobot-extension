@@ -42,6 +42,53 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <block type="controls_range">
+        <value name="FROM">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+        <value name="STEP">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+    </block>
+    <block type="controls_forEach">
+        <value name="LIST">
+          <block type="controls_range">
+            <value name="FROM">
+              <shadow type="math_number">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <value name="STEP">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <value name="VAR">
+          <block type="py_variables">
+            <value name="name">
+                <shadow type="text">
+                  <field name="TEXT">i</field>
+                </shadow>
+            </value>
+          </block>
+        </value>
+    </block>
 </category>
 `;
 

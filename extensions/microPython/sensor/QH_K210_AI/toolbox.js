@@ -431,7 +431,7 @@ function addToolbox () {
             <block type="PY_qdp_k210_list_var">
                 <value name="LIST">
                     <shadow type="text">
-                        <field name="TEXT">10,20,30,40</field>
+                        <field name="TEXT">160,120</field>
                     </shadow>
                 </value>
             </block>

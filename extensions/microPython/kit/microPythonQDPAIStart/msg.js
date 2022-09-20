@@ -19,7 +19,10 @@ function addMsg (Blockly) {
         loop_continue:'continue',
         controls_thread:'thread execution functions %1 arguments %2 ',
         thread_func:'function %1 arg %2',
-        controls_exec:'Executable code %1'
+        controls_exec:'Executable code %1',
+        controls_range:'Range from %1 to ％２ step ％３',
+        controls_forEach:'In %1 for %2 do %3',
+        py_variables:'variables %1'
 
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
@@ -40,7 +43,10 @@ function addMsg (Blockly) {
         loop_continue:'跳至下一个',
         controls_thread:'启动线程 执行函数 %1 参数 %2 ',
         thread_func:'函数 %1 参数 %2',
-        controls_exec:'执行代码 %1'
+        controls_exec:'执行代码 %1',
+        controls_range:'序列 从 %1 到 %2 间隔 %3',
+        controls_forEach:'对 %1 中的每个项目 %2 执行 %3',
+        py_variables:'变量 %1'
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_OTHER_CATEGORY:'其他',
@@ -60,7 +66,10 @@ function addMsg (Blockly) {
         loop_continue:'跳至下一個',
         controls_thread:'啟動線程 執行函數 %1 參數 %2 ',
         thread_func:'函數 %1 參數 %2',
-        controls_exec:'執行代碼 %1'
+        controls_exec:'執行代碼 %1',
+        controls_range:'序列 從 %1 到 %2間隔 %3',
+        controls_forEach:'對 %1 中的每個專案 %2 執行 %3',
+        py_variables:'變數 %1'
     });
     return Blockly;
 }
