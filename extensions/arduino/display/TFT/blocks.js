@@ -740,6 +740,50 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.make_arduino_st7735_draw_line1 = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.make_arduino_st7735_draw_line1,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_IMG_TFT_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'st7735_draw_line1_type',
+                        options:[[Blockly.Msg.drawFastHLine, "drawFastHLine"],[Blockly.Msg.drawFastVLine, "drawFastVLine"]]
+                    }, 
+                    { 
+                        type: "input_value", 
+                        name: "st7735_draw_pixel_start_x" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "st7735_draw_pixel_start_y" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "st7735_draw_pixel_length" 
+                    },
+                    { 
+                        type: "input_value", 
+                        name: "st7735_draw_pixel_color" 
+                    }               
+                ],
+                "tooltip": "",
+                colour: tft_colour,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     Blockly.Blocks.make_arduino_st7735_draw_rect_change_2019_10_18 = {
         init: function () {
             this.jsonInit({
