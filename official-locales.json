@@ -123,7 +123,9 @@
         "mpyQHASR.name": "ASR",
         "mpyQHASR.description":"For AIStart ASR",
         "QH_K210_AI_STUDIO.name": "AI",
-        "QH_K210_AI_STUDIO.description":"For AIStart AI"
+        "QH_K210_AI_STUDIO.description":"For AIStart AI",
+        "tft.name": "TFT",
+        "tft.description": " TFT display based on ST7735 and ST7789 drivers."
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -249,7 +251,9 @@
         "mpyQHASR.name": "语音识别",
         "mpyQHASR.description":"用于AIStart 语音识别",
         "QH_K210_AI_STUDIO.name": "人工智能",
-        "QH_K210_AI_STUDIO.description":"用于AIStart 人工智能"
+        "QH_K210_AI_STUDIO.description":"用于AIStart 人工智能",
+        "tft.name": "TFT",
+        "tft.description": "基于ST7735和ST7789驱动的TFT显示器。"
 
     },
     "zh-tw": {
@@ -375,7 +379,9 @@
         "mpyQHASR.name": "語音識別",
         "mpyQHASR.description":"用於AIStart 語音識別",
         "QH_K210_AI_STUDIO.name": "人工智慧",
-        "QH_K210_AI_STUDIO.description":"用於AIStart 人工智慧"
+        "QH_K210_AI_STUDIO.description":"用於AIStart 人工智慧",
+        "tft.name": "TFT",
+        "tft.description": "基於ST7735和ST7789驅動的TFT顯示器。"
 
     }
 }
