@@ -24,6 +24,7 @@ function addBlocks (Blockly) {
     const QH_OTHER_COLOR = '#cbc668';
     const QH_STORAGE_COLOR  = '#8a4f3d';
     const QH_WIFI_COLOR  = '#ed665a';
+    const QH_BAIDU_COLOR = '#cccc66';
 
     const xxqrIconUrl = 'data:image/png;base64,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';
 
@@ -179,6 +180,8 @@ function addBlocks (Blockly) {
    const QH_JPG11 = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIAC0ALQMBIgACEQEDEQH/xAAbAAEAAgIDAAAAAAAAAAAAAAAABgcDBQQICf/aAAgBAQAAAAD1TABhqG0onx7GRTrlKrilhr9gAf/EABUBAQEAAAAAAAAAAAAAAAAAAAAE/9oACAECEAAAAAitH//EABYBAQEBAAAAAAAAAAAAAAAAAAADBf/aAAgBAxAAAAAT18W5/8QALRAAAgECBAMFCQAAAAAAAAAAAwQFARMAAgYUISMzBxARMIMSICIkMUNxc6P/2gAIAQEAAT8A8w/AVbXOLTGYHaFPjz+3KxMQpXLxyJho6f8AVQ7HK/lhMW0UAEpjHKEHheL1i41HCTEjlXzxs03HUD9bQgGu08PvbimIc2o6smHKMRzQRA+AwbwTeuDvSikYkbhhcKFOc5fzxwXX5prKErWrNheXqUKiFOkCvQ3J/mefjQ09IOTIY0DxptAq56FK2GyVL1rNL+4wtCrqyjEgMvMOAIsw/cURSRDYUAEIqU6Ig2PK/8QAJBEAAQMBBwUAAAAAAAAAAAAAAQIDEQAQEhMUICEiMUFCUYH/2gAIAQIBAT8Atw23NlFYPjd6fTWaae4TE0UIQeLilyBM9j60f//EACMRAAIBAgYCAwAAAAAAAAAAAAECAwQRABITISIyBRAgQoH/2gAIAQMBAT8A9mWojmiCRQvG2bUZ+y2HHKDsbnY3w/j6mmjExdBbsn2xTyVMqM1RGkb6jqAhuCgPA/o3+H//2Q==";
 
    const QH_JPGLOGO = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIAC0ALQMBIgACEQEDEQH/xAAdAAABBAIDAAAAAAAAAAAAAAAABQYHCAECAwQJ/9oACAEBAAAAAPVMrXpZbPDGNEJou2CBRuZ7OA0mSrSZkjJqp8ovYjhM7TxX/wD/xAAVAQEBAAAAAAAAAAAAAAAAAAAEAP/aAAgBAhAAAACKqKqMn//EABYBAQEBAAAAAAAAAAAAAAAAAAUABP/aAAgBAxAAAACROkTrRn//xAA4EAABAgMEBgQOAwAAAAAAAAADBAUBBhMAAgcUESAhIzNDEBJEcQgVJFFSVGRydIKToqPisrPD/9oACAEBAAE/AOicMbErFNhpYY28zo4ok1U4kojqIi7wJ7N+MA5qlcTtL7cZwJF2yRwBgY9LZX7P/dqYoToeRJeC6jCEyYLw2BdYl5CFWoy5z2dzhlfFuexuTgtbwua4BROKRLWNRifMwAn+IEbjck1y5bwVWxw689vpkcEqR4dgRADlB4yn/a5qTJLqeZ5fdWlXwVoKNiy4cFFJMDcFx8TeRh3xwHCCvwK6bs/q1f7LSKzzWC4hSMYYsjDdPWMUpYqDF9nBmez6kyBcCsi2LfXq5esGlxi6ORYUgQMkEXN70sNtUVpZE6sqozUrDUFQqhMPTAPdo5Oo5sk2mMai5GCI6j6IN9+lnpnxJKlWiSOxomzNUGggQ7jffpZ+ZcVDN60LS5GMUrhWCYRQAog324/hZkvvAVztBxheuhKqSlBp5WzL0YfSrfP0zDhPK00ueedwQOWhSjEZFAdkfcL3/Z6Fj4EYclczLztdUyjiaVKrb+a1zA3DsQDhuNl67cPxYZtVt/LZnlxmlJFFK1poBT9fr04efo//xAAaEQACAgMAAAAAAAAAAAAAAAAEEAARFCEk/9oACAECAQE/AIOR1sYetvHX/8QAGBEAAwEBAAAAAAAAAAAAAAAAAQQQFAD/2gAIAQMBAT8A5hZTHWGRjAF0T//Z";
+
+   const BAIDU_LOGO = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjYzODA3Mjk2NDQ2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI1MTkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCI+PHBhdGggZD0iTTE4NC42ODIwNTggNTM4Ljc1ODc3MWMxMTEuMTc2ODc3LTIzLjg3MzQ3OCA5Ni4wMjkwODYtMTU2LjczNjU5MyA5Mi43MDE2OS0xODUuNzc1Njc3LTUuNDQ0ODI4LTQ0Ljc2ODU4OC01OC4xMDE0MzYtMTIzLjAyMDU0Mi0xMjkuNjA1NTI2LTExNi44MzExMjItODkuOTc5Mjc2IDguMDc0MTY4LTEwMy4xMjU5NzcgMTM4LjA1MTk5MS0xMDMuMTI1OTc3IDEzOC4wNTE5OTEtMTIuMTY5NDI0IDYwLjA3OTI1OCAyOS4xMzIxNTggMTg4LjQ1MTU1NCAxNDAuMDI5ODEzIDE2NC41NTQ4MDh6IG0xMTguMDY0MzUyIDIzMS4xMDI3MDljLTMuMjU3NTkgOS4zMzA2NjctMTAuNTE3MzYgMzMuMjI3NDEzLTQuMjM0ODY3IDU0LjAyOTQ0OSAxMi40MDIxMDkgNDYuNjc2NjA0IDUyLjkxMjU2MSA0OC43NzA3NjkgNTIuOTEyNTYyIDQ4Ljc3MDc2OWg1OC4yMTc3NzhWNzMwLjM1MTU3MmgtNjIuMzM2MzAyYy0yOC4wMTUyNyA4LjM1MzM5LTQxLjUzNDI2NiAzMC4xNTU5NzItNDQuNTU5MTcxIDM5LjUwOTkwOHogbTg4LjI4MDY3Ni00NTMuODk4NTY0YzYxLjQwNTU2MyAwIDExMS4wMzcyNjYtNzAuNjY2NDI0IDExMS4wMzcyNjYtMTU4LjAzOTYyOSAwLTg3LjI4MDEzMS00OS42MzE3MDMtMTU3LjkyMzI4Ny0xMTEuMDM3MjY2LTE1Ny45MjMyODctNjEuMzEyNDg5IDAtMTExLjA2MDUzNCA3MC42NDMxNTYtMTExLjA2MDUzNCAxNTcuOTIzMjg3IDAgODcuMzczMjA1IDQ5Ljc3MTMxNCAxNTguMDM5NjI5IDExMS4wNjA1MzQgMTU4LjAzOTYyOXogbTI2NC40Njk3MzMgMTAuNDQ3NTU1YzgyLjA2Nzk4OCAxMC42NTY5NzEgMTM0Ljg0MDkzOC03Ni45MjU2NSAxNDUuMzM1MDMtMTQzLjMxMDY3MSAxMC43MDM1MDgtNjYuMjkxOTQ3LTQyLjI1NTU5LTE0My4yODc0MDItMTAwLjM1NzAyNi0xNTYuNTI3MTc3LTU4LjIxNzc3OS0xMy4zNTYxMTctMTMwLjkwODU2MiA3OS45MDQwMTctMTM3LjU0MDA4NCAxNDAuNzA0NTk5LTcuOTExMjg5IDc0LjMxOTU3OCAxMC42MzM3MDMgMTQ4LjU5MjYyIDkyLjU2MjA4IDE1OS4xMzMyNDl6IG0yMDEuMDg2MzQ4IDM5MC4yMTI2ODhzLTEyNi45NzYxODYtOTguMjM5NTkzLTIwMS4xMDk2MTctMjA0LjQxMzc0M2MtMTAwLjQ3MzM2OC0xNTYuNTUwNDQ1LTI0My4yMDIzMjctOTIuODQxMzAyLTI5MC45NDkyODItMTMuMjE2NTA2LTQ3LjUzNzUzOSA3OS42MDE1MjctMTIxLjYyNDQzMiAxMjkuOTU0NTU0LTEzMi4xNDE3OTIgMTQzLjI4NzQwMy0xMC42ODAyNCAxMy4xMjM0MzItMTUzLjM4NTkzIDkwLjE2NTQyNC0xMjEuNjk0MjM3IDIzMC44NzAwMjMgMzEuNjY4NDI0IDE0MC42MTE1MjUgMTQyLjkzODM3NSAxMzcuOTM1NjQ4IDE0Mi45MzgzNzQgMTM3LjkzNTY0OHM4MS45OTgxODIgOC4wNzQxNjggMTc3LjExOTc5Ny0xMy4yMTY1MDZjOTUuMTY4MTUxLTIxLjEwNDUyNiAxNzcuMDk2NTI4IDUuMjU4NjggMTc3LjA5NjUyOCA1LjI1ODY4MXMyMjIuMjgzOTQ4IDc0LjQzNTkyMSAyODMuMTA3Nzk4LTY4Ljg1MTQ4MmM2MC43NTQwNDUtMTQzLjMzMzkzOS0zNC4zNjc1Ny0yMTcuNjUzNTE4LTM0LjM2NzU2OS0yMTcuNjUzNTE4eiBtLTM4MC4zMjM1NzggMjEzLjI1NTc3MmgtMTQ0LjUyMDYzMmMtNjIuNDA2MTA4LTEyLjQ0ODY0Ni04Ny4yNTY4NjItNTUuMDI5OTk1LTkwLjM5ODExLTYyLjI4OTc2NS0zLjA3MTQ0Mi03LjM3NjExMy0yMC44MDIwMzYtNDEuNjA0MDcyLTExLjQyNDgzMi05OS44NDUxMTkgMjYuOTY4MTg4LTg3LjI1Njg2MiAxMDMuODcwNTY5LTkzLjUxNjA4OCAxMDMuODcwNTY5LTkzLjUxNjA4OGg3Ni45MjU2NXYtOTQuNTYzMTcxbDY1LjUyNDA4NyAxLjAwMDU0NnYzNDkuMjEzNTk3eiBtMjY5LjE0NjcwMS0xLjAwMDU0NWgtMTY2LjI5OTk0NmMtNjQuNDUzNzM2LTE2LjYxMzcwNy02Ny40NTUzNzItNjIuNDA2MTA4LTY3LjQ1NTM3MS02Mi40MDYxMDh2LTE4My44OTA5MjlsNjcuNDU1MzcxLTEuMDkzNjE5djE2NS4yNzYxMzFjNC4xMTg1MjQgMTcuNjM3NTIgMjYuMDE0MTc5IDIwLjgyNTMwNCAyNi4wMTQxOCAyMC44MjUzMDVoNjguNTI1NzIydi0xODUuMDA3ODE3aDcxLjc2MDA0NHYyNDYuMjk3MDM3eiBtMjM1LjQwNzM4LTQ5MC45ODg1NDhjMC0zMS43NjE0OTgtMjYuMzg2NDc1LTEyNy4zOTUwMTktMTI0LjIzMDUwMy0xMjcuMzk1MDE5LTk4LjAwNjkwOCAwLTExMS4xMDcwNzEgOTAuMjU4NDk4LTExMS4xMDcwNzIgMTU0LjA2MDcxNiAwIDYwLjg5MzY1NiA1LjE0MjMzOCAxNDUuODkzNDc0IDEyNi44ODMxMTIgMTQzLjE5NDMyOSAxMjEuNzg3MzExLTIuNjk5MTQ2IDEwOC40NTQ0NjMtMTM3LjkzNTY0OCAxMDguNDU0NDYzLTE2OS44NjAwMjZ6IG0wIDAiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjI1MjAiPjwvcGF0aD48L3N2Zz4=';
     
     var qdprobotESP32_BOTH_PIN_Display_Dropdown = [
     ['.P0-32-33（Display）','0'],
@@ -7511,6 +7514,204 @@ function addBlocks (Blockly) {
                 ],
                 "tooltip": "串口打印",
                 colour:QH_COMMUNICATE_color1,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    //语音合成或者语音识别百度密钥初始化
+    Blockly.Blocks.Baidu_voice_initialization = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.Baidu_voice_initialization,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'input_value',
+                        name: 'key'
+                    }
+                ],
+                "tooltip": "语音合成或者语音识别百度密钥初始化",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    //语音合成或者语音识别百度密钥初始化
+    Blockly.Blocks.Baidu_voice_initialization = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.Baidu_voice_initialization,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'input_value',
+                        name: 'key'
+                    }
+                ],
+                "tooltip": "语音合成或者语音识别百度密钥初始化",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.qdp_recording_stopped_setups = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_recording_stopped_setups,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'CLK',
+                        options: esp32_digital_pin
+                    },
+                    {
+                        type: 'field_dropdown',
+                        name: 'DTA',
+                        options: esp32_digital_pin
+                    }
+                ],
+                "tooltip": "",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.qdp_Speech_Recognition = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_Speech_Recognition,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'input_value',
+                        name: 'key'
+                    }
+                ],
+                "tooltip": "语音识别结果，此功能不与语音合成一起使用，最多可识别8秒音频; 齐护密钥请上传sample文件夹下的‘齐护密钥生成固件.bin’固件打印得到！！",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
+            });
+        }
+    };
+
+    Blockly.Blocks.qdp_recording_stopped = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_recording_stopped,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                ],
+                "tooltip": "",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.baidu_pronunciation_speaker_selection = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.baidu_pronunciation_speaker_selection,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'name',
+                        options: [["度逍遥","5003"], ["度小鹿","5118"], ["度博文","106"], ["度小童","110"], ["度小萌","111"], ["度米朵","103"], ["度小娇","5"]]
+                    }
+                ],
+                "tooltip": "点击帮助在线试听并选择发音人",
+                colour:QH_BAIDU_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.qdp_speech_synthesis = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: Blockly.Msg.qdp_speech_synthesis,
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: BAIDU_LOGO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                        type: 'input_value',
+                        name: 'key'
+                    },
+                    {
+                        type: 'input_value',
+                        name: 'data'
+                    }
+                ],
+                "tooltip": "点击帮助在线试听并选择发音人",
+                colour:QH_BAIDU_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
             });

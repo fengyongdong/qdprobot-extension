@@ -24,6 +24,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---OPERATOR---',
         QH_WEATHER_LABEL:'---WEATHER---',
         QH_TIMER_LABEL:'---TIMER---',
+        QH_BAIDU_SPEECH_LABEL:'---BAIDU SPEECH---',
+        QH_AI_SPEECH_LABEL:'---AI SPEECH---',
         QH_C02_COLOR_SCREEN_CATEGORY:'Color Screen',
         QH_C02_SENSOR_CATEGORY:'Sensor',
         QH_ACTUATOR_CATEGORY:'Actuator',
@@ -451,7 +453,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲ Tur left_back",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ stop",
         qdp_esp32_motor_mecanum_init : 'Motor universal car init Left front wheel %1 Left rear wheel %2 Right front wheel %3 Right rear wheel %4',
-        qdp_esp32_motor_mecanum_run :'Motor universal car run  %1 speed 0~255 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9'
+        qdp_esp32_motor_mecanum_run :'Motor universal car run  %1 speed 0~255 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9',
+        Baidu_voice_initialization:'BAIDU speech initialization auth %1',
+        qdp_recording_stopped_setups:'ASR initialization CLK %1 DTA %2',
+        qdp_Speech_Recognition:'ASR result QH auth %1',
+        qdp_recording_stopped:'ASR stop record',
+        baidu_pronunciation_speaker_selection:'Speech synthesis Articulator %1',
+        qdp_speech_synthesis:'speech synthesis QH auth %1 text %2'
 
 
     });
@@ -482,6 +490,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---运算---',
         QH_WEATHER_LABEL:'---天气---',
         QH_TIMER_LABEL:'---定时器---',
+        QH_BAIDU_SPEECH_LABEL:'---百度语音---',
+        QH_AI_SPEECH_LABEL:'---AI语音---',
         QH_C02_COLOR_SCREEN_CATEGORY:'彩屏',
         QH_C02_SENSOR_CATEGORY:'传感器',
         QH_ACTUATOR_CATEGORY:'执行器',
@@ -906,7 +916,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左后转",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
         qdp_esp32_motor_mecanum_init : '直流电机万向车 初始化 左前轮 %1 左后轮 %2 右前轮 %3 右后轮 %4',
-        qdp_esp32_motor_mecanum_run :'直流电机万向车 执行 %1 速度0~255 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9'
+        qdp_esp32_motor_mecanum_run :'直流电机万向车 执行 %1 速度0~255 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9',
+        Baidu_voice_initialization:'百度语音 初始化 密钥 %1',
+        qdp_recording_stopped_setups:'语音识别 初始化 CLK %1 DTA %2',
+        qdp_Speech_Recognition:'语音识别结果 齐护密钥 %1',
+        qdp_recording_stopped:'语音识别停止录音',
+        baidu_pronunciation_speaker_selection:'语音合成 发音人设置 %1',
+        qdp_speech_synthesis:'语音合成 齐护密钥 %1 合成文本 %2'
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_BUTTON_LABEL:'---按鈕---',
@@ -935,6 +951,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---運算---',
         QH_WEATHER_LABEL:'---天氣---',
         QH_TIMER_LABEL:'---定時器---',
+        QH_BAIDU_SPEECH_LABEL:'---百度語音---',
+        QH_AI_SPEECH_LABEL:'---AI語音---',
         QH_C02_COLOR_SCREEN_CATEGORY:'彩屏',
         QH_C02_SENSOR_CATEGORY:'感測器',
         QH_ACTUATOR_CATEGORY:'執行器',
@@ -1359,7 +1377,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左後轉",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
         qdp_esp32_motor_mecanum_init : '直流電機萬向車 初始化 左前輪 %1 左後輪 %2 右前輪 %3 右後輪 %4',
-        qdp_esp32_motor_mecanum_run :'直流電機萬向車 執行 %1 速度0~255 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9'
+        qdp_esp32_motor_mecanum_run :'直流電機萬向車 執行 %1 速度0~255 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9',
+        Baidu_voice_initialization:'百度語音 初始化 密鑰 %1',
+        qdp_recording_stopped_setups:'語音識別 初始化 CLK %1 DTA %2',
+        qdp_Speech_Recognition:'語音識別結果 齊護密鑰 %1',
+        qdp_recording_stopped:'語音識別停止錄音',
+        baidu_pronunciation_speaker_selection:'語音合成 發音人設置 %1',
+        qdp_speech_synthesis:'語音合成 齊護密鑰 %1 合成文本 %2'
     });
     return Blockly;
 }

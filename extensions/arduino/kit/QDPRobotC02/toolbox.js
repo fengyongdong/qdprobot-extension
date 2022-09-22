@@ -536,7 +536,42 @@ function addToolbox () {
 <category name="%{BKY_QH_SPEECH_CATEGORY}" id="QH_SPEECH_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_SPEECH_ICO}">
     <block type="QDP32_ASR_SendData"></block>
     <block type="QDP32_ASR_ReceiveData"></block>
-    <block type="QDP32_ASR_CompareData"></block>
+    <block type="QDP32_ASR_CompareData"></block>    
+    <label text="%{BKY_QH_BAIDU_SPEECH_LABEL}"></label>
+    <block type="Baidu_voice_initialization">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT">24.4ee9cba2c7cb2bd1c994098458611691.2592000.1658767840.282335-21763994</field>
+        </shadow>
+      </value>       
+    </block>
+    <block type="qdp_recording_stopped_setups">
+        <field name="CLK">25</field> 
+        <field name="DTA">26</field>            
+    </block>
+    <block type="qdp_Speech_Recognition">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT">6681E3</field>
+        </shadow>
+      </value>        
+    </block>
+    <block type="qdp_recording_stopped"></block>
+    <block type="baidu_pronunciation_speaker_selection"></block>
+
+    <block type="qdp_speech_synthesis">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT">6681E3</field>
+        </shadow>
+      </value> 
+      <value name="data">
+        <shadow type="text">
+          <field name="TEXT">你好世界</field>
+        </shadow>
+      </value>         
+    </block>
+    <label text="%{BKY_QH_AI_SPEECH_LABEL}"></label>   
     <block type="speech_recognition_initialization">
         <value name="auth">
             <shadow type="text">

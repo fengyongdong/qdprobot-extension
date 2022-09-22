@@ -13468,6 +13468,76 @@ Blockly.Arduino.serialPrint = function() {
   return code;
 };
 
+Blockly.Arduino.Baidu_voice_initialization = function() {                                              
+  var key= Blockly.Arduino.valueToCode(this, 'key', Blockly.Arduino.ORDER_ATOMIC);                                                                                             
+  var code = 'Baidu_voice_key = ' +key+ ';\n';
+  return code;
+};
+
+Blockly.Arduino.qdp_recording_stopped_setups = function() {
+    var CLK= this.getFieldValue('CLK');
+    var DTA= this.getFieldValue('DTA');
+    Blockly.Arduino.definitions_['include_QDProbot_voice_setups'] ='#define CONFIG_I2S_LRCK_PIN ' +CLK+ '\n'
+                                                                  +'#define CONFIG_I2S_DATA_IN_PIN ' +DTA+ '\n'
+                                                                  +'#include <QDProbot_voice.h>';
+    var code='';
+    return code;
+};
+
+Blockly.Arduino.qdp_Speech_Recognition = function() {
+    var key= Blockly.Arduino.valueToCode(this, 'key', Blockly.Arduino.ORDER_ATOMIC);
+    Blockly.Arduino.setups_['QDProbot_voice'] ='voice_initialization(' +key+ ');';
+    var code='qdp_Speech_Recognition()';
+    return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino.qdp_recording_stopped = function() {
+    var code='recording_status = false;\n';
+    return code;
+};
+
+Blockly.Arduino.baidu_pronunciation_speaker_selection = function() {
+  Blockly.Arduino.definitions_['include_SD_MMC'] ='#include <SD_MMC.h>';
+  Blockly.Arduino.definitions_['include_SD'] ='#include <SD.h>';
+  Blockly.Arduino.definitions_['include_SPI'] ='#include <SPI.h>';  
+  Blockly.Arduino.definitions_['include_QDProbot_voice1'] ='#include <QDProbot_voice1.h>';    
+  Blockly.Arduino.definitions_['var_sd'] = 'SPIClass sdSPI(VSPI);\n'
+                                     +'#define SD_MISO     22\n'
+                                     +'#define SD_MOSI     19\n'
+                                     +'#define SD_SCLK     21\n'
+                                     +'#define SD_CS       0\n';                                                          
+  Blockly.Arduino.setups_['sd_setups'] = 'sdSPI.begin(SD_SCLK, SD_MISO, SD_MOSI, SD_CS);;\n'
+                                               +'if (!SD.begin(SD_CS, sdSPI)){\n'
+                                               +'  Serial.println(F("ERROR: SD card mount failed!"));;\n'
+                                               +'}\n'
+                                               +'Serial.println("Initialisation done.");\n';
+  var name= this.getFieldValue('name');                                                
+  var code = 'tts_per = "' +name+ '";\n';
+  return code;
+};
+
+Blockly.Arduino.qdp_speech_synthesis = function() {
+  Blockly.Arduino.definitions_['include_SD_MMC'] ='#include <SD_MMC.h>';
+  Blockly.Arduino.definitions_['include_SD'] ='#include <SD.h>';
+  Blockly.Arduino.definitions_['include_SPI'] ='#include <SPI.h>';  
+  Blockly.Arduino.definitions_['include_QDProbot_voice1'] ='#include <QDProbot_voice1.h>';    
+  Blockly.Arduino.definitions_['var_sd'] = 'SPIClass sdSPI(VSPI);\n'
+                                     +'#define SD_MISO     22\n'
+                                     +'#define SD_MOSI     19\n'
+                                     +'#define SD_SCLK     21\n'
+                                     +'#define SD_CS       0\n';                                                          
+  Blockly.Arduino.setups_['sd_setups'] = 'sdSPI.begin(SD_SCLK, SD_MISO, SD_MOSI, SD_CS);;\n'
+                                               +'if (!SD.begin(SD_CS, sdSPI)){\n'
+                                               +'  Serial.println(F("ERROR: SD card mount failed!"));;\n'
+                                               +'}\n'
+                                               +'Serial.println("Initialisation done.");\n';
+  var data= Blockly.Arduino.valueToCode(this, 'data', Blockly.Arduino.ORDER_ATOMIC);                                                
+  var key= Blockly.Arduino.valueToCode(this, 'key', Blockly.Arduino.ORDER_ATOMIC);                                                
+  Blockly.Arduino.setups_['qdp_speech_synthesis'] = 'qdp_speech_synthesis_initialization(' +key+ ');\n';                                                
+  var code = 'qdp_tts(' +data+ ');\n';
+  return code;
+};
+
 
 
 
