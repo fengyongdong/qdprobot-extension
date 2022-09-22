@@ -22,7 +22,7 @@ const mpu6050 = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['sensor'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://www.qdprobot.com'
 });
 
 module.exports = mpu6050;

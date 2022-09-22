@@ -405,7 +405,7 @@ function addBlocks (Blockly) {
                         name: 'body'
                     }
                     ],
-                "tooltip": '虚拟管脚状态',
+                "tooltip": '发送邮件（注：有的国家可能不能使用此功能！）',
                 colour: QH_MPY_BLYNK_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -440,7 +440,7 @@ function addBlocks (Blockly) {
                         name: 'attribute_value'
                     }
                     ],
-                "tooltip": '虚拟管脚状态',
+                "tooltip": '设置对应APP内V值的颜色',
                 colour: QH_MPY_BLYNK_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']

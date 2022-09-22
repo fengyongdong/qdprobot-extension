@@ -22,7 +22,7 @@ const cooperativeScheduler = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['other'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://www.qdprobot.com'
 });
 
 module.exports = cooperativeScheduler;

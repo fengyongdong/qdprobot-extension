@@ -1,7 +1,7 @@
 const mpy_esp32_wifi = formatMessage => ({
     name: formatMessage({
         id: 'mpy_esp32_wifi.name',
-        default: 'Infrared'
+        default: 'ESP Wifi'
     }),
     extensionId: 'mpy_esp32_wifi',
     version: '1.0.0',
@@ -11,7 +11,7 @@ const mpy_esp32_wifi = formatMessage => ({
     iconURL: `asset/mpy_esp32_wifi.png`,
     description: formatMessage({
         id: 'mpy_esp32_wifi.description',
-        default: 'Infrared communication.'
+        default: 'Wifi communication.'
     }),
     featured: true,
     blocks: 'blocks.js',

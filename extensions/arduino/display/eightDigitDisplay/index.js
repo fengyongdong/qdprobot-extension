@@ -22,7 +22,7 @@ const eightDigitDisplay = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['display'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://www.qdprobot.com'
 });
 
 module.exports = eightDigitDisplay;

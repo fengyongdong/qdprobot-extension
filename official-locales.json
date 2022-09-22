@@ -125,7 +125,11 @@
         "QH_K210_AI_STUDIO.name": "AI",
         "QH_K210_AI_STUDIO.description":"For AIStart AI",
         "tft.name": "TFT",
-        "tft.description": " TFT display based on ST7735 and ST7789 drivers."
+        "tft.description": " TFT display based on ST7735 and ST7789 drivers.",
+        "mpy_esp32_wifi.name": "ESP Wifi",
+         "mpy_esp32_wifi.description":"ESP Wifi application",
+         "mpy_blynk.name":"Blynk",
+         "mpy_blynk.description":"Blynk IOT"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -253,7 +257,11 @@
         "QH_K210_AI_STUDIO.name": "人工智能",
         "QH_K210_AI_STUDIO.description":"用于AIStart 人工智能",
         "tft.name": "TFT",
-        "tft.description": "基于ST7735和ST7789驱动的TFT显示器。"
+        "tft.description": "基于ST7735和ST7789驱动的TFT显示器。",
+        "mpy_esp32_wifi.name": "ESP Wifi网络",
+         "mpy_esp32_wifi.description":"ESP Wifi 网络应用",
+         "mpy_blynk.name":"Blynk物联网",
+         "mpy_blynk.description":"Blynk IOT 物联网应用"
 
     },
     "zh-tw": {
@@ -381,7 +389,11 @@
         "QH_K210_AI_STUDIO.name": "人工智慧",
         "QH_K210_AI_STUDIO.description":"用於AIStart 人工智慧",
         "tft.name": "TFT",
-        "tft.description": "基於ST7735和ST7789驅動的TFT顯示器。"
+        "tft.description": "基於ST7735和ST7789驅動的TFT顯示器。",
+        "mpy_esp32_wifi.name": "ESP Wifi網路",
+         "mpy_esp32_wifi.description":"ESP Wifi 網路應用",
+         "mpy_blynk.name":"Blynk物聯網",
+         "mpy_blynk.description":"Blynk IOT 物聯網應用"
 
     }
 }

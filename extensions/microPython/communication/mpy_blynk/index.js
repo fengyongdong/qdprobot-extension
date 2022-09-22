@@ -11,7 +11,7 @@ const mpy_blynk = formatMessage => ({
     iconURL: `asset/blynk.png`,
     description: formatMessage({
         id: 'mpy_blynk.description',
-        default: 'Blynk library.'
+        default: 'Blynk IOT.'
     }),
     featured: true,
     blocks: 'blocks.js',
