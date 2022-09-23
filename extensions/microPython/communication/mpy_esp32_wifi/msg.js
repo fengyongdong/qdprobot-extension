@@ -3,7 +3,6 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         QH_WIFI_CATEGORY:'NETWORK',
-        iot_wifi_connect:'Connect to WIFI wifi name %1 password %2',
         network_init:'Set WIFI mode as %1',
         network_open:'WIFI %1 network',
         MIXLY_NETWORK_WIFI_OPEN:'active',
@@ -25,7 +24,6 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         QH_WIFI_CATEGORY:'网络',
-        iot_wifi_connect:'确保连接到 WIFI 名称 %1 密码 %2',
         network_init:'设置WIFI 模式为 %1',
         network_open:'WIFI %1 网络接口',
         MIXLY_NETWORK_WIFI_OPEN:'激活',
@@ -47,7 +45,6 @@ function addMsg (Blockly) {
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_WIFI_CATEGORY:'網路',
-        iot_wifi_connect:'確保連接到 WIFI 名稱 %1 密碼 %2',
         network_init:'設置WIFI 模式為 %1',
         network_open:'WIFI %1 網路介面',
         MIXLY_NETWORK_WIFI_OPEN:'啟動',
