@@ -7628,7 +7628,7 @@ function addBlocks (Blockly) {
                         name: 'key'
                     }
                 ],
-                "tooltip": "语音识别结果，此功能不与语音合成一起使用，最多可识别8秒音频; 齐护密钥请上传sample文件夹下的‘齐护密钥生成固件.bin’固件打印得到！！",
+                "tooltip": "语音识别结果，此功能不与语音合成一起使用，最多可识别8秒音频; 齐护密钥请从器件供应商提供的‘齐护密钥生成固件.bin’固件打印得到！！",
                 colour:QH_BAIDU_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_number']
@@ -7679,7 +7679,7 @@ function addBlocks (Blockly) {
                         options: [["度逍遥","5003"], ["度小鹿","5118"], ["度博文","106"], ["度小童","110"], ["度小萌","111"], ["度米朵","103"], ["度小娇","5"]]
                     }
                 ],
-                "tooltip": "点击帮助在线试听并选择发音人",
+                "tooltip": "选择发音人",
                 colour:QH_BAIDU_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -7710,7 +7710,7 @@ function addBlocks (Blockly) {
                         name: 'data'
                     }
                 ],
-                "tooltip": "点击帮助在线试听并选择发音人",
+                "tooltip": "合成发音",
                 colour:QH_BAIDU_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
