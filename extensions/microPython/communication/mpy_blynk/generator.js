@@ -20,17 +20,10 @@ function addGenerator (Blockly) {
           "blynk = blynklib.Blynk(" + auth + ", server=" + server + ", port=" + port + ")";
 
       Blockly.Python.imports_['blynk_on_connected'] =
-          `
-  @blynk.handle_event("connect")
-  def connect_handler():
-      print('Blynk connected')
+          `@blynk.handle_event("connect")\ndef connect_handler():\n  print('Blynk connected')
   `
 
-      Blockly.Python.imports_['blynk_on_disconnected'] =
-          `
-  @blynk.handle_event("disconnect")
-  def connect_handler():
-      print('Blynk disconnected')
+      Blockly.Python.imports_['blynk_on_disconnected'] =`@blynk.handle_event("disconnect")\ndef connect_handler():\n  print('Blynk disconnected')
   `
 
       return '';
