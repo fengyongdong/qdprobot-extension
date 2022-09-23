@@ -47,7 +47,7 @@ function addMsg (Blockly) {
         serial_read:'緩衝區',
         serial_read_line:'一行',
         PY_qdp_k210_communicate_ir_recv:'紅外接收 端口 %1 獲取編碼',
-        PY_qdp_k210_communicate_i2c_init:'I2C初始化(默引腳) SDA# %1 SCL# %2  頻率 %3',
+        PY_qdp_k210_communicate_i2c_init:'I2C初始化(默引腳) SDA# %1',
         PY_qdp_k210_communicate_i2c_init1:'I2C初始化(自定義引腳) SDA# %1 SCL# %2  頻率 %3',
         PY_qdp_k210_communicate_i2c_scan:'搜索I2c匯流排上的設備',
         PY_qdp_k210_communicate_i2s_init:'I2S初始化 設備 %1 採樣率 %2',
