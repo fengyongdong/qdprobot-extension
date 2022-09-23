@@ -17,7 +17,7 @@ function addToolbox () {
     <block type="storage_file_write">
         <value name="data">
           <shadow type="text">
-            <field name="TEXT">Mixly</field>
+            <field name="TEXT">hello world</field>
           </shadow>
         </value>
         <value name="FILE">

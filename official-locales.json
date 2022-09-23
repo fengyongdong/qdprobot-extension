@@ -126,10 +126,12 @@
         "QH_K210_AI_STUDIO.description":"For AIStart AI",
         "tft.name": "TFT",
         "tft.description": " TFT display based on ST7735 and ST7789 drivers.",
-        "mpy_esp32_wifi.name": "ESP Wifi",
-         "mpy_esp32_wifi.description":"ESP Wifi application",
-         "mpy_blynk.name":"Blynk",
-         "mpy_blynk.description":"Blynk IOT"
+        "mpy_esp32_wifi.name": "ESP32 WIFI",
+        "mpy_esp32_wifi.description": "esp32,esp8266 WIFI library",
+        "mpy_blynk.name": "MPY BLYNK",
+        "mpy_blynk.description": "esp32,esp8266 MPY Blynk library",
+        "mpyQHFile.name": "MPY file management",
+        "mpyQHFile.description": "File management library for Micro Python"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -258,10 +260,12 @@
         "QH_K210_AI_STUDIO.description":"用于AIStart 人工智能",
         "tft.name": "TFT",
         "tft.description": "基于ST7735和ST7789驱动的TFT显示器。",
-        "mpy_esp32_wifi.name": "ESP Wifi网络",
-         "mpy_esp32_wifi.description":"ESP Wifi 网络应用",
-         "mpy_blynk.name":"Blynk物联网",
-         "mpy_blynk.description":"Blynk IOT 物联网应用"
+        "mpy_esp32_wifi.name": "ESP32 WIFI",
+        "mpy_esp32_wifi.description": "适用于esp32,esp8266的WIFI库",
+        "mpy_blynk.name": "MPY BLYNK",
+        "mpy_blynk.description": "适用于esp32,esp8266的MPY Blynk库",
+        "mpyQHFile.name": "MPY 文件管理",
+        "mpyQHFile.description": "适用于Micro Python 的文件管理库"
 
     },
     "zh-tw": {
@@ -390,10 +394,12 @@
         "QH_K210_AI_STUDIO.description":"用於AIStart 人工智慧",
         "tft.name": "TFT",
         "tft.description": "基於ST7735和ST7789驅動的TFT顯示器。",
-        "mpy_esp32_wifi.name": "ESP Wifi網路",
-         "mpy_esp32_wifi.description":"ESP Wifi 網路應用",
-         "mpy_blynk.name":"Blynk物聯網",
-         "mpy_blynk.description":"Blynk IOT 物聯網應用"
+        "mpy_esp32_wifi.name": "ESP32 WIFI",
+        "mpy_esp32_wifi.description": "適用於esp32,esp8266的WIFI庫",
+        "mpy_blynk.name": "MPY BLYNK",
+        "mpy_blynk.description": "適用於esp32,esp8266的MPY Blynk庫",
+        "mpyQHFile.name": "MPY 檔管理",
+        "mpyQHFile.description": "適用於Micro Python 的檔管理庫"
 
     }
 }
