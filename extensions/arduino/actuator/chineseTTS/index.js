@@ -22,7 +22,7 @@ const chineseTTS = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['actuator'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = chineseTTS;

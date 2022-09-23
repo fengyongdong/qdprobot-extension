@@ -11,7 +11,7 @@ const mpy_blynk = formatMessage => ({
     iconURL: `asset/blynk.png`,
     description: formatMessage({
         id: 'mpy_blynk.description',
-        default: 'Blynk library.'
+        default: 'Blynk IOT.'
     }),
     featured: true,
     blocks: 'blocks.js',
@@ -20,7 +20,7 @@ const mpy_blynk = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['communication'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = mpy_blynk;

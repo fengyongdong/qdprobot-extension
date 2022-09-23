@@ -22,7 +22,7 @@ const irRemoteReceiver = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['communication'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = irRemoteReceiver;

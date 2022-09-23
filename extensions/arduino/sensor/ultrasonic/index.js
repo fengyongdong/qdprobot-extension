@@ -22,7 +22,7 @@ const ultrasonic = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['sensor'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = ultrasonic;

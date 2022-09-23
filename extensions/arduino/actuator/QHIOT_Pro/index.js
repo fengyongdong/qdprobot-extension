@@ -19,7 +19,7 @@ const QHIOT_Pro = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['actuator'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = QHIOT_Pro;

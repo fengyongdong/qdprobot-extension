@@ -20,7 +20,7 @@ const QH_K210_AI = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['sensor'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = QH_K210_AI;

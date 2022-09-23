@@ -21,7 +21,7 @@ const insertSourceCode = formatMessage => ({
     msg: 'msg.js',
     official: true,
     tags: ['other'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = insertSourceCode;

@@ -24,7 +24,7 @@ function addToolbox () {
         </value>
         <value name="qdp_wifi_pass">
             <shadow type="text">
-                <field name="TEXT">www.qdprobot.com</field>
+                <field name="TEXT">gx.qdprobot.com</field>
             </shadow>
         </value>
         <value name="auth">

@@ -22,7 +22,7 @@ const  QDPRobotIOT= formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['kit'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = QDPRobotIOT;

@@ -20,7 +20,7 @@ const mpyQHDigit = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['display'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = mpyQHDigit;

@@ -20,7 +20,7 @@ const microPythonQDPAIStart = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['kit','actuator', 'sensor', 'display', 'communication', 'other'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = microPythonQDPAIStart;

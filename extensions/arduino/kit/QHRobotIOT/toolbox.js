@@ -1437,7 +1437,7 @@ function addToolbox () {
         </value>
         <value name="pwd">
             <shadow type="text">
-                <field name="TEXT">www.qdprobot.com</field>
+                <field name="TEXT">gx.qdprobot.com</field>
             </shadow>
         </value>
     </block>
@@ -1450,7 +1450,7 @@ function addToolbox () {
         </value>
         <value name="pwd">
             <shadow type="text">
-                <field name="TEXT">www.qdprobot.com</field>
+                <field name="TEXT">gx.qdprobot.com</field>
             </shadow>
         </value>
     </block>

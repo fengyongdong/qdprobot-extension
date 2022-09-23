@@ -2,7 +2,7 @@ const QDPAIStart = formatMessage => ({
     name: 'QDPRobot AIStart',
     deviceId: 'QDPAIStart_k210MaixDock',
     manufactor: 'QDPRobot',
-    learnMore: 'https://qdprobot.taobao.com',
+    learnMore: 'http://gx.qdprobot.com',
     typeList: ['arduino', 'microPython'],
     iconURL: 'asset/QDPAIStart.png',
     typeList: ['arduino', 'microPython'],
@@ -18,7 +18,7 @@ const QDPAIStart = formatMessage => ({
     connectionSmallIconURL: 'asset/QDPAIStart-small.svg',
     programLanguage: ['block', 'c', 'cpp', 'microPython'],
     tags: ['kit'],
-    helpLink: 'http://www.qdprobot.com/'
+    helpLink: 'http://gx.qdprobot.com/'
 });
 
 const QDPAIStartArduino = formatMessage => {

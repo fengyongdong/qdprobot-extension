@@ -2,7 +2,7 @@ const QDPRobotMakeStart = formatMessage => ({
     name: 'MakeStart编程套件',
     deviceId: 'QDPRobotMakeStart_arduinoUnoUltra',
     manufactor: 'QDPRobot',
-    learnMore: 'https://qdprobot.taobao.com',
+    learnMore: 'http://gx.qdprobot.com',
     iconURL: 'asset/MakeStart1.png',
     description: formatMessage({
         id: 'QDPRobotMakeStart.description',
@@ -27,7 +27,7 @@ const QDPRobotMakeStart = formatMessage => ({
     tags: ['kit'],
     deviceExtensions: ['QDPRobotMakeStart'],
     deviceExtensionsCompatible: 'arduinoUno',
-    helpLink: 'http://www.qdprobot.com/'
+    helpLink: 'http://gx.qdprobot.com/'
 });
 
 module.exports = QDPRobotMakeStart;
