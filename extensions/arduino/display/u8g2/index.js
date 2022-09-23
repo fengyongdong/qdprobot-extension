@@ -18,7 +18,7 @@ const u8g2 = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['display'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = u8g2;

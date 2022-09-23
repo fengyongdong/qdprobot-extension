@@ -22,7 +22,7 @@ const ds18b20 = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['sensor'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = ds18b20;

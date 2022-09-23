@@ -22,7 +22,7 @@ const  QDP_blynk= formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['communication'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = QDP_blynk;

@@ -22,7 +22,7 @@ const cooperativeScheduler = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['other'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = cooperativeScheduler;

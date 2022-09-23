@@ -20,7 +20,7 @@ const mpyQH_K210_LCD = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['display'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = mpyQH_K210_LCD;

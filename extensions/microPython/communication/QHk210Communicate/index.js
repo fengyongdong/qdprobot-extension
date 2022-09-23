@@ -20,7 +20,7 @@ const QHk210Communicate = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['communication'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = QHk210Communicate;

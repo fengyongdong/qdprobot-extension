@@ -22,7 +22,7 @@ const ultrasonic = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['sensor'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = ultrasonic;

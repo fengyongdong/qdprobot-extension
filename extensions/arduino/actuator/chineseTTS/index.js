@@ -22,7 +22,7 @@ const chineseTTS = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['actuator'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = chineseTTS;

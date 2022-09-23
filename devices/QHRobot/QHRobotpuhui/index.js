@@ -2,7 +2,7 @@ const QDPRobotpuhui = formatMessage => ({
     name: '普惠AI人工智能系列',
     deviceId: 'QDPRobotpuhui_arduinoUnoUltra',
     manufactor: 'QDPRobot',
-    learnMore: 'https://qdprobot.taobao.com',
+    learnMore: 'http://gx.qdprobot.com',
     iconURL: 'asset/puhui1.png',
     description: formatMessage({
         id: 'QDPRobotpuhui.description',
@@ -27,7 +27,7 @@ const QDPRobotpuhui = formatMessage => ({
     tags: ['kit'],
     deviceExtensions: ['QDPRobotpuhui'],
     deviceExtensionsCompatible: 'arduinoUno',
-    helpLink: 'http://www.qdprobot.com/'
+    helpLink: 'http://gx.qdprobot.com/'
 });
 
 module.exports = QDPRobotpuhui;

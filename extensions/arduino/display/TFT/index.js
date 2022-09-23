@@ -16,7 +16,7 @@ const tft = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['display'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = tft;

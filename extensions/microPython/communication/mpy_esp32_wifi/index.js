@@ -20,7 +20,7 @@ const mpy_esp32_wifi = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['communication'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = mpy_esp32_wifi;

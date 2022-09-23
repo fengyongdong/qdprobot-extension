@@ -21,7 +21,7 @@ const insertSourceCode = formatMessage => ({
     msg: 'msg.js',
     official: true,
     tags: ['other'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = insertSourceCode;

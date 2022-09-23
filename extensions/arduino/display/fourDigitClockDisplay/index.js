@@ -22,7 +22,7 @@ const fourDigitClockDisplay = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['display'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = fourDigitClockDisplay;

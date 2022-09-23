@@ -22,7 +22,7 @@ const irRemoteReceiver = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['communication'],
-    helpLink: 'http://www.qdprobot.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = irRemoteReceiver;
