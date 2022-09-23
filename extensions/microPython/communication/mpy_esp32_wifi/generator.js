@@ -3,15 +3,6 @@
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
 
-  Blockly.Python.iot_wifi_connect = function(block) {
-    Blockly.Python.imports_['import_simple'] = "import simple";  
-    Blockly.Python.imports_['import_miot'] = "import miot";  
-    var username =  Blockly.Python.valueToCode(this, 'WIFINAME', Blockly.Python.ORDER_ATOMIC) ;
-    var password =  Blockly.Python.valueToCode(this, 'PASSWORD', Blockly.Python.ORDER_ATOMIC) ; 
-    var code='miot.do_connect(' + username + ','  + password + ')\n';
-    return code;
-  };
-
   Blockly.Python.network_init= function() {
     Blockly.Python.imports_['import_network'] = "import network";
     var mode=this.getFieldValue('mode');

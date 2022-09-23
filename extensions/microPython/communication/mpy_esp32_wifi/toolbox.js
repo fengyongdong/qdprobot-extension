@@ -7,18 +7,6 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_WIFI_CATEGORY}" id="QH_WIFI_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_WIFI_ICO}">
-    <block type="iot_wifi_connect">
-        <value name="WIFINAME">
-          <shadow type="text">
-            <field name="TEXT">wifiname</field>
-          </shadow>
-        </value>
-        <value name="PASSWORD">
-          <shadow type="text">
-            <field name="TEXT">wifipassword</field>
-          </shadow>
-        </value>
-      </block>
       <block type="network_init"></block>
       <block type="network_open"></block>
 
