@@ -42,8 +42,8 @@ function addGenerator (Blockly) {
           "@blynk.handle_event('write V" + virtual_pin + "')\n" +
           'def write_virtual_pin_handler(pin, _value):\n' + 
           '  for i in range(0, len(_value)):\n' +
-          '    try: _value[i] = eval(_value[i])\n' +
-          '      except: pass\n' +
+          '    try:_value[i] = eval(_value[i])\n' +
+          '    except: pass\n' +
           '  if len(_value) == 1:\n'+
           '    _value = _value[0]\n  ' + branch;
       return '';
