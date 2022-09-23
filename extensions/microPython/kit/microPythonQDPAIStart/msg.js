@@ -20,7 +20,7 @@ function addMsg (Blockly) {
         controls_thread:'thread execution functions %1 arguments %2 ',
         thread_func:'function %1 arg %2',
         controls_exec:'Executable code %1',
-        controls_range:'Range from %1 to ％２ step ％３',
+        controls_range:'Range from %1 to %2 step %3',
         controls_forEach:'In %1 for %2 do %3',
         py_variables:'variables %1'
 
