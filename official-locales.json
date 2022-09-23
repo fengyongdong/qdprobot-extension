@@ -131,7 +131,9 @@
         "mpy_blynk.name": "MPY BLYNK",
         "mpy_blynk.description": "esp32,esp8266 MPY Blynk library",
         "mpyQHFile.name": "MPY file management",
-        "mpyQHFile.description": "File management library for Micro Python"
+        "mpyQHFile.description": "File management library for Micro Python",
+        "microPythonQDPAIStart.name":"QDPRobot AIstart",
+        "microPythonQDPAIStart.description":"QDPRobot AIstart K210"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -264,8 +266,10 @@
         "mpy_esp32_wifi.description": "适用于esp32,esp8266的WIFI库",
         "mpy_blynk.name": "MPY BLYNK",
         "mpy_blynk.description": "适用于esp32,esp8266的MPY Blynk库",
-        "mpyQHFile.name": "MPY 文件管理",
-        "mpyQHFile.description": "适用于Micro Python 的文件管理库"
+        "mpyQHFile.name": "文件管理",
+        "mpyQHFile.description": "适用于MicroPython 的文件管理库",
+        "microPythonQDPAIStart.name":"齐护AIstart",
+        "microPythonQDPAIStart.description":"齐护AIstart K210主机"
 
     },
     "zh-tw": {
@@ -398,8 +402,10 @@
         "mpy_esp32_wifi.description": "適用於esp32,esp8266的WIFI庫",
         "mpy_blynk.name": "MPY BLYNK",
         "mpy_blynk.description": "適用於esp32,esp8266的MPY Blynk庫",
-        "mpyQHFile.name": "MPY 檔管理",
-        "mpyQHFile.description": "適用於Micro Python 的檔管理庫"
+        "mpyQHFile.name": "檔管理",
+        "mpyQHFile.description": "適用於MicroPython的檔管理庫",
+        "microPythonQDPAIStart.name":"齊護AIstart",
+        "microPythonQDPAIStart.description":"齊護AIstart K210主機"
 
     }
 }
