@@ -18,7 +18,7 @@ const QDPRobotpuhui = formatMessage => ({
     msg: `msg.js`,                //扩展的多语言支持
     library: 'lib',
     tags: ['kit','actuator', 'sensor', 'display', 'communication', 'other'],             //标识此插件的类目。可选选项有：actuator, sensor, display, communication, other。
-    helpLink: 'https://qdprobot.taobao.com'//帮助链接，点击插件页中的帮助将打开此链接。
+    helpLink: 'http://gx.qdprobot.com'//帮助链接，点击插件页中的帮助将打开此链接。
 });
 
 module.exports = QDPRobotpuhui;

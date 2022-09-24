@@ -174,6 +174,8 @@ function addGenerator (Blockly) {
       return code;
   };
 
+  /*
+
   Blockly.Python.try_except_else_finally = function() {
     var branch1 = Blockly.Python.statementToCode(this, 'DO1');
     branch1 = branch1.replace(/(^\s*)|(\s*$)/g, "");
@@ -223,7 +225,7 @@ function addGenerator (Blockly) {
       var code = `${val} in ${name}`;
       return [code,Blockly.Python.ORDER_RELATIONAL];
     };
-
+*/
     return Blockly;
   }
  

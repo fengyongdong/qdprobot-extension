@@ -21,7 +21,7 @@ const eitghtTimesEightMatirxDisplay = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['display'],
-    helpLink: 'https://openblockcc.gitee.io/wiki/main'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = eitghtTimesEightMatirxDisplay;

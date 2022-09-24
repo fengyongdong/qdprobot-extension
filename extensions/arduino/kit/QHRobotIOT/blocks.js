@@ -1124,7 +1124,7 @@ function addBlocks (Blockly) {
                 "tooltip": "颜色传感器的值的应用",
                 colour: QH_Sensor_color,
                 colourTertiary: '#C0C0C0',
-                extensions: ['output_number']
+                extensions: ['output_boolean']
             });
         }
     };

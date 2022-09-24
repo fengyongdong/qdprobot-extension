@@ -596,7 +596,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN1',
-                        options: qdprobotESP32_R_PIN_Output_Dropdown
+                        options: qdprobotESP32_L_PIN_Output_Dropdown
                     },
                     {
                         type: 'input_value',
@@ -645,7 +645,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN1',
-                        options: qdprobotESP32_R_PIN_Output_Dropdown
+                        options: qdprobotESP32_L_PIN_Output_Dropdown
                     }
                 ],
                 "tooltip": "RGB颜色发送执行",
@@ -777,7 +777,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-
+ /*
     //删除
     Blockly.Blocks.python_del = {
         init: function () {
@@ -797,6 +797,7 @@ function addBlocks (Blockly) {
             });
         }
     };
+   
 
     //try_except
     Blockly.Blocks.try_except_else_finally = {
@@ -901,9 +902,10 @@ function addBlocks (Blockly) {
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_number']
             });
+            
         }     
     };
-
+*/
     return Blockly;
 }
 

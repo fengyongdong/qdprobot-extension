@@ -96,26 +96,6 @@ function addToolbox () {
         </value>
     </block>
 </category>
-<category name="%{BKY_QH_OTHER_CATEGORY}" id="QH_OTHER_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_OTHER_ICO}">
-    <block type="try_except_else_finally"></block>
-    <block type="PY_time_ticks"></block>    
-    <block type="PY_QH_variables_get"></block>
-    <block type="PY_QH_string">
-        <value name="VAR">
-            <shadow type="text">
-                <field name="TEXT">text</field>
-            </shadow>
-        </value>
-    </block>
-    <block type="python_in">
-        <value name="val">
-            <shadow type="math_number">
-                <field name="NUM">0</field>
-            </shadow>
-        </value>
-    </block>
-    <block type="python_del"></block>
-</category>
 `;
 
 }

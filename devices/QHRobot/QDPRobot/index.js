@@ -2,7 +2,7 @@ const QDPRobot = formatMessage => ({
     name: 'QDPRobot UNO',
     deviceId: 'QDPRobot_arduinoUnoUltra',
     manufactor: 'QDPRobot',
-    learnMore: 'https://qdprobot.taobao.com',
+    learnMore: 'http://gx.qdprobot.com',
     iconURL: 'asset/QDPRobot.png',
     description: formatMessage({
         id: 'QDPRobot.description',
@@ -27,7 +27,7 @@ const QDPRobot = formatMessage => ({
     tags: ['kit'],
     deviceExtensions: ['QDPRobot'],
     deviceExtensionsCompatible: 'arduinoUno',
-    helpLink: 'http://www.qdprobot.com/'
+    helpLink: 'http://gx.qdprobot.com/'
 });
 
 module.exports = QDPRobot;

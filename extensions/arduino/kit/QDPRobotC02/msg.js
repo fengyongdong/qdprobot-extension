@@ -24,6 +24,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---OPERATOR---',
         QH_WEATHER_LABEL:'---WEATHER---',
         QH_TIMER_LABEL:'---TIMER---',
+        QH_BAIDU_SPEECH_LABEL:'---BAIDU SPEECH---',
+        QH_AI_SPEECH_LABEL:'---AI SPEECH---',
         QH_C02_COLOR_SCREEN_CATEGORY:'Color Screen',
         QH_C02_SENSOR_CATEGORY:'Sensor',
         QH_ACTUATOR_CATEGORY:'Actuator',
@@ -94,7 +96,7 @@ function addMsg (Blockly) {
         qdp_esp32_lightSensor:'Light sensor Port %1',
         qdp_esp32_sound:'Sound sensor Port %1',
         qdp_esp32_potentiometer:'Potentiometer sensor Port %1',
-        qdp_esp32_Soilmoisture:'Soilmoisture sensor Port %1',
+        qdp_esp32_Soilmoisture:'：Soil rainwater moisture port %1',
         qdp_esp32_dht11:'Temperature and humidity sensor Port %1 parameter %2',
         QH_Temperature:'Temperature',
         QH_Humidity:'Humidity',
@@ -129,9 +131,9 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor2:'Servo 180° Port %1 Angle(0~180) %2 ',
         qdp_esp32_servomotorread:'Servo read angle Port %1',
         qdp_esp32_servomotorPWM_set180:'Servo board N0 %1 [parameter setting] Lower limit range of PWM(1-4095) %2 PWM upper limit range (2-4096) %3',
-		qdp_esp32_servomotorPWM:'Servo board N0 %1 Servo NO(0~15) %2 Angle %3 ',
-		qdp_esp32_servomotorPWM_set360:'Servo board360° NO %1 [parameter setting] PWM stop value %2 PWM forward lower limit %3 PWM forward upper limit  %4 PWM reverses lower limit %5 PWM reverses upper limit %6 ',
-		qdp_esp32_servomotorPWM360:'Servo board360° N0 %1 Direction %2 NO(0`15)  %3 Speed(0`10) %4',
+        qdp_esp32_servomotorPWM:'Servo board N0 %1 Servo NO(0~15) %2 Angle %3 ',
+        qdp_esp32_servomotorPWM_set360:'Servo board360° NO %1 [parameter setting] PWM stop value %2 PWM forward lower limit %3 PWM forward upper limit  %4 PWM reverses lower limit %5 PWM reverses upper limit %6 ',
+        qdp_esp32_servomotorPWM360:'Servo board360° N0 %1 Direction %2 NO(0`15)  %3 Speed(0`10) %4',
         QDP32_ASR_SendData:'Send to QH-ASR Port %1 Order %2',
         QDP32_ASR_ReceiveData:'QH-ASR start Port %1',
         QDP32_ASR_CompareData:'QH-ASR CompareData Port %1 Order %2',
@@ -451,7 +453,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲ Tur left_back",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ stop",
         qdp_esp32_motor_mecanum_init : 'Motor universal car init Left front wheel %1 Left rear wheel %2 Right front wheel %3 Right rear wheel %4',
-        qdp_esp32_motor_mecanum_run :'Motor universal car run  %1 speed 0~255 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9'
+        qdp_esp32_motor_mecanum_run :'Motor universal car run  %1 speed 0~255 Left front wheel %2 %3 Left rear wheel %4 %5 Right front wheel %6 %7 Right rear wheel %8 %9',
+        Baidu_voice_initialization:'BAIDU speech initialization auth %1',
+        qdp_recording_stopped_setups:'ASR initialization CLK %1 DTA %2',
+        qdp_Speech_Recognition:'ASR result QH auth %1',
+        qdp_recording_stopped:'ASR stop record',
+        baidu_pronunciation_speaker_selection:'Speech synthesis Articulator %1',
+        qdp_speech_synthesis:'speech synthesis QH auth %1 text %2'
 
 
     });
@@ -482,6 +490,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---运算---',
         QH_WEATHER_LABEL:'---天气---',
         QH_TIMER_LABEL:'---定时器---',
+        QH_BAIDU_SPEECH_LABEL:'---百度语音---',
+        QH_AI_SPEECH_LABEL:'---AI语音---',
         QH_C02_COLOR_SCREEN_CATEGORY:'彩屏',
         QH_C02_SENSOR_CATEGORY:'传感器',
         QH_ACTUATOR_CATEGORY:'执行器',
@@ -510,7 +520,7 @@ function addMsg (Blockly) {
         QDP_display_samll_clr2:'背景',
         QH_esp32_display_samll_flash_pic:'图片显示 端口 %1 横/竖 %2 模式 %3 图片 %4',
         QH_display_samll_HV10:'横屏',
-		QH_display_samll_HV11:'竖屏',
+        QH_display_samll_HV11:'竖屏',
         QH_display_small_mode0:'正常',
         QH_display_samll_mode1:'透明',
         QDP_esp32_display_samll_pic:'图片显示 端口 %1 %2 地址 %3 起点 X %4 Y %5 宽 %6 高 %7',
@@ -552,7 +562,7 @@ function addMsg (Blockly) {
         qdp_esp32_lightSensor:'光线传感器 端口 %1',
         qdp_esp32_sound:'声音传感器 端口 %1',
         qdp_esp32_potentiometer:'电位传感器 端口 %1',
-        qdp_esp32_Soilmoisture:'土壤湿度传感器 端口 %1',
+        qdp_esp32_Soilmoisture:'土壤雨水湿度 端口 %1',
         qdp_esp32_dht11:'温湿度传感器 端口 %1 参数 %2',
         QH_Temperature:'温度',
         QH_Humidity:'湿度',
@@ -587,9 +597,9 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor2:'舵机180° 端口 %1 角度(0~180) %2 ',
         qdp_esp32_servomotorread:'舵机读取角度 端口 %1',
         qdp_esp32_servomotorPWM_set180:'舵机板180° 板号 %1 [参数设置] PWM下限值 范围(1-4095) %2 PWM 上限值 范围(2-4096) %3',
-		qdp_esp32_servomotorPWM:'舵机板180° 板号 %1 舵机号(0~15) %2 角度 %3 ',
-		qdp_esp32_servomotorPWM_set360:'舵机板360° 板号 %1 [参数设置] PWM停止值 %2 PWM 正转下限值  %3 PWM 正转上限值  %4 PWM 反转下限值  %5 PWM 反转上限值  %6 ',
-		qdp_esp32_servomotorPWM360:'舵机板360° 板号 %1 方向 %2 舵机号(0-15)  %3 速度(0-10) %4',
+        qdp_esp32_servomotorPWM:'舵机板180° 板号 %1 舵机号(0~15) %2 角度 %3 ',
+        qdp_esp32_servomotorPWM_set360:'舵机板360° 板号 %1 [参数设置] PWM停止值 %2 PWM 正转下限值  %3 PWM 正转上限值  %4 PWM 反转下限值  %5 PWM 反转上限值  %6 ',
+        qdp_esp32_servomotorPWM360:'舵机板360° 板号 %1 方向 %2 舵机号(0-15)  %3 速度(0-10) %4',
         QDP32_ASR_SendData:'发送到齐护语音识别 端口 %1 指令 %2',
         QDP32_ASR_ReceiveData:'齐护语音识别 开启 端口 %1',
         QDP32_ASR_CompareData:'齐护语音识别到 端口 %1 指令 %2',
@@ -906,7 +916,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左后转",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
         qdp_esp32_motor_mecanum_init : '直流电机万向车 初始化 左前轮 %1 左后轮 %2 右前轮 %3 右后轮 %4',
-        qdp_esp32_motor_mecanum_run :'直流电机万向车 执行 %1 速度0~255 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9'
+        qdp_esp32_motor_mecanum_run :'直流电机万向车 执行 %1 速度0~255 左前轮 %2 %3 左后轮 %4 %5 右前轮 %6 %7 右后轮 %8 %9',
+        Baidu_voice_initialization:'百度语音 初始化 密钥 %1',
+        qdp_recording_stopped_setups:'语音识别 初始化 CLK %1 DTA %2',
+        qdp_Speech_Recognition:'语音识别结果 齐护密钥 %1',
+        qdp_recording_stopped:'语音识别停止录音',
+        baidu_pronunciation_speaker_selection:'语音合成 发音人设置 %1',
+        qdp_speech_synthesis:'语音合成 齐护密钥 %1 合成文本 %2'
     });
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
         QH_BUTTON_LABEL:'---按鈕---',
@@ -935,6 +951,8 @@ function addMsg (Blockly) {
         QH_OPERATOR_LABEL:'---運算---',
         QH_WEATHER_LABEL:'---天氣---',
         QH_TIMER_LABEL:'---定時器---',
+        QH_BAIDU_SPEECH_LABEL:'---百度語音---',
+        QH_AI_SPEECH_LABEL:'---AI語音---',
         QH_C02_COLOR_SCREEN_CATEGORY:'彩屏',
         QH_C02_SENSOR_CATEGORY:'感測器',
         QH_ACTUATOR_CATEGORY:'執行器',
@@ -1005,7 +1023,7 @@ function addMsg (Blockly) {
         qdp_esp32_lightSensor:'光線感測器 端口 %1',
         qdp_esp32_sound:'聲音感測器 端口 %1',
         qdp_esp32_potentiometer:'電位感測器 端口 %1',
-        qdp_esp32_Soilmoisture:'土壤濕度感測器 端口 %1',
+        qdp_esp32_Soilmoisture:'土壤雨水濕度 端口 %1',
         qdp_esp32_dht11:'溫濕度感測器 端口 %1 參數 %2',
         QH_Temperature:'溫度',
         QH_Humidity:'濕度',
@@ -1359,7 +1377,13 @@ function addMsg (Blockly) {
         qdp_esp32_servomotor360_mecanum_Turn_Left_back : "↲左後轉",
         qdp_esp32_servomotor360_mecanum_Stop : "ⓧ停止",
         qdp_esp32_motor_mecanum_init : '直流電機萬向車 初始化 左前輪 %1 左後輪 %2 右前輪 %3 右後輪 %4',
-        qdp_esp32_motor_mecanum_run :'直流電機萬向車 執行 %1 速度0~255 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9'
+        qdp_esp32_motor_mecanum_run :'直流電機萬向車 執行 %1 速度0~255 左前輪 %2 %3 左後輪 %4 %5 右前輪 %6 %7 右後輪 %8 %9',
+        Baidu_voice_initialization:'百度語音 初始化 密鑰 %1',
+        qdp_recording_stopped_setups:'語音識別 初始化 CLK %1 DTA %2',
+        qdp_Speech_Recognition:'語音識別結果 齊護密鑰 %1',
+        qdp_recording_stopped:'語音識別停止錄音',
+        baidu_pronunciation_speaker_selection:'語音合成 發音人設置 %1',
+        qdp_speech_synthesis:'語音合成 齊護密鑰 %1 合成文本 %2'
     });
     return Blockly;
 }

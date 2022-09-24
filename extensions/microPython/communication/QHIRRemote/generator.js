@@ -8,6 +8,7 @@ function addGenerator (Blockly) {
       var PIN = this.getFieldValue('PIN');
       var setupBranch = Blockly.Python.statementToCode(block, 'DO');
       setupBranch = setupBranch.replace(/(^\s*)|(\s*$)/g, "");
+      setupBranch = Blockly.Python.addLoopTrap(setupBranch,block.id);
       if (!setupBranch)
         setupBranch='pass';
       Blockly.Python.imports_['import_IRReceiver'] = `from IRRemote import IRReceiver`;
@@ -15,7 +16,7 @@ function addGenerator (Blockly) {
       Blockly.Python.setups_['setup_receiver_callback'] =`receiver.callback = rec`;
       Blockly.Python.setups_['setup_receiver_daemon'] =`receiver.daemon()`;
       
-      Blockly.Python.customFunctions_['ir_rec']  = `def rec(dec):\n    ${setupBranch}`;
+      Blockly.Python.customFunctions_['ir_rec']  = `def rec(dec):\n  ${setupBranch}`;
       var code = setupBranch;
 
       return '';

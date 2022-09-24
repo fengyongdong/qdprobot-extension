@@ -6,7 +6,7 @@ const mpyQHList = formatMessage => ({
     extensionId: 'mpyQHList',
     version: '1.0.0',
     type: 'microPython',
-    supportDevice: ['microPythonEsp32'],
+    supportDevice: ['microPythonEsp32','microPythonK210MaixDock'],
     author: 'QDProbot',
     iconURL: `asset/list.png`,
     description: formatMessage({
@@ -20,7 +20,7 @@ const mpyQHList = formatMessage => ({
     msg: 'msg.js',
     library: 'lib',
     tags: ['other'],
-    helpLink: 'https://qdprobot.taobao.com'
+    helpLink: 'http://gx.qdprobot.com'
 });
 
 module.exports = mpyQHList;
