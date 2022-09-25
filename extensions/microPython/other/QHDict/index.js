@@ -6,7 +6,7 @@ const mpyQHDict = formatMessage => ({
     extensionId: 'mpyQHDict',
     version: '1.0.0',
     type: 'microPython',
-    supportDevice: ['microPythonEsp32','microPythonK210MaixDock'],
+    supportDevice: ['microPythonEsp32', 'microPythonEsp8266', 'microPythonK210MaixDock'],
     author: 'QDProbot',
     iconURL: `asset/dict.png`,
     description: formatMessage({
