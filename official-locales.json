@@ -133,7 +133,11 @@
         "mpyQHFile.name": "MPY file management",
         "mpyQHFile.description": "File management library for Micro Python",
         "microPythonQDPAIStart.name":"QDPRobot AIstart",
-        "microPythonQDPAIStart.description":"QDPRobot AIstart K210"
+        "microPythonQDPAIStart.description":"QDPRobot AIstart K210",
+        "mpy_simple_blynk.name":"Classics Blynk",
+        "mpy_simple_blynk.description":"Use the IOTstart module to connect to the Blynk server quickly ",
+        "C02Advanced.name":"C02 advanced applications",
+        "C02Advanced.description":"C02 Advanced applications in Micro Python"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -269,7 +273,11 @@
         "mpyQHFile.name": "文件管理",
         "mpyQHFile.description": "适用于MicroPython 的文件管理库",
         "microPythonQDPAIStart.name":"齐护AIstart",
-        "microPythonQDPAIStart.description":"齐护AIstart K210主机"
+        "microPythonQDPAIStart.description":"齐护AIstart K210主机",
+        "mpy_simple_blynk.name":"经典Blynk",
+        "mpy_simple_blynk.description":"使用齐护IOTstart模块快捷连接Blynk服务器",
+        "C02Advanced.name":"C02 高级应用",
+        "C02Advanced.description":"C02 Micro Python下的高级应用"
 
     },
     "zh-tw": {
@@ -405,7 +413,10 @@
         "mpyQHFile.name": "檔管理",
         "mpyQHFile.description": "適用於MicroPython的檔管理庫",
         "microPythonQDPAIStart.name":"齊護AIstart",
-        "microPythonQDPAIStart.description":"齊護AIstart K210主機"
-
+        "microPythonQDPAIStart.description":"齊護AIstart K210主機",
+        "mpy_simple_blynk.name":"經典Blynk",
+        "mpy_simple_blynk.description":"使用齊護IOTstart模組快捷連接Blynk伺服器",
+        "C02Advanced.name":"C02 高級應用",
+        "C02Advanced.description":"C02 Micro Python下的高級應用"        
     }
 }
