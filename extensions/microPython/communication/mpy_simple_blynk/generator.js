@@ -19,14 +19,14 @@ function addGenerator (Blockly) {
       Blockly.Python.imports_['import_qdpk210_aistart'] = 'import qdpk210_aistart';
       Blockly.Python.imports_['import_simple_blynk'] = 'import simple_blynk';
       Blockly.Python.imports_['import_time'] = 'import time';
-      var code = "fm.register(qdpk210_aistart.board_pins[" + TX + "],fm.fpioa.UART1_TX)\n"
+      Blockly.Python.setups_["simpleBlynk_init"] ="fm.register(qdpk210_aistart.board_pins[" + TX + "],fm.fpioa.UART1_TX)\n"
                                              + "fm.register(qdpk210_aistart.board_pins[" + RX + "],fm.fpioa.UART1_RX)\n"
                                              + "uart1=UART(UART.UART1, 9600, timeout=1000, read_buf_len=4096)\n"
                                              + "simpleBlynk = simple_blynk.SimpleBlynk(uart1)\n"
                                              + "simpleBlynk.sendConfigWifi(" + wifi_ssid + ", " + wifi_pass + ")\n"
                                              + "time.sleep_ms(500)\n"
                                              + "simpleBlynk.sendConfigAuth(" + auth + ", " + ip + ")\n";
-      return code;
+      return '';
     };
 
     //运行SimpleBlynk
@@ -60,16 +60,20 @@ function addGenerator (Blockly) {
       branch = branch.replace(/(^\s*)|(\s*$)/g, "");//去除两端空格
       branch = Blockly.Python.addLoopTrap(branch, block.id);
       Blockly.Python.customFunctions_['def_readBlynkData'] = "def readBlynkData(pin, pinValue):\n";
-      Blockly.Python.customFunctions_['def_readBlynkData'] += "    " + (branch ? branch : "pass") + "\n";
+      Blockly.Python.customFunctions_['def_readBlynkData'] += "  " + (branch ? branch : "pass") + "\n";
       Blockly.Python.setups_["attachBlynkWriteCallBack"] ='simpleBlynk.attachBlynkWriteCallBack(readBlynkData)\n';
       var code = '';
       return code;
     };
 
-    Blockly.Python.SimpleBlynk_RETRIEVE_DATA = function() {
+    Blockly.Python.SimpleBlynk_RETRIEVE_DATA = function(block) {
       var Vpin = this.getFieldValue('Vpin');
       var branch = Blockly.Python.statementToCode(this, 'DO');
-      var code = 'if pin == "' + Vpin +'":\n' + branch +'\n';
+      branch = branch.replace(/(^\s*)|(\s*$)/g, "");//去除两端空格
+      branch = Blockly.Python.addLoopTrap(branch, block.id);
+      if(!branch)
+        branch='pass';
+      var code = 'if pin == "' + Vpin +'":\n  ' + branch +'\n';
       return code;
     };
 
