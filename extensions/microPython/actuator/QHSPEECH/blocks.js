@@ -129,7 +129,7 @@ function addBlocks (Blockly) {
                         name: 'num1'
                     }
                 ],
-                "tooltip": "此为串口运行设备,合成模块中发出指定的提示音,注:编号一定要为两位的数值,个位数时要加0\n可以用“停止合成”块终止它",
+                "tooltip": "此为串口运行设备,合成模块中发出指定的提示音\n可以用“停止合成”块终止它",
                 colour: QH_SPEECH_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
