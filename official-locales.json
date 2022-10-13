@@ -137,7 +137,9 @@
         "mpy_simple_blynk.name":"Classics Blynk",
         "mpy_simple_blynk.description":"Use the IOTstart module to connect to the Blynk server quickly ",
         "C02Advanced.name":"C02 advanced applications",
-        "C02Advanced.description":"C02 Advanced applications in Micro Python"
+        "C02Advanced.description":"C02 Advanced applications in Micro Python",
+        "mpyQHk210SPEECH.name":"K210 speech",
+        "mpyQHk210SPEECH.description":"Suitable for K210 speech synthesis modul"
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -277,7 +279,9 @@
         "mpy_simple_blynk.name":"经典Blynk",
         "mpy_simple_blynk.description":"使用齐护IOTstart模块快捷连接Blynk服务器",
         "C02Advanced.name":"C02 高级应用",
-        "C02Advanced.description":"C02 Micro Python下的高级应用"
+        "C02Advanced.description":"C02 Micro Python下的高级应用",
+        "mpyQHk210SPEECH.name":"K210语音合成",
+        "mpyQHk210SPEECH.description":"适用于K210的语音合成模块"
 
     },
     "zh-tw": {
@@ -417,6 +421,8 @@
         "mpy_simple_blynk.name":"經典Blynk",
         "mpy_simple_blynk.description":"使用齊護IOTstart模組快捷連接Blynk伺服器",
         "C02Advanced.name":"C02 高級應用",
-        "C02Advanced.description":"C02 Micro Python下的高級應用"        
+        "C02Advanced.description":"C02 Micro Python下的高級應用",
+        "mpyQHk210SPEECH.name":"K210語音合成",
+        "mpyQHk210SPEECH.description":"適用於K210的語音合成模組"        
     }
 }

@@ -7536,7 +7536,7 @@ function addGenerator (Blockly) {
     if(parseInt(num)<='9')
       num='0'+num;
 
-    var code = 'hc.HC("[x1]sound'+dropdown_pin3+''+num+'",0);\n';
+    var code = 'hc.HC("[x1]sound'+dropdown_pin3+''+num+'",1);\n';
     return code;
   };
 

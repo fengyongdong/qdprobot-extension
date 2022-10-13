@@ -8833,7 +8833,7 @@ Blockly.Arduino.qdp_esp32_motor_mecanum_run = function() {
     var dropdown_pin3 = this.getFieldValue('pin');
     var num = Blockly.Arduino.valueToCode(this, 'num1',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
 
-    var code = 'QFYY.HC("[x1]sound'+dropdown_pin3+''+num+'",0);\n';
+    var code = 'QFYY.HC("[x1]sound'+dropdown_pin3+''+num+'",1);\n';
     return code;
   };
 

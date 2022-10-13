@@ -8228,7 +8228,7 @@ function addGenerator (Blockly) {
         Blockly.Arduino.definitions_['var_qdprobot_qdpxfhs'] = 'QDPQF QFYY;\n';
         Blockly.Arduino.definitions_['var_qdprobot_serial'+dropdown_pin] = 'SoftwareSerial  P'+dropdown_pin+'(QDPport['+dropdown_pin+'][1],QDPport['+dropdown_pin+'][0]);\n';
         Blockly.Arduino.setups_['setup_qdprobot_serial'+dropdown_pin] = 'P'+dropdown_pin+'.begin(9600);\n';
-        var code = 'QFYY.begin(P'+dropdown_pin+');\nQFYY.HC("[x1]sound'+Num+'",0);\n';
+        var code = 'QFYY.begin(P'+dropdown_pin+');\nQFYY.HC("[x1]sound'+Num+'",1);\n';
         }
         return code;
     };
