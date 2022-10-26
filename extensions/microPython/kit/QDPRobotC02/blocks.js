@@ -450,7 +450,7 @@ function addBlocks (Blockly) {
                     {
                         type: 'field_dropdown',
                         name: 'PIN',
-                        options: qdprobotESP32_L2_PIN_Input_Dropdown
+                        options: qdprobotESP32_R2_PIN_Input_Dropdown
                     }
                 ],
                 "tooltip": "土壤湿度传感器的模拟数值",
