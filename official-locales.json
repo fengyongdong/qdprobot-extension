@@ -139,7 +139,19 @@
         "C02Advanced.name":"C02 advanced applications",
         "C02Advanced.description":"C02 Advanced applications in Micro Python",
         "mpyQHk210SPEECH.name":"K210 speech",
-        "mpyQHk210SPEECH.description":"Suitable for K210 speech synthesis modul"
+        "mpyQHk210SPEECH.description":"Suitable for K210 speech synthesis modul",
+        "mpy_esp32_ble.name":"ble",
+        "mpy_esp32_ble.description":"The bluetooth application",
+        "mpy_esp32_serial.name":"MicroPython ESP32 serial",
+        "mpy_esp32_serial.description":"MicroPython ESP32 serial ",
+        "mpy_esp32_i2c.name":"MicroPython ESP32 I2C",
+        "mpy_esp32_i2c.description":"MicroPython ESP32 I2C communication",
+        "mpy_esp32_spi.name":"MicroPython ESP32 SPI",
+        "mpy_esp32_spi.description":"MicroPython ESP32 SPI communication",
+        "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
+        "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW communication",
+        "mpyQHText.name":"MicroPython Text",
+        "mpyQHText.description":"MicroPython Text"  
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -281,7 +293,19 @@
         "C02Advanced.name":"C02 高级应用",
         "C02Advanced.description":"C02 Micro Python下的高级应用",
         "mpyQHk210SPEECH.name":"K210语音合成",
-        "mpyQHk210SPEECH.description":"适用于K210的语音合成模块"
+        "mpyQHk210SPEECH.description":"适用于K210的语音合成模块",
+        "mpy_esp32_ble.name":"蓝牙",
+        "mpy_esp32_ble.description":"蓝牙应用",
+        "mpy_esp32_serial.name":"MicroPython ESP32 串口",
+        "mpy_esp32_serial.description":"MicroPython ESP32 串口 ",
+        "mpy_esp32_i2c.name":"MicroPython ESP32 I2C",
+        "mpy_esp32_i2c.description":"MicroPython ESP32 I2C通讯 ",
+        "mpy_esp32_spi.name":"MicroPython ESP32 SPI",
+        "mpy_esp32_spi.description":"MicroPython ESP32 SPI通讯 ",
+        "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
+        "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW 通讯 ",
+        "mpyQHText.name":"MicroPython 文本",
+        "mpyQHText.description":"MicroPython 文本"
 
     },
     "zh-tw": {
@@ -423,6 +447,18 @@
         "C02Advanced.name":"C02 高級應用",
         "C02Advanced.description":"C02 Micro Python下的高級應用",
         "mpyQHk210SPEECH.name":"K210語音合成",
-        "mpyQHk210SPEECH.description":"適用於K210的語音合成模組"        
+        "mpyQHk210SPEECH.description":"適用於K210的語音合成模組",
+        "mpy_esp32_ble.name":"藍牙",
+        "mpy_esp32_ble.description":"藍牙應用",
+        "mpy_esp32_serial.name":"MicroPython ESP32 串口",
+        "mpy_esp32_serial.description":"MicroPython ESP32 串口 ",
+        "mpy_esp32_i2c.name":"MicroPython ESP32 I2C",
+        "mpy_esp32_i2c.description":"MicroPython ESP32 I2C通訊 ",
+        "mpy_esp32_spi.name":"MicroPython ESP32 SPI",
+        "mpy_esp32_spi.description":"MicroPython ESP32 SPI通訊 ",
+        "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
+        "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW 通訊 ",
+        "mpyQHText.name":"MicroPython 文本",
+        "mpyQHText.description":"MicroPython 文本"      
     }
 }
