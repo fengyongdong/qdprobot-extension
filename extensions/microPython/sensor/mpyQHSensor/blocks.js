@@ -166,21 +166,7 @@ function addBlocks (Blockly) {
                         type: 'field_dropdown',
                         name: 'key',
                         options:[["MPU9250", "MPU9250"],["BMP280", "BMP280"],["SHT20", "SHT20"],["ADXL345","ADXL345"]]
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN1',
-                        options:k210_pins
-                    },
-                    {
-                        type: 'field_dropdown',
-                        name: 'PIN2',
-                        options:k210_pins
-                    },
-                    { 
-                        type: "input_value", 
-                        name: "freq" 
-                    }                    
+                    }                   
                 ],
                 "tooltip": "IIC传感器初始化",
                 colour: QH_sensor_color,

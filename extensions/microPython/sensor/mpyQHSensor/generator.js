@@ -41,8 +41,6 @@ function addGenerator (Blockly) {
   }
 
   Blockly.Python.PY_qdp_k210_sensor_use_i2c_init=function(){
-    var dropdown_pin1 = this.getFieldValue('PIN1');
-    var dropdown_pin2 = this.getFieldValue('PIN2');
     var key = this.getFieldValue('key');
     var freq = Blockly.Python.valueToCode(this, 'freq', Blockly.Python.ORDER_ATOMIC);
     var code;
