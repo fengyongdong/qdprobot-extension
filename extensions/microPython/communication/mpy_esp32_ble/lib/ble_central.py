@@ -1,13 +1,4 @@
-"""
-Bluetooth-Central
 
-Micropython  library for the Bluetooth-Central
-=======================================================
-#Preliminary composition	       202200329
-#https://github.com/micropython/micropython/tree/master/examples/bluetooth
-
-dahanzimin From the Mixly Team 
-"""
 import bluetooth
 import time
 

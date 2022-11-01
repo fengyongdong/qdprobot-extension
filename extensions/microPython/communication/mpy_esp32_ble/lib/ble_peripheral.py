@@ -1,14 +1,3 @@
-"""
-Bluetooth-Peripheral
-
-Micropython  library for the Bluetooth-Peripheral
-=======================================================
-#Preliminary composition	       				202200329
-#Add access MAC address and repair bytes		202200329
-#https://github.com/micropython/micropython/tree/master/examples/bluetooth
-
-dahanzimin From the Mixly Team 
-"""
 
 import bluetooth
 from micropython import const
