@@ -151,7 +151,9 @@
         "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
         "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW communication",
         "mpyQHText.name":"MicroPython Text",
-        "mpyQHText.description":"MicroPython Text"  
+        "mpyQHText.description":"MicroPython Text",
+        "ESP32_HuskyLens_Vision.name":"HuskyLens Vision",
+        "ESP32_HuskyLens_Vision.description":"HuskyLens Vision module"  
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -305,7 +307,9 @@
         "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
         "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW 通讯 ",
         "mpyQHText.name":"MicroPython 文本",
-        "mpyQHText.description":"MicroPython 文本"
+        "mpyQHText.description":"MicroPython 文本",
+        "ESP32_HuskyLens_Vision.name":"二哈识图",
+        "ESP32_HuskyLens_Vision.description":"二哈识图 模块"
 
     },
     "zh-tw": {
@@ -459,6 +463,8 @@
         "mpy_esp32_espnow.name":"MicroPython ESP32 ESPNOW",
         "mpy_esp32_espnow.description":"MicroPython ESP32 ESPNOW 通訊 ",
         "mpyQHText.name":"MicroPython 文本",
-        "mpyQHText.description":"MicroPython 文本"      
+        "mpyQHText.description":"MicroPython 文本",
+        "ESP32_HuskyLens_Vision.name":"二哈識圖",
+        "ESP32_HuskyLens_Vision.description":"二哈識圖 模組"      
     }
 }
