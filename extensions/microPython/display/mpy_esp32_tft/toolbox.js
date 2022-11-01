@@ -7,22 +7,7 @@ function addToolbox () {
 
     return `
 <category name="TFT" id="QH_TFT_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_TFT_ICO}">
-  <block type="communicate_spi_init">
-    <value name="VAR">
-      <shadow type="text">
-        <field name="TEXT">spi</field>
-      </shadow>
-    </value>
-    <value name="freq">
-      <shadow type="math_number">
-        <field name="NUM">200000</field>
-      </shadow>
-    </value>          
-    <field name="sck">0</field>
-    <field name="mosi">4</field>
-    <field name="miso">5</field>
-  <next>
-  <block type="tft_use_spi_init">
+<block type="tft_use_spi_init">
     <value name="SPISUB">
       <shadow type="variables_get">
         <field name="VAR">spi</field>
@@ -53,8 +38,6 @@ function addToolbox () {
         <field name="NUM">240</field>
       </shadow>
     </value>
-  </block>
-  </next>
   </block>
   <block type="tft_show_image_or_string_delay">
     <value name="SUB">
