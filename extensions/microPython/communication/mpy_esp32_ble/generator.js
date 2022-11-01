@@ -79,30 +79,6 @@ function addGenerator (Blockly) {
       return code;  
   };
 
-  Blockly.Python.communicate_bluetooth_handle = function (block) {
-    Blockly.Python.imports_['import_ble_handle'] = 'import ble_handle'; 
-    var v = Blockly.Python.valueToCode(this, 'VAR', Blockly.Python.ORDER_ATOMIC);
-    v = v.replace(/\'/g, ""); 
-    var method = Blockly.Python.valueToCode(this, 'METHOD', Blockly.Python.ORDER_ATOMIC);
-    method = method.replace(/\'/g, ""); 
-    var code = v + '=ble_handle.Handle()\n'+v+'.recv('+ method +')\n';
-    return code;
-  };
-
-  Blockly.Python.communicate_bluetooth_handle_callback = function (block) {
-      var name = Blockly.Python.valueToCode(this, 'NAME',Blockly.Python.ORDER_ATOMIC); 
-      name = name.replace(/\'/g, "");  
-      var branch = Blockly.Python.statementToCode(this, 'DO');
-      branch = branch.replace(/(^\s*)|(\s*$)/g, "");
-      branch = Blockly.Python.addLoopTrap(branch,block.id);
-      if (!branch)
-        branch='pass';
-      Blockly.Python.customFunctions_['import_handle_callback'] = `def ${name}(key1, key2, key3, keyx):\n  ${branch}\n`;
-      var code = '';
-      return code;  
-  };
-
-    
     return Blockly;
 }
  

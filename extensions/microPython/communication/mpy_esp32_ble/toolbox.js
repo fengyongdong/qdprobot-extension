@@ -10,14 +10,14 @@ function addToolbox () {
   <block type="communicate_bluetooth_central_init">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_c</field>
+        <field name="TEXT">C_b</field>
       </shadow>
     </value>
   </block>
   <block type="communicate_bluetooth_peripheral_init">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_p</field>
+        <field name="TEXT">P_b</field>
       </shadow>
     </value>
     <value name="data">
@@ -29,14 +29,14 @@ function addToolbox () {
   <block type="communicate_bluetooth_scan">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_x</field>
+        <field name="TEXT">B1</field>
       </shadow>
     </value>
   </block>
   <block type="communicate_bluetooth_connect">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_x</field>
+        <field name="TEXT">B1</field>
       </shadow>
     </value>
     <value name="data">
@@ -48,14 +48,14 @@ function addToolbox () {
   <block type="communicate_bluetooth_is_connected">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_x</field>
+        <field name="TEXT">B1</field>
       </shadow>
     </value>
   </block>
   <block type="communicate_bluetooth_send">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_x</field>
+        <field name="TEXT">B1</field>
       </shadow>
     </value>
     <value name="data">
@@ -67,7 +67,7 @@ function addToolbox () {
   <block type="communicate_bluetooth_recv">
     <value name="VAR">
       <shadow type="text">
-        <field name="TEXT">ble_x</field>
+        <field name="TEXT">B1</field>
       </shadow>
     </value>
     <value name="METHOD">
@@ -80,25 +80,6 @@ function addToolbox () {
     <value name="NAME">
       <shadow type="text">
         <field name="TEXT">ble_method</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="communicate_bluetooth_handle">
-    <value name="VAR">
-      <shadow type="text">
-        <field name="TEXT">handle</field>
-      </shadow>
-    </value>
-    <value name="METHOD">
-      <shadow type="text">
-        <field name="TEXT">handle_method</field>
-      </shadow>
-    </value>
-  </block>
-  <block type="communicate_bluetooth_handle_callback">
-    <value name="NAME">
-      <shadow type="text">
-        <field name="TEXT">handle_method</field>
       </shadow>
     </value>
   </block>

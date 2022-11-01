@@ -239,64 +239,7 @@ function addBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.communicate_bluetooth_handle = {
-        init: function () {
-            this.jsonInit({
-                message0: '%1',
-                message1: Blockly.Msg.communicate_bluetooth_handle,
-                args0: [
-                    {
-                        type: 'field_image',
-                        src: QH_BLE_ICO,
-                        width: 40,
-                        height: 40
-                    }
-                ],
-                args1: [
-                    {
-                        type: 'input_value',
-                        name: 'VAR'
-                    },
-                    {
-                        type: 'input_value',
-                        name: 'METHOD'
-                    }                                   
-                ],
-                "tooltip": "",
-                colour: QH_BLE_COLOR,
-                colourTertiary: '#C0C0C0',
-                extensions: ['shape_statement']
-            });
-        }
-    };
-
-    Blockly.Blocks.communicate_bluetooth_handle_callback = {
-        init: function () {
-            this.jsonInit({
-                message0: Blockly.Msg.communicate_bluetooth_handle_callback,
-                message1: '%1',
-                args0: [
-                    {
-                        type: 'input_value',
-                        name: 'NAME'
-                    }
-                ],
-                 args1: [
-                {
-                  "type": "input_statement",
-                  "name": "DO"
-                }
-                ],
-                "tooltip": "",
-                colour: QH_BLE_COLOR,
-                colourTertiary: '#C0C0C0',
-                extensions: ['shape_hat']
-            });
-            this.setNextStatement(false, null);
-        }
-    };
-
-
+   
     return Blockly;
 }
 
