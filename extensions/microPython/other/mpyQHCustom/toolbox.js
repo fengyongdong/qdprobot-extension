@@ -13,6 +13,7 @@ function addToolbox () {
     <block type="factory_block"></block>
     <block type="factory_block_return"></block>
     <block type="factory_block_return_bool"></block>
+    <block type="factory_block_var"></block>
 </category>
 `;
 

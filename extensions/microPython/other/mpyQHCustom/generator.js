@@ -37,6 +37,12 @@ function addGenerator (Blockly) {
     return [VALUE,Blockly.Python.ORDER_ATOMIC];
   };
 
+  Blockly.Python.factory_block_var = function() {
+    var NAME = this.getFieldValue('NAME');
+    var VALUE=Blockly.Python.valueToCode(this, 'VALUE', Blockly.Python.ORDER_RELATIONAL) || '0'
+    return `${NAME} = ${VALUE}`;
+  };
+
    
     return Blockly;
 }

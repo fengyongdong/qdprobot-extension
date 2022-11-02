@@ -3,7 +3,7 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         HUSKYLENSVISION_CATEGORY: 'HuskyLens camera',
-        HUSKYLENSVISION_BEGIN_I2C: 'Initializes HuskyLens I2C pin SDA %1 SCL %2 address %3',
+        HUSKYLENSVISION_BEGIN_I2C: 'Initializes HuskyLens (I2C) address 0x32',
         HUSKYLENSVISION_WRITE_ALGORITHM: 'HuskyLens switches to the %1 algorithm',
         FACE_RECOGNITION: 'face recognition',
         OBJECT_TRACKING: 'object tracking',
@@ -64,7 +64,7 @@ function addMsg (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
         HUSKYLENSVISION_CATEGORY: 'HuskyLens摄像头',
-        HUSKYLENSVISION_BEGIN_I2C: '初始化HuskyLens  I2C引脚  SDA %1 SCL %2 地址 %3',
+        HUSKYLENSVISION_BEGIN_I2C: '初始化HuskyLens (I2C) 地址 0x32',
         HUSKYLENSVISION_WRITE_ALGORITHM: 'HuskyLens 切换到 %1 算法',
         FACE_RECOGNITION: '人脸识别',
         OBJECT_TRACKING: '物体追踪',
@@ -125,7 +125,7 @@ function addMsg (Blockly) {
 
     Object.assign(Blockly.ScratchMsgs.locales['zh-tw'], {
         HUSKYLENSVISION_CATEGORY: 'HuskyLens攝像頭',
-        HUSKYLENSVISION_BEGIN_I2C: '初始化HuskyLens  I2C引腳  SDA %1 SCL %2 地址 %3',
+        HUSKYLENSVISION_BEGIN_I2C: '初始化HuskyLens (I2C) 地址 0x32',
         HUSKYLENSVISION_WRITE_ALGORITHM: 'HuskyLens 切換到 %1 演算法',
         FACE_RECOGNITION: '人臉識別',
         OBJECT_TRACKING: '物體追蹤',

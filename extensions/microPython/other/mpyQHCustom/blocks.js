@@ -186,6 +186,38 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.factory_block_var = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                message1: '%1 = %2',
+                args0: [
+                    {
+                        type: 'field_image',
+                        src: QH_CUSTOM_ICO,
+                        width: 40,
+                        height: 40
+                    }
+                ],
+                args1: [
+                    {
+                      "type": "field_input",
+                      "name": "NAME",
+                      "text": "var",
+                      "spellcheck": false
+                    },
+                    {
+                      "type": "input_value",
+                      "name": "VALUE"
+                    } 
+                ],
+                colour: QH_CUSTOM_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
     
 
     return Blockly;

@@ -4,10 +4,6 @@ function addGenerator (Blockly) {
 
     
     Blockly.Arduino.huskyLensVision_beginI2C = function () {
-        var sdaPin = this.getFieldValue('SDA_PIN');
-        var sclPin = this.getFieldValue('SCL_PIN');
-        var address = this.getFieldValue('ADDRESS');
-        
         Blockly.Arduino.includes_['DFRobot_HuskyLens'] = '#include <DFRobot_HuskyLens.h>';
         Blockly.Arduino.definitions_['DFRobot_HuskyLens'] = 'DFRobot_HuskyLens huskylens;';
 
