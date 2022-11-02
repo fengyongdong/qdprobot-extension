@@ -157,7 +157,9 @@
         "mpyQHCustom.name":"Custom blocks",
         "mpyQHCustom.description":"MicroPython Custom blocks",
         "I2C_Scanner.name":"I2C Scanner",
-        "I2C_Scanner.description":"Scan addresses of I2C devices"  
+        "I2C_Scanner.description":"Scan addresses of I2C devices",
+        "mpy_esp32_ntp.name":"ESP32 NTP",
+        "mpy_esp32_ntp.description":"Esp32 NTP"  
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -317,7 +319,9 @@
         "mpyQHCustom.name":"自定义块",
         "mpyQHCustom.description":"MicroPython 自定义块",
         "I2C_Scanner.name":"I2C 扫描",
-        "I2C_Scanner.description":"用于扫描I2C设备地址"
+        "I2C_Scanner.description":"用于扫描I2C设备地址",
+        "mpy_esp32_ntp.name":"ESP32 NTP",
+        "mpy_esp32_ntp.description":"网络校时"
 
     },
     "zh-tw": {
@@ -477,6 +481,8 @@
         "mpyQHCustom.name":"自定義塊",
         "mpyQHCustom.description":"MicroPython 自定義塊",
         "I2C_Scanner.name":"I2C 掃描",
-        "I2C_Scanner.description":"用於掃描I2C設備地址"      
+        "I2C_Scanner.description":"用於掃描I2C設備地址",
+        "mpy_esp32_ntp.name":"ESP32 NTP",
+        "mpy_esp32_ntp.description":"網路校時"      
     }
 }
