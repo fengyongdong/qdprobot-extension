@@ -8,7 +8,7 @@ const ESP32_HuskyLens_Vision = formatMessage => ({
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266','QDPRobot_arduinoUnoUltra',
         'QDPRobotC02_arduinoESP32QDP', 'QDPRobotIOT_arduinoEsp8266'],
-    author: 'QDProbot',
+    author: 'Yinshen Wang',
     iconURL: `asset/ESP32_HuskyLens_Vision.png`,
     description: formatMessage({
         id: 'ESP32_HuskyLens_Vision.description',

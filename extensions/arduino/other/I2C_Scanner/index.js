@@ -6,7 +6,7 @@ const I2C_Scanner = formatMessage => ({
     extensionId: 'I2C_Scanner',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoMega2560', 'arduinoNano', 'arduinoEsp8266', 'arduinoEsp32', 'MatrixRobot_arduinoEsp32'],
-    author: '',
+    author: 'Yinshen Wang',
     iconURL: `asset/I2C_Scanner.png`,
     description: formatMessage({
         id: 'I2C_Scanner.description',
