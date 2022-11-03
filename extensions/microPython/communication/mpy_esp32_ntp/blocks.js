@@ -56,7 +56,7 @@ function addBlocks (Blockly) {
                         options: [[Blockly.Msg.time_all,"()"],[Blockly.Msg.time_year,"()[0]"],[Blockly.Msg.time_month,"()[1]"],[Blockly.Msg.time_day,"()[2]"],[Blockly.Msg.time_hour,"()[3]"],[Blockly.Msg.time_minute,"()[4]"],[Blockly.Msg.time_second,"()[5]"],[Blockly.Msg.time_week,"()[6]"],[Blockly.Msg.time_days,"()[7]"]]
                     }
                 ],
-                "tooltip": "所有:返回(年,月,日,时,分,秒,周,天)无组",
+                "tooltip": "所有:返回(年,月,日,时,分,秒,周,天)数组",
                 colour: QH_NTP_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['output_number']
