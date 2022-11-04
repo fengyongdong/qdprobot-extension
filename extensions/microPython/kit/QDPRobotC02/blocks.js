@@ -737,7 +737,7 @@ function addBlocks (Blockly) {
                         name: 'num1'
                     }
                 ],
-                "tooltip": "舵机,注意选择对应的舵机类型0~180度,不建议长时间运行！\n",
+                "tooltip": "舵机,注意选择对应的舵机类型0~180度！\n",
                 colour: QH_Actuator_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -770,7 +770,7 @@ function addBlocks (Blockly) {
                         name: 'num1'
                     }
                 ],
-                "tooltip": "舵机,注意选择对应的舵机类型0~180度,不建议长时间运行！\n",
+                "tooltip": "舵机,注意选择对应的舵机类型360度,连续转动！\n",
                 colour: QH_Actuator_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
