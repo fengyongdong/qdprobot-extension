@@ -9,27 +9,27 @@ function addToolbox () {
 <block type="MQTT_subscribe_plus">
   <value name="server">
     <shadow type="text">
-      <field name="TEXT">bemfa.com</field>
+      <field name="TEXT">qdprobot.com</field>
     </shadow>
   </value> 
   <value name="port">
     <shadow type="text">
-      <field name="TEXT">9501</field>
+      <field name="TEXT">1883</field>
     </shadow>
   </value>
   <value name="client_id">
     <shadow type="text">
-      <field name="TEXT">e6ba073d8114a31462f282e88de6e222</field>
+      <field name="TEXT">MAC address</field>
     </shadow>
   </value>  
     <value name="mqtt_username">
     <shadow type="text">
-      <field name="TEXT">qdprobot</field>
+      <field name="TEXT">admin88</field>
     </shadow>
   </value> 
   <value name="mqtt_password">
     <shadow type="text">
-      <field name="TEXT">12345678</field>
+      <field name="TEXT">88888888</field>
     </shadow>
   </value>        
 </block>
