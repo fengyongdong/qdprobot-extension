@@ -159,7 +159,11 @@
         "I2C_Scanner.name":"I2C Scanner",
         "I2C_Scanner.description":"Scan addresses of I2C devices",
         "mpy_esp32_ntp.name":"ESP32 NTP",
-        "mpy_esp32_ntp.description":"Esp32 NTP"  
+        "mpy_esp32_ntp.description":"Esp32 NTP",
+        "mpy_HuskyLens_Vision.name":"MicroPython huskylens vision",
+        "mpy_HuskyLens_Vision.description":"MicroPython  huskylens vision module",
+        "QH_MQTT.name":"MQTT",
+        "QH_MQTT.description":"Arduino MQTT module"  
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -321,7 +325,11 @@
         "I2C_Scanner.name":"I2C 扫描",
         "I2C_Scanner.description":"用于扫描I2C设备地址",
         "mpy_esp32_ntp.name":"ESP32 NTP",
-        "mpy_esp32_ntp.description":"网络校时"
+        "mpy_esp32_ntp.description":"网络校时",
+        "mpy_HuskyLens_Vision.name":"MicroPython 二哈识图",
+        "mpy_HuskyLens_Vision.description":"MicroPython 二哈识图 模块",
+        "QH_MQTT.name":"MQTT",
+        "QH_MQTT.description":"Arduino MQTT 模块"
 
     },
     "zh-tw": {
@@ -483,6 +491,10 @@
         "I2C_Scanner.name":"I2C 掃描",
         "I2C_Scanner.description":"用於掃描I2C設備地址",
         "mpy_esp32_ntp.name":"ESP32 NTP",
-        "mpy_esp32_ntp.description":"網路校時"      
+        "mpy_esp32_ntp.description":"網路校時",
+        "mpy_HuskyLens_Vision.name":"MicroPython 二哈識圖",
+        "mpy_HuskyLens_Vision.description":"MicroPython 二哈識圖 模組",
+        "QH_MQTT.name":"MQTT",
+        "QH_MQTT.description":"Arduino MQTT 模組"      
     }
 }
