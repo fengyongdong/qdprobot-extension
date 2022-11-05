@@ -122,11 +122,11 @@ function addGenerator (Blockly) {
         branch = branch.replace(/(^\s*)|(\s*$)/g, "");
         branch = Blockly.Python.addLoopTrap(branch, block.id);
         if (!branch)
-            branch='pass';           
-        Blockly.Python.imports_['blynk_on_disconnected'] =
+            branch='pass'; 
+
+        Blockly.Python.variables_['blynk_on_disconnected'] =
             '@blynk.handle_event("disconnect")\n' +
-            'def connect_handler():\n' + 
-            "  print('Blynk disconnected')\n  " + branch;
+            'def connect_handler():\n  ' + branch;
 
         return '';
     };
@@ -138,10 +138,9 @@ function addGenerator (Blockly) {
         branch = Blockly.Python.addLoopTrap(branch, block.id);
         if (!branch)
         branch='pass';
-        Blockly.Python.imports_['blynk_on_connected'] =
+        Blockly.Python.variables_['blynk_on_connected'] =
             '@blynk.handle_event("connect")\n' +
-            'def connect_handler():\n' + 
-            "  print('Blynk connected')\n  " + branch;
+            'def connect_handler():\n  ' + branch;
 
         return '';
     };

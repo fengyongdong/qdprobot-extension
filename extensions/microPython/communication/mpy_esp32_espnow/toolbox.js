@@ -75,6 +75,24 @@ function addToolbox () {
         <field name="TEXT">cb</field>
       </shadow>
     </value>
+    <statement name="DO">
+      <block type="control_if">
+        <value name="CONDITION">
+          <block type="operator_equals">
+            <value name="OPERAND1">
+              <shadow type="data_variable">
+                <field name="VARIABLE">msg</field>
+              </shadow>
+            </value>
+            <value name="OPERAND2">
+              <shadow type="text">
+                <field name="TEXT">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
   </block>
 </category>
 `;

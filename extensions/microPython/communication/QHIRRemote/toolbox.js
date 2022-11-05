@@ -7,12 +7,37 @@ function addToolbox () {
 
     return `
 <category name="%{BKY_QH_IR_CATEGORY}" id="QH_IR_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_COMMUNICATE_ICO}">
-    <block type="PY_qdp_esp32_ir_re"></block>
+    <block type="communicate_ir_recv"></block>    
+    <block type="PY_qdp_esp32_ir_re">
+        <statement name="DO">
+        <block type="control_if">
+          <value name="CONDITION">
+            <block type="operator_equals">
+              <value name="OPERAND1">
+                <shadow type="data_variable">
+                  <field name="VARIABLE">data</field>
+                </shadow>
+              </value>
+              <value name="OPERAND2">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
     <block type="PY_qdp_esp32_ir_send">
+        <value name="address">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
         <value name="contents">
-            <shadow type="text">
-              <field name="TEXT">c3f9070005000200000400a0e2</field>
-            </shadow>
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
         </value>
     </block>
 </category>

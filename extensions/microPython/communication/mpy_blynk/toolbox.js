@@ -31,20 +31,24 @@ function addToolbox () {
         </shadow>
       </value>
       <value name="virtual_pin_val">
-        <block type="mpy_variables_name">
+        <shadow type="mpy_variables_name">
             <value name="name">
               <shadow type="text">
                 <field name="TEXT">_value</field>
               </shadow>
             </value>
-        </block>
+        </shadow>
       </value>
       <statement name="DO">
-        <block type="text_print">
+        <block type="microPython_console_consolePrint">
           <value name="TEXT">
-            <block type="variables_get">
-              <field name="VAR">_value</field>
-            </block>
+            <shadow type="mpy_variables_name">
+                <value name="name">
+                  <shadow type="text">
+                    <field name="TEXT">_value</field>
+                  </shadow>
+                </value>
+            </shadow>
           </value>
         </block>
       </statement>
@@ -90,8 +94,28 @@ function addToolbox () {
         </shadow>
       </value>
     </block>
-    <block type="mpython_blynk_on_connected"></block>  
-    <block type="mpython_blynk_on_disconnected"></block> 
+    <block type="mpython_blynk_on_connected">
+        <statement name="DO">
+          <block type="microPython_console_consolePrint">
+            <value name="TEXT">
+              <shadow type="text">
+                <field name="TEXT">connected</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+    </block>  
+    <block type="mpython_blynk_on_disconnected">
+      <statement name="DO">
+        <block type="microPython_console_consolePrint">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">disconnected</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block> 
     <block type="mpython_blynk_sync_virtual">
       <value name="virtual_pin">
         <shadow type="math_number">

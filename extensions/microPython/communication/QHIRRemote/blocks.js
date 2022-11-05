@@ -26,6 +26,31 @@ function addBlocks (Blockly) {
         ['P9-L-12（touch）','12'],
         ['P10-L-25','25']
     ];
+
+    Blockly.Blocks.communicate_ir_recv = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.communicate_ir_recv,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'PIN',
+                        options: qdprobotESP32_R_PIN_Output_Dropdown
+                    },
+                    {
+                      "type": "field_input",
+                      "name": "SUB",
+                      "text": "cb",
+                      "spellcheck": false
+                    }   
+                ],
+                "tooltip": "在单独进程中运行.对应摇控器的按键输入，注：红外遥控器的“发送” “接收”在一个程序内不能同时使用，只能二选一！",
+                colour: QH_OTHER_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['shape_statement']
+            });
+        }
+    };
     
     //红外遥控器接收
     Blockly.Blocks.PY_qdp_esp32_ir_re = {
@@ -53,7 +78,6 @@ function addBlocks (Blockly) {
         }
     };
 
-    //红外发射数组
     Blockly.Blocks.PY_qdp_esp32_ir_send = {
         init: function () {
             this.jsonInit({
@@ -75,10 +99,14 @@ function addBlocks (Blockly) {
                     },
                     {
                         type: 'input_value',
+                        name: 'address'
+                    },
+                    {
+                        type: 'input_value',
                         name: 'contents'
                     }                                    
                 ],
-                "tooltip": "长度至少要保证在10位以上.否则接收模块收不到！",
+                "tooltip": "红外发送地址与内容均为0~255之间的整数",
                 colour: QH_COMMUNICATE_color1,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']

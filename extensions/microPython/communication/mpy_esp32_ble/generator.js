@@ -74,7 +74,7 @@ function addGenerator (Blockly) {
       branch = Blockly.Python.addLoopTrap(branch,block.id);
       if (!branch)
         branch='pass';
-      Blockly.Python.customFunctions_['import_bluetooth_method'] = `def ${name}(data):\n  ${branch}\n`;
+      Blockly.Python.variables_['import_bluetooth_method'] = `def ${name}(data):\n  ${branch}\n`;
       var code = '';
       return code;  
   };
