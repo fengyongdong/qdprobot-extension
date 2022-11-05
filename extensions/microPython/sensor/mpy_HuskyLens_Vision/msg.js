@@ -46,7 +46,9 @@ function addMsg (Blockly) {
         huskylens_command_request_photo_screenshot:'HuskyLens %1 Trigger %2 to save to SD card',
         PHOTO_TAKE_PHOTO:'photo',
         PHOTO_SCREEN_SHOT:'screem shot',
-        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 The current algorithm data is an SD card %3'
+        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 The current algorithm data is an SD card %3',
+        MODEL_SAVE:'save',
+        MODEL_LOAD:'load'
 
     });
 
@@ -95,7 +97,9 @@ function addMsg (Blockly) {
         huskylens_command_request_photo_screenshot:'HuskyLens %1 触发 %2 保存到SD卡',
         PHOTO_TAKE_PHOTO:'拍照',
         PHOTO_SCREEN_SHOT:'截屏',
-        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 当前算法数据为SD卡 %3'
+        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 当前算法数据为SD卡 %3',
+        MODEL_SAVE:'保存',
+        MODEL_LOAD:'加载'
 
     });
 
@@ -144,7 +148,9 @@ function addMsg (Blockly) {
         huskylens_command_request_photo_screenshot:'HuskyLens %1 觸發 %2 保存到SD卡',
         PHOTO_TAKE_PHOTO:'拍照',
         PHOTO_SCREEN_SHOT:'截屏',
-        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 當前演算法數據為SD卡 %3'
+        huskylens_save_load_model_to_SD_card:'HuskyLens %1  %2 當前演算法數據為SD卡 %3',
+        MODEL_SAVE:'保存',
+        MODEL_LOAD:'加載'
         
     });
 

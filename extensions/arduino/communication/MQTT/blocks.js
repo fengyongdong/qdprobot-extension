@@ -50,7 +50,7 @@ function addBlocks (Blockly) {
                 }],
                 args1: [{
                     type: 'input_statement',
-                    name: 'SUBSTACK'
+                    name: 'function'
                 }],
                 colour: QH_MQTT_COLOR,
                 secondaryColour: '#C0C0C0',
