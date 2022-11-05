@@ -10465,7 +10465,8 @@ Blockly.Arduino.qdp_esp32_BT_print_string = function() {
     Blockly.Arduino.definitions_['include_QDP_ESP_WIFI'] = '#include <QDP_ESP_WIFI.h>';
     Blockly.Arduino.definitions_['var_declare_QDP_ESP_WIFI'] = 'QDP_ESP_WIFI MonEsp;';
     //Blockly.Arduino.setups_['config_access_point_setup'] = 'WiFi.begin('+ssid+','+pwd+');\nwhile (WiFi.status() != WL_CONNECTED) {\ndelay(500);\nSerial.print(".");\n}';
-    var code = 'WiFi.begin('+ssid+','+pwd+');\nwhile (WiFi.status() != WL_CONNECTED) {\ndelay(500);\nSerial.print(".");\n}\n';
+    Blockly.Arduino.setups_['setup_WiFi_begin'] = 'WiFi.begin('+ssid+','+pwd+');\nwhile (WiFi.status() != WL_CONNECTED) {\ndelay(500);\nSerial.print(".");\n}\n';
+    var code='';
 
     return code;
   };
