@@ -30,7 +30,7 @@ function addBlocks (Blockly) {
                       name: "mqtt_password"
                     }
                 ],
-                "tooltip": "",
+                "tooltip": "只要改变客户端ID为MAC地址就可以用测试帐号，如要专用帐号请联系齐护",
                 colour:QH_MQTT_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
@@ -52,6 +52,7 @@ function addBlocks (Blockly) {
                     type: 'input_statement',
                     name: 'function'
                 }],
+                "tooltip": "接收相关主题的数据，接收的数据放在变量 mqtt_data",
                 colour: QH_MQTT_COLOR,
                 secondaryColour: '#C0C0C0',
                 extensions: ['shape_hat']
@@ -75,7 +76,7 @@ function addBlocks (Blockly) {
                       name: "topic"
                     }
                 ],
-                "tooltip": "",
+                "tooltip": "发送数据到指定主题",
                 colour:QH_MQTT_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
