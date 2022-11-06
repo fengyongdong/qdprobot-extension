@@ -5,7 +5,7 @@ const mpy_HuskyLens_Vision = formatMessage => ({
     }),
     extensionId: 'mpy_HuskyLens_Vision',
     version: '1.0.0',
-    supportDevice: ['microPythonEsp32','microPythonEsp8266','microPythonK210MaixDock'],
+    supportDevice: ['microPythonEsp32','microPythonEsp8266'],
     author: 'QDProbot',
     iconURL: `asset/mpy_HuskyLens_Vision.png`,
     description: formatMessage({
