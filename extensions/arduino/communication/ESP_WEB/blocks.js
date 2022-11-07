@@ -508,6 +508,24 @@ function addBlocks (Blockly) {
         }
     };
 
+    Blockly.Blocks.QH_variables_get = {
+        init: function () {
+            this.jsonInit({
+                message0: '%1',
+                args0: [
+                    {
+                        type: 'input_value',
+                        name: 'VAR'
+                    } 
+                ],
+                "tooltip": "获取变量",
+                colour:QH_WEB_COLOR,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
+            });
+        }     
+    };
+
     return Blockly;
 }
 

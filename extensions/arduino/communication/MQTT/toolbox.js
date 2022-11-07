@@ -39,6 +39,19 @@ function addToolbox () {
             <field name="TEXT">text</field>
         </shadow>
     </value>
+    <statement name="function">
+        <block type="arduino_serial_multiSerialPrint" >
+            <value name="VALUE">
+                <block type="QH_variables_get">
+                    <value name="VAR">
+                        <shadow type="text">
+                            <field name="TEXT">mqtt_data</field>
+                        </shadow>
+                    </value>
+                </block>
+            </value>
+        </block>
+    </statement>
 </block>
 <block type="MQTT_publish">
   <value name="data">
@@ -52,7 +65,6 @@ function addToolbox () {
     </shadow>
   </value>       
 </block>
-
 </category>
 `;
 }

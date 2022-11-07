@@ -44,7 +44,7 @@ function addToolbox () {
             <block type="SimpleBlynk_RETRIEVE_DATA">
                 <field name="Vpin">V0</field>
                 <statement name="DO">
-                    <block type="serialPrint">
+                    <block type="arduino_serial_multiSerialPrint">
                         <value name="VALUE">
                             <block type="SimpleBlynk_ReadData"></block>
                         </value>
@@ -72,7 +72,7 @@ function addToolbox () {
     <block type="SimpleBlynk_RETRIEVE_DATA">
         <field name="Vpin">V0</field>
     </block>
-    <block type="serialPrint">
+    <block type="arduino_serial_multiSerialPrint">
         <value name="VALUE">
            <shadow type="text">
                 <field name="TEXT">2</field>

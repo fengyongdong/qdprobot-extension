@@ -68,6 +68,13 @@ Blockly.Arduino.MQTT_subscribe_plus = function() {
     return code;
 };
 
+    Blockly.Arduino.QH_variables_get = function() {
+        var name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
+        name = name.replace(/\"/g,'');
+        code = name;
+        return [code, Blockly.Arduino.ORDER_NONE];
+    };
+
     return Blockly;
 
 }

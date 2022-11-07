@@ -52,7 +52,7 @@ function addToolbox () {
     <block type="QDP_blynk_iot_CONNECTED" name="硬件连接服务器状态(布尔)"></block>
     <block type="QDP_blynk_iot_get_data">
         <statement name="DO">
-            <block type="serialPrint">
+            <block type="arduino_serial_multiSerialPrint">
                 <value name="VALUE">
                     <block type="blynk_param"></block>
                 </value>
@@ -126,7 +126,7 @@ function addToolbox () {
     <block type="QDP_blynk_terminal_clear" name="终端清屏"></block>
     <block type="QDP_blynk_iot_terminal_get" name="终端组件获取文本">
         <statement name="DO">
-            <block type="serialPrint" >
+            <block type="arduino_serial_multiSerialPrint" >
                 <value name="VALUE">
                     <block type="QH_variables_get">
                         <value name="VAR">
@@ -222,7 +222,7 @@ function addToolbox () {
     </block>
     <block type="QDP_blynk_time_input_1" name="时间输入">
         <statement name="DO">
-            <block type="serialPrint">
+            <block type="arduino_serial_multiSerialPrint">
                 <value name="VALUE">
                     <block type="QH_variables_get">
                         <value name="VAR">
@@ -233,7 +233,7 @@ function addToolbox () {
                     </block>
                 </value>
                 <next>
-                    <block type="serialPrint">
+                    <block type="arduino_serial_multiSerialPrint">
                         <value name="VALUE">
                             <block type="QH_variables_get">
                                 <value name="VAR">
@@ -303,7 +303,7 @@ function addToolbox () {
     <block type="QDP_blynk_light" name="光线传感器">
         <field name="Vpin">V0</field>
         <statement name="DO">
-            <block type="serialPrint" >
+            <block type="arduino_serial_multiSerialPrint" >
                 <value name="VALUE">
                     <block type="QH_variables_get">
                         <value name="VAR">
@@ -319,7 +319,7 @@ function addToolbox () {
     <block type="QDP_blynk_gravity" name="重力传感器">
         <field name="Vpin">V0</field>
         <statement name="DO">
-            <block type="serialPrint">
+            <block type="arduino_serial_multiSerialPrint">
                 <value name="VALUE">
                     <block type="QH_variables_get">
                         <value name="VAR">
@@ -330,7 +330,7 @@ function addToolbox () {
                     </block>
                 </value>
                 <next>
-                    <block type="serialPrint">
+                    <block type="arduino_serial_multiSerialPrint">
                         <value name="VALUE">
                             <block type="QH_variables_get">
                                 <value name="VAR">
@@ -341,7 +341,7 @@ function addToolbox () {
                             </block>
                         </value>
                         <next>
-                            <block type="serialPrint">
+                            <block type="arduino_serial_multiSerialPrint">
                                 <value name="VALUE">
                                     <block type="QH_variables_get">
                                         <value name="VAR">
@@ -359,7 +359,7 @@ function addToolbox () {
         </statement>
     </block>
     <label text="------"></label>  
-    <block type="serialPrint">
+    <block type="arduino_serial_multiSerialPrint">
         <value name="VALUE">
            <shadow type="text">
                 <field name="TEXT">2</field>

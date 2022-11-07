@@ -49,7 +49,34 @@ function addToolbox () {
         </value>
     </block>
     <block type="QDP_esp32_web_page_attachSliderChanged"></block>
-    <block type="QDP_esp32_web_page_SliderChanged" ></block>
+    <block type="QDP_esp32_web_page_SliderChanged" >
+        <statement name="DO">
+            <block type="control_if">
+              <value name="CONDITION">
+                <block type="operator_equals">
+                  <value name="OPERAND1">
+                    <shadow type="QH_variables_get">
+                        <value name="VAR">
+                            <shadow type="text">
+                                <field name="TEXT">id</field>
+                            </shadow>
+                        </value>
+                    </shadow>
+                  </value>
+                  <value name="OPERAND2">
+                    <block type="QDP_esp32_web_page_Slider_id" >
+                        <value name="id">
+                            <shadow type="math_number" >
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+    </block>
     <block type="QDP_esp32_web_page_Slider_id" >
         <value name="id">
             <shadow type="text">
@@ -58,7 +85,34 @@ function addToolbox () {
         </value>
     </block>
     <block type="QDP_esp32_web_page_attachButtonClick"></block>
-    <block type="QDP_esp32_web_page_ButtonClick" ></block>
+    <block type="QDP_esp32_web_page_ButtonClick" >
+        <statement name="DO">
+            <block type="control_if">
+              <value name="CONDITION">
+                <block type="operator_equals">
+                  <value name="OPERAND1">
+                    <shadow type="QH_variables_get">
+                        <value name="VAR">
+                            <shadow type="text">
+                                <field name="TEXT">id</field>
+                            </shadow>
+                        </value>
+                    </shadow>
+                  </value>
+                  <value name="OPERAND2">
+                    <block type="QDP_esp32_web_page_Button_id" >
+                        <value name="id">
+                            <shadow type="math_number" >
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+    </block>
     <block type="QDP_esp32_web_page_Button_id" >
         <value name="id">
             <shadow type="text">
@@ -130,7 +184,21 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    <block type="QDP_web_receive_data_32"></block>
+    <block type="QDP_web_receive_data_32">
+        <statement name="data">
+            <block type="arduino_serial_multiSerialPrint" >
+                <value name="VALUE">
+                    <shadow type="QH_variables_get">
+                        <value name="VAR">
+                            <shadow type="text">
+                                <field name="TEXT">web_data</field>
+                            </shadow>
+                        </value>
+                    </shadow>
+                </value>
+            </block>
+        </statement>
+    </block>
 </category>
 `;
 }

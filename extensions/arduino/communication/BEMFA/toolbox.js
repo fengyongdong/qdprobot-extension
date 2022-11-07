@@ -8,7 +8,7 @@ function addToolbox () {
 <category name="%{BKY_QH_BEMFA_CATEGORY}" id="QH_BEMFA_CATEGORY" colour="#42CCFF" secondaryColour="#42CCFF" iconURI="${QH_BEMFA_ICO}">
     <block type="QDP_tcp_device_cloud_subscription">
         <statement name="function">
-            <block type="serialPrint">
+            <block type="arduino_serial_multiSerialPrint">
                 <value name="VALUE">
                     <block type="QH_variables_get">
                         <value name="VAR">

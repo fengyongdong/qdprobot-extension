@@ -1550,20 +1550,38 @@ function addToolbox () {
 	            <field name="TEXT">10</field>
 	        </shadow>
 	    </value>
+        <statement name="success">
+            <block type="arduino_serial_multiSerialPrint" >
+                <value name="VALUE">
+                    <shadow type="text">
+                        <field name="TEXT">Sent with success</field>
+                    </shadow>
+                </value>
+            </block>
+        </statement>
+        <statement name="failure">
+            <block type="arduino_serial_multiSerialPrint" >
+                <value name="VALUE">
+                    <shadow type="text">
+                        <field name="TEXT">Error sending the data</field>
+                    </shadow>
+                </value>
+            </block>
+        </statement>
     </block>
     <block type="QDP32_esp_now_receive">
         <statement name="success">
-            <block type="serialPrint">
+            <block type="arduino_serial_multiSerialPrint" >
                 <value name="VALUE">
-                        <block type="QH_variables_get">
-                            <value name="VAR">
-                                <shadow type="text">
-                                    <field name="TEXT">mydata</field>
-                                </shadow>
-                            </value>
-                        </block>
-                    </value>
-            </block> 
+                    <block type="QH_variables_get">
+                        <value name="VAR">
+                            <shadow type="text">
+                                <field name="TEXT">mydata</field>
+                            </shadow>
+                        </value>
+                    </block>
+                </value>
+            </block>
         </statement>
     </block>
     <label text="%{BKY_QH_WEATHER_LABEL}"></label>
