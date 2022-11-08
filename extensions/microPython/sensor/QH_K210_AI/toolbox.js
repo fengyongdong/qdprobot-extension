@@ -492,27 +492,6 @@ function addToolbox () {
         </shadow>
       </value>
     </block>
-    <block type="PY_qdp_k210_image_find_line_segments">
-      <value name="roi">
-            <block type="PY_qdp_k210_list_var">
-                <value name="LIST">
-                    <shadow type="text">
-                        <field name="TEXT">0,0,320,240</field>
-                    </shadow>
-                </value>
-            </block>
-        </value>
-      <value name="distance">
-        <shadow type="math_number">
-          <field name="NUM">10</field>
-        </shadow>
-      </value>
-      <value name="difference">
-        <shadow type="math_number">
-          <field name="NUM">15</field>
-        </shadow>
-      </value>
-    </block>
     <block type="PY_qdp_k210_image_find_circles">
         <value name="roi">
             <block type="PY_qdp_k210_list_var">

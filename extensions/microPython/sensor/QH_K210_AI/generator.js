@@ -355,15 +355,6 @@ function addGenerator (Blockly) {
       return [code, Blockly.Python.ORDER_ATOMIC]; 
     };
 
-    Blockly.Python.PY_qdp_k210_image_find_line_segments = function () {
-      Blockly.Python.imports_['import_image'] = 'import image';
-      var sub =this.getFieldValue("VAR");
-      var roi =Blockly.Python.valueToCode(this, 'roi',Blockly.Python.ORDER_ATOMIC);
-      var distance =Blockly.Python.valueToCode(this, 'distance',Blockly.Python.ORDER_ATOMIC);
-      var difference =Blockly.Python.valueToCode(this, 'difference',Blockly.Python.ORDER_ATOMIC);
-      var code = sub+'.find_line_segments('+roi+','+distance+','+difference+')';
-      return [code, Blockly.Python.ORDER_ATOMIC]; 
-    };
 
 
     Blockly.Python.PY_qdp_k210_image_find_circles = function () {
