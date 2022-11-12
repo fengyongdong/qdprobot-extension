@@ -64,7 +64,7 @@ function addBlocks (Blockly) {
                         name: "img" 
                     }
                 ],
-                "tooltip": "LCD初始化\n频率:（实际上指 SPI 的通讯速率） 的频率\n颜色:LCD 初始化的颜色， 可以是 16 位的 RGB565 颜色值，比如 0xFFFF； 或者 RGB888 元组， 比如 (236, 36, 36)，\n反色:LCD 反色显示",
+                "tooltip": "",
                 colour: QH_LCD_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
