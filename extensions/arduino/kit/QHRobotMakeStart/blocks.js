@@ -948,7 +948,7 @@ function addBlocks(Blockly) {
                     type: 'input_value',
                     name: 'num'
                 }],
-                "tooltip": "只能显示数字，选择auto时自动小数点，如果显示时钟时请选2位小数，其它数值如果选择了对应的小数位就一定要对应的小数位值，否则请选择auto自动",
+                "tooltip": "当是小数时不能直接填入，要建一个变量放进去，只能显示数字，选择auto时自动小数点，如果显示时钟时请选2位小数，其它数值如果选择了对应的小数位就一定要对应的小数位值，否则请选择auto自动",
                 colour: QH_SMG_COLOR,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
