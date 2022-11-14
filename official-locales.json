@@ -163,7 +163,11 @@
         "mpy_HuskyLens_Vision.name":"MicroPython huskylens vision",
         "mpy_HuskyLens_Vision.description":"MicroPython  huskylens vision module",
         "QH_MQTT.name":"MQTT",
-        "QH_MQTT.description":"Arduino MQTT module"  
+        "QH_MQTT.description":"Arduino MQTT module",
+        "ESP_WEB_PRO.name":"webpage PRO",
+        "ESP_WEB_PRO.description":"Web control device programming platform PRO version",
+        "arduino_array.name":"Array",
+        "arduino_array.description":"Array"  
     },
     "zh-cn": {
         "QDPRobotpuhui.description": "普惠人工智能系列课程专用。",
@@ -329,7 +333,11 @@
         "mpy_HuskyLens_Vision.name":"MicroPython 二哈识图",
         "mpy_HuskyLens_Vision.description":"MicroPython 二哈识图 模块",
         "QH_MQTT.name":"MQTT",
-        "QH_MQTT.description":"Arduino MQTT 模块"
+        "QH_MQTT.description":"Arduino MQTT 模块",
+        "ESP_WEB_PRO.name":"网页编辑 PRO",
+        "ESP_WEB_PRO.description":"网页上控制设备的编程平台 PRO版",
+        "arduino_array.name":"数组",
+        "arduino_array.description":"数组"
 
     },
     "zh-tw": {
@@ -495,6 +503,10 @@
         "mpy_HuskyLens_Vision.name":"MicroPython 二哈識圖",
         "mpy_HuskyLens_Vision.description":"MicroPython 二哈識圖 模組",
         "QH_MQTT.name":"MQTT",
-        "QH_MQTT.description":"Arduino MQTT 模組"      
+        "QH_MQTT.description":"Arduino MQTT 模組",
+        "ESP_WEB_PRO.name":"網頁編輯 PRO",
+        "ESP_WEB_PRO.description":"網頁上控制設備的編程平臺 PRO版",
+        "arduino_array.name":"數組",
+        "arduino_array.description":"數組"      
     }
 }
