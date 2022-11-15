@@ -82,19 +82,6 @@ function addToolbox () {
                 <field name="TEXT">text</field>
             </shadow>
         </value>
-        <statement name="function">
-            <block type="arduino_serial_multiSerialPrint" >
-                <value name="VALUE">
-                    <shadow type="QH_variables_get">
-                        <value name="VAR">
-                            <shadow type="text">
-                                <field name="TEXT">value</field>
-                            </shadow>
-                        </value>
-                    </shadow>
-                </value>
-            </block>
-        </statement>
     </block>
     <block type="espdashpro_get_joystick_value">
       <value name="Label">
@@ -102,32 +89,6 @@ function addToolbox () {
               <field name="TEXT">摇杆</field>
           </shadow>
       </value>
-      <statement name="function">
-        <block type="arduino_serial_multiSerialPrint" >
-            <value name="VALUE">
-                <shadow type="QH_variables_get">
-                    <value name="VAR">
-                        <shadow type="text">
-                            <field name="TEXT">x</field>
-                        </shadow>
-                    </value>
-                </shadow>
-            </value>
-        <next>
-        <block type="arduino_serial_multiSerialPrint" >
-            <value name="VALUE">
-                <shadow type="QH_variables_get">
-                    <value name="VAR">
-                        <shadow type="text">
-                            <field name="TEXT">y</field>
-                        </shadow>
-                    </value>
-                </shadow>
-            </value>
-            </block>
-        </next>
-        </block>
-      </statement>
     </block>
     <block type="espdashpro_set_title">
       <value name="title">
