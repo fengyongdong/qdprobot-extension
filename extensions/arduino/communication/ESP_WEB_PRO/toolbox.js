@@ -83,7 +83,7 @@ function addToolbox () {
             </shadow>
         </value>
         <statement name="function">
-            <block type="arduino_serial_multiSerialPrint" >
+            <block type="arduino_serial_serialPrint" >
                 <value name="VALUE">
                     <shadow type="QH_variables_get">
                         <value name="VAR">
@@ -103,7 +103,7 @@ function addToolbox () {
           </shadow>
       </value>
       <statement name="function">
-        <block type="arduino_serial_multiSerialPrint" >
+        <block type="arduino_serial_serialPrint" >
             <value name="VALUE">
                 <shadow type="QH_variables_get">
                     <value name="VAR">
@@ -114,7 +114,7 @@ function addToolbox () {
                 </shadow>
             </value>
         <next>
-        <block type="arduino_serial_multiSerialPrint" >
+        <block type="arduino_serial_serialPrint" >
             <value name="VALUE">
                 <shadow type="QH_variables_get">
                     <value name="VAR">
