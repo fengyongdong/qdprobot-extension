@@ -4,8 +4,8 @@ from fpioa_manager import fm
 import qdpk210_aistart
 
 def read_id(pin):
-	pins = qdpk210_aistart.pins(pin_name)
-	fm.register(pin, pins[0])
+	pins = qdpk210_aistart.pins(qdpk210_aistart.board_pins[pin])
+	fm.register(qdpk210_aistart.board_pins[pin], pins[0])
 	L1 = GPIO(pins[1], GPIO.IN, GPIO.PULL_UP)	
 	a = []
 	t1 = time.ticks_us()
@@ -43,8 +43,8 @@ def read_id(pin):
 			
 	B1 = "".join(a_c)
 	B2 = B1[16:32]
-	#print(len(B1))
-	if len(B1)==32 or len(B1)==46:
+	#print((B1))
+	if len(B1)==33 or len(B1)==46:
 		B3=int(B2,2)
 		return B3
 	else:

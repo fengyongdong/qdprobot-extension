@@ -23,6 +23,7 @@ function addToolbox () {
     <block type="PY_qdp_k210_serial_read"></block>
     <label text="IR"></label>
     <block type="PY_qdp_k210_communicate_ir_recv"></block>
+      <label text="I2C"></label>
     <block type="PY_qdp_k210_communicate_i2c_init">
         <value name="freq">
             <shadow type="math_number">
@@ -30,7 +31,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    <label text="I2C"></label>
+  
     <block type="PY_qdp_k210_communicate_i2c_init1">
         <value name="freq">
             <shadow type="math_number">
