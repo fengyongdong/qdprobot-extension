@@ -2,7 +2,7 @@ from machine import UART
 from utime import sleep_ms
 
 
-class SimpleDFPlayerMini:
+class SimpleQDPPlayerMini:
 
     def __init__(self, uart_id,tx,rx):
         self._uart = UART(uart_id, tx=tx, rx=rx,baudrate=9600)
