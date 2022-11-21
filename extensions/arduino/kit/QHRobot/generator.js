@@ -8527,7 +8527,7 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         }
 
         Blockly.Arduino.setups_['setup_qdprobot_serial4'] = 'myQDPPlayer.setTimeOut(600);';
-        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+num2+');\n delay(50);';
+        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+num2+');\n delay(50);\n';
         return code;
     };
     //MP3音量
