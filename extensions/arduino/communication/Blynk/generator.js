@@ -323,6 +323,7 @@ Blockly.Arduino.QDP_blynk_bridge_VPin = function() {
 //RTC组件初始化
 Blockly.Arduino.QDP_blynk_WidgetRTC_init = function() { 
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['include_WidgetRTC'] = '#include <WidgetRTC.h>';
   Blockly.Arduino.definitions_['G1_WidgetRTC'] ='WidgetRTC rtc;\n';
   Blockly.Arduino.setups_['setSyncInterval'] = 'setSyncInterval('+value_num+'* 60);';
 

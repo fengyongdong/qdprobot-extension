@@ -8527,7 +8527,7 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         }
 
         Blockly.Arduino.setups_['setup_qdprobot_serial4'] = 'myQDPPlayer.setTimeOut(600);';
-        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+num2+');\n delay(50);';
+        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+num2+');\n delay(50);\n';
         return code;
     };
     //MP3音量
@@ -8570,7 +8570,7 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         Blockly.Arduino.setups_['setup_qdprobot_serial3'] = 'if (!myQDPPlayer.begin(P'+dropdown_pin+')) {\n   while(true);\n }';
         }
         Blockly.Arduino.setups_['setup_qdprobot_serial4'] = 'myQDPPlayer.setTimeOut(50);';
-        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.loop('+num2+');\n delay(50);';
+        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.loop('+num2+');\n delay(50);\n';
         return code;
     };
     //MP3播放暂停
@@ -8591,7 +8591,7 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         Blockly.Arduino.setups_['setup_qdprobot_serial'+dropdown_pin] = 'P'+dropdown_pin+'.begin(9600);';
         Blockly.Arduino.setups_['setup_qdprobot_serial3'] = 'if (!myQDPPlayer.begin(P'+dropdown_pin+')) {\n   while(true);\n }'; 
         }
-        var code ='myQDPPlayer.order('+dropdown_pin3+');\n delay(50);';
+        var code ='myQDPPlayer.order('+dropdown_pin3+');\n delay(50);\n';
         return code;
     };
     //MP3上一首
@@ -8617,7 +8617,7 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         }else{
         dropdown_pin3 = 'next';
         }
-        var code ='myQDPPlayer.'+dropdown_pin3+'();\n delay(50);';
+        var code ='myQDPPlayer.'+dropdown_pin3+'();\n delay(50);\n';
         return code;
     };
     //MP3播放音效
@@ -8639,12 +8639,13 @@ Blockly.Arduino.qdp_BT_print_string = function() {
         Blockly.Arduino.setups_['setup_qdprobot_serial3'] = 'if (!myQDPPlayer.begin(P'+dropdown_pin+')) {\n   while(true);\n }'; 
         }
         Blockly.Arduino.setups_['setup_qdprobot_serial4'] = 'myQDPPlayer.setTimeOut(600);';
-        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+dropdown_pin3+');\n delay(600);';
+        var code ='myQDPPlayer.volume('+num+');\n myQDPPlayer.play('+dropdown_pin3+');\n delay(600);\n';
         return code;
     };
     //定义PlayerMini目录
     Blockly.Arduino.QH_ESPuno_define_mp3_directory = function() {
-        var data = Blockly.Arduino.valueToCode(this, 'data',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;;
+        var data = Blockly.Arduino.valueToCode(this, 'data',Blockly.Arduino.ORDER_ATOMIC) ||'0' ;
+        data = data.replace(/\"/g, ""); 
         data = data.replace(/\.mp3/g,"\",\"");
         data = "\"" + data +  "\"";
         data = data.replace(",\"\"","");

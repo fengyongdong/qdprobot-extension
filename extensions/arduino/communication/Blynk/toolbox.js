@@ -299,6 +299,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
+    <block type="QDP_blynk_WidgetRTC_get_time" name="RTC获取数据"> </block>
     <block name="播放音乐组件" type="QDP_blynk_iot_playmusic" ></block>
     <block type="QDP_blynk_light" name="光线传感器">
         <field name="Vpin">V0</field>

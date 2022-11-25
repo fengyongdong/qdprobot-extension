@@ -72,13 +72,6 @@ function addToolbox () {
     <block type="SimpleBlynk_RETRIEVE_DATA">
         <field name="Vpin">V0</field>
     </block>
-    <block type="arduino_serial_multiSerialPrint">
-        <value name="VALUE">
-           <shadow type="text">
-                <field name="TEXT">2</field>
-            </shadow>
-        </value>
-    </block>
     <block type="SimpleBlynk_ReadData"></block>
 </category>
 `;
