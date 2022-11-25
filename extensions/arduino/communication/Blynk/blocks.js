@@ -1049,7 +1049,7 @@ var BLYNK_VIRTUALPIN_SELECT1 = [
         }
     };
 
-    //桥接虚拟管脚
+    //RTC组件初始化
     Blockly.Blocks.QDP_blynk_WidgetRTC_init = {
         init: function () {
             this.jsonInit({
@@ -1070,6 +1070,26 @@ var BLYNK_VIRTUALPIN_SELECT1 = [
                 colour:blynk_color,
                 colourTertiary: '#C0C0C0',
                 extensions: ['shape_statement']
+            });
+        }
+    };
+
+    //RTC获取时间
+    Blockly.Blocks.QDP_blynk_WidgetRTC_get_time = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.QDP_blynk_WidgetRTC_get_time,
+                args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'TIME_TYPE',
+                        options:[[Blockly.Msg.year, "year()"], [Blockly.Msg.month, "month()"], [Blockly.Msg.day, "day()"], [Blockly.Msg.hour, "hour()"], [Blockly.Msg.minute, "minute()"], [Blockly.Msg.second, "second()"]]
+                    }
+                ],
+                "tooltip": "",
+                colour:blynk_color,
+                colourTertiary: '#C0C0C0',
+                extensions: ['output_number']
             });
         }
     };
