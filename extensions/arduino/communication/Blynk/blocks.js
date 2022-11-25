@@ -1083,7 +1083,7 @@ var BLYNK_VIRTUALPIN_SELECT1 = [
                     {
                         type: 'field_dropdown',
                         name: 'TIME_TYPE',
-                        options:[[Blockly.Msg.year, "year()"], [Blockly.Msg.month, "month()"], [Blockly.Msg.day, "day()"], [Blockly.Msg.hour, "hour()"], [Blockly.Msg.minute, "minute()"], [Blockly.Msg.second, "second()"]]
+                        options:[[Blockly.Msg.year, "year"], [Blockly.Msg.month, "month"], [Blockly.Msg.day, "day"], [Blockly.Msg.hour, "hour"], [Blockly.Msg.minute, "minute"], [Blockly.Msg.second, "second"]]
                     }
                 ],
                 "tooltip": "",
