@@ -19,7 +19,7 @@ jobs:
         with:
           repository: aopu-edu/openblock-resource-cli
           ref: refs/heads/main
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GH_PAA }}
           path: openblock-resource-cli
       - run: |
           cd openblock-resource-cli
