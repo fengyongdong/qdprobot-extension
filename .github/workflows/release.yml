@@ -30,7 +30,7 @@ jobs:
       - name: external-resources Install
         uses: actions/checkout@v2
         with:
-          repository: aopu-edu/external-resources-qdp
+          repository: fengyongdong/qdprobot-extension
           ref: refs/heads/qdp
           token: ${{ secrets.GH_PAT }}
           path: external-resources
@@ -100,11 +100,3 @@ jobs:
           asset_path: ${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
           asset_name: ${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
           asset_content_type: text/plain
-
-      # Upload to digitalocean
-      - name: Release resources to digital ocean spaces
-        run: |
-          export DO_KEY_ID=${{ secrets.DO_KEY_ID }}
-          export DO_SECRET_KEY=${{ secrets.DO_SECRET_KEY }}
-          upload-file --filePath=qdp-external-resources-${{ steps.get-version.outputs.VERSION }}.zip
-          upload-file --filePath=${{ steps.get-version.outputs.VERSION }}-checksums-sha256.txt
