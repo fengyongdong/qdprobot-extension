@@ -9,9 +9,11 @@ function addBlocks (Blockly) {
         init: function () {
             this.jsonInit({
                 message0: Blockly.Msg.INSERTSOURCECODE_COMMANDBLOCK,
-                args0: [{
-                    type: 'input_value',
-                    name: 'CODE'
+                args0: [
+                {
+                    type: "field_input",
+                    name: "CODE",
+                    text: "pinMode(0, INPUT);"
                 },
                 {
                     type: 'field_dropdown',
@@ -32,8 +34,9 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.INSERTSOURCECODE_ROUNDBLOCK,
                 args0: [{
-                    type: 'input_value',
-                    name: 'CODE'
+                    type: "field_input",
+                    name: "CODE",
+                    text: "Hello OpenBlock"
                 }],
                 colour: color,
                 secondaryColour: secondaryColour,
@@ -47,8 +50,9 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.INSERTSOURCECODE_BOOLEANBLOCK,
                 args0: [{
-                    type: 'input_value',
-                    name: 'CODE'
+                    type: "field_input",
+                    name: "CODE",
+                    text: "digitalRead(0)"
                 }],
                 colour: color,
                 secondaryColour: secondaryColour,
@@ -62,8 +66,9 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.INSERTSOURCECODE_INSERTININCLUDEAREA,
                 args0: [{
-                    type: 'input_value',
-                    name: 'CODE'
+                    type: "field_input",
+                    name: "CODE",
+                    text: '#include "example.h"'
                 },
                 {
                     type: 'field_dropdown',
@@ -85,8 +90,9 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.INSERTSOURCECODE_INSERTINDEFINEAREA,
                 args0: [{
-                    type: 'input_value',
-                    name: 'CODE'
+                    type: "field_input",
+                    name: "CODE",
+                    text: "uint8_t example = 0;"
                 },
                 {
                     type: 'field_dropdown',

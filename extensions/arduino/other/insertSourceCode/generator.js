@@ -4,9 +4,7 @@
 function addGenerator (Blockly) {
 
     const getSourceString = function (block) {
-        let code = Blockly.Arduino.valueToCode(block, 'CODE', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1)
-            .replace(/\\\\/g, '\\')
-            .replace(/\\'/g, '\'');
+        let code =block.getFieldValue('CODE');
         const escape = block.getFieldValue('ESCAPE');
         if (escape === '0') {
             code = code.replace(/\\n/g, '\n');

@@ -508,7 +508,7 @@ function addBlocks (Blockly) {
         }
     };
 
-    Blockly.Blocks.QH_variables_get = {
+    Blockly.Blocks.QH_variables_get_string = {
         init: function () {
             this.jsonInit({
                 message0: '%1',

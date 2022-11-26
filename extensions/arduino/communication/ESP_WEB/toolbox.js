@@ -55,7 +55,7 @@ function addToolbox () {
               <value name="CONDITION">
                 <block type="operator_equals">
                   <value name="OPERAND1">
-                    <shadow type="QH_variables_get">
+                    <shadow type="QH_variables_get_string">
                         <value name="VAR">
                             <shadow type="text">
                                 <field name="TEXT">id</field>
@@ -91,7 +91,7 @@ function addToolbox () {
               <value name="CONDITION">
                 <block type="operator_equals">
                   <value name="OPERAND1">
-                    <shadow type="QH_variables_get">
+                    <shadow type="QH_variables_get_string">
                         <value name="VAR">
                             <shadow type="text">
                                 <field name="TEXT">id</field>
@@ -188,7 +188,7 @@ function addToolbox () {
         <statement name="data">
             <block type="arduino_serial_multiSerialPrint" >
                 <value name="VALUE">
-                    <shadow type="QH_variables_get">
+                    <shadow type="QH_variables_get_string">
                         <value name="VAR">
                             <shadow type="text">
                                 <field name="TEXT">web_data</field>

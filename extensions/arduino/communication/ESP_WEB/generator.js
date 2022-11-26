@@ -177,10 +177,10 @@ function addGenerator (Blockly) {
      return code;
   };
 
-  Blockly.Arduino.QH_variables_get = function() {
+  Blockly.Arduino.QH_variables_get_string = function() {
       var name = Blockly.Arduino.valueToCode(this, 'VAR',Blockly.Arduino.ORDER_ATOMIC) ||' ' ;
       name = name.replace(/\"/g,'');
-      code = name;
+      code = `String(${name})`;
       return [code, Blockly.Arduino.ORDER_NONE];
   };
 
